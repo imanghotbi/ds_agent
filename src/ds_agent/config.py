@@ -5,6 +5,8 @@ class Nodes:
     SUPERVISOR = "supervisor"
     CLEANER = "cleaner"
     EDA = "eda"
+    FEATURE_ENGINEER = "feature_engineer"
+    TRAINER = "trainer"
     TOOLS = "tools"
     REPORTER = "reporter"
     FINISH = "FINISH"

@@ -3,7 +3,7 @@ from langgraph.graph import StateGraph, START, END
 from ds_agent.core.state import AgentState
 from ds_agent.config import Nodes
 from ds_agent.core.nodes.supervisor import supervisor_node
-from ds_agent.core.nodes.worker import cleaner_node, eda_node
+from ds_agent.core.nodes.worker import cleaner_node, eda_node, feature_engineer_node, trainer_node
 from ds_agent.core.nodes.tools import tool_node
 from ds_agent.core.nodes.reporter import reporter_node
 
@@ -30,6 +30,8 @@ def create_graph() -> StateGraph:
     workflow.add_node(Nodes.SUPERVISOR, supervisor_node)
     workflow.add_node(Nodes.CLEANER, cleaner_node)
     workflow.add_node(Nodes.EDA, eda_node)
+    workflow.add_node(Nodes.FEATURE_ENGINEER, feature_engineer_node)
+    workflow.add_node(Nodes.TRAINER, trainer_node)
     workflow.add_node(Nodes.TOOLS, tool_node)
     workflow.add_node(Nodes.REPORTER, reporter_node)
     
@@ -41,6 +43,9 @@ def create_graph() -> StateGraph:
         {
             Nodes.CLEANER: Nodes.CLEANER,
             Nodes.EDA: Nodes.EDA,
+            Nodes.FEATURE_ENGINEER: Nodes.FEATURE_ENGINEER,
+            Nodes.TRAINER: Nodes.TRAINER,
+            Nodes.REPORTER: Nodes.REPORTER,
             Nodes.FINISH: Nodes.REPORTER  # Route FINISH to Reporter
         }
     )
@@ -56,11 +61,28 @@ def create_graph() -> StateGraph:
         worker_router,
         {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
     )
+
+    workflow.add_conditional_edges(
+        Nodes.FEATURE_ENGINEER,
+        worker_router,
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+    )
+
+    workflow.add_conditional_edges(
+        Nodes.TRAINER,
+        worker_router,
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+    )
     
     workflow.add_conditional_edges(
         Nodes.TOOLS,
         tool_router,
-        {Nodes.CLEANER: Nodes.CLEANER, Nodes.EDA: Nodes.EDA}
+        {
+            Nodes.CLEANER: Nodes.CLEANER, 
+            Nodes.EDA: Nodes.EDA,
+            Nodes.FEATURE_ENGINEER: Nodes.FEATURE_ENGINEER,
+            Nodes.TRAINER: Nodes.TRAINER
+        }
     )
     
     workflow.add_edge(Nodes.REPORTER, END)
