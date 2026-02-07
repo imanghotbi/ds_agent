@@ -25,33 +25,38 @@ async def main():
     
     try:
         # Use E2B AsyncSandbox as a context manager for guaranteed cleanup
-        async with await AsyncSandbox.create(api_key=settings.e2b_api_key) as sandbox:
+        async with await AsyncSandbox.create(
+            api_key=settings.e2b_api_key.get_secret_value(),
+            timeout=settings.sandbox_timeout
+        ) as sandbox:
             state["sandbox_session"] = sandbox
-            logger.info("E2B AsyncSandbox initialized and active.")
+            logger.info(f"E2B AsyncSandbox initialized and active (Timeout: {settings.sandbox_timeout}s).")
 
             while True:
                 try:
-                    user_input = input("User: ")
+                    # 1. Get optional file path
+                    file_input = input("File path to upload (optional, press Enter to skip): ").strip()
+                    if file_input.lower() in ["exit", "quit"]:
+                        break
+                    
+                    if file_input:
+                        if not os.path.exists(file_input):
+                            print(f"Error: Local file '{file_input}' not found.")
+                        else:
+                            filename = os.path.basename(file_input)
+                            print(f"Uploading {filename} to sandbox...")
+                            with open(file_input, "rb") as f:
+                                await sandbox.files.write(filename, f)
+                            print(f"System: Successfully uploaded {filename}.")
+                            state["messages"].append(HumanMessage(content=f"[System: User uploaded file '{filename}']"))
+
+                    # 2. Get user prompt
+                    user_input = input("User prompt: ").strip()
+                    if not user_input:
+                        continue
                     if user_input.lower() in ["exit", "quit"]:
                         break
                     
-                    # Handle file uploads
-                    if user_input.startswith("/upload "):
-                        file_path = user_input.replace("/upload ", "").strip()
-                        if not os.path.exists(file_path):
-                            print(f"Error: File '{file_path}' not found.")
-                            continue
-                        
-                        filename = os.path.basename(file_path)
-                        print(f"Uploading {filename} to sandbox...")
-                        with open(file_path, "rb") as f:
-                            await sandbox.files.write(filename, f)
-                        
-                        upload_msg = f"Successfully uploaded {filename} to the current directory."
-                        print(f"System: {upload_msg}")
-                        state["messages"].append(HumanMessage(content=f"[System: User uploaded file '{filename}']"))
-                        continue
-
                     # Process user message
                     state["messages"].append(HumanMessage(content=user_input))
                     
@@ -61,13 +66,33 @@ async def main():
                             if key == "agent":
                                 last_msg = value["messages"][-1]
                                 state["messages"].append(last_msg)
+                                
+                                # Show thinking if there's content
                                 if last_msg.content:
-                                    print(f"\nAgent: {last_msg.content}\n")
+                                    print(f"\n--- Agent Thinking ---\n{last_msg.content}\n")
+                                
+                                # Show tool calls if any
+                                if last_msg.tool_calls:
+                                    print("--- Tool Calls Requested ---")
+                                    for tc in last_msg.tool_calls:
+                                        print(f"Tool: {tc['name']}")
+                                        print(f"Arguments: {tc['args']}")
+                                    print("---------------------------\n")
+
                             elif key == "tools":
+                                logger.info("Tool execution cycle completed")
+                                # Update local state
                                 state["messages"].extend(value["messages"])
                                 state["notebook_cells"].extend(value["notebook_cells"])
-                                # sandbox_session is already set via context manager
-                                logger.info("Tool execution cycle completed")
+                                
+                                print("--- Tool Execution Results ---")
+                                for msg in value["messages"]:
+                                    # Truncate long outputs for display
+                                    content = msg.content
+                                    if len(content) > 500:
+                                        content = content[:500] + "..."
+                                    print(f"Tool '{msg.name}' result:\n{content}\n")
+                                print("------------------------------\n")
                     
                 except KeyboardInterrupt:
                     break

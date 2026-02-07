@@ -18,11 +18,16 @@ async def agent_node(state: AgentState):
     The main agent node that calls the LLM.
     """
     logger.info("Agent node started")
-    llm = LLMFactory().create()
+    llm_factory = LLMFactory()
+    llm = llm_factory.create()
     
     # Static tool definitions for binding
     tool_defs = E2BTools(None).get_tools()
     llm_with_tools = llm.bind_tools(tool_defs)
+    
+    # Apply retry logic if configured
+    if llm_factory.max_retries > 0:
+        llm_with_tools = llm_with_tools.with_retry(stop_after_attempt=llm_factory.max_retries)
     
     messages = state['messages']
     if not messages or not isinstance(messages[0], SystemMessage):

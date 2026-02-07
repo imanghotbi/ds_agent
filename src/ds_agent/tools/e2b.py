@@ -1,5 +1,6 @@
 import base64
 import json
+import os
 from typing import List, Optional, Dict, Any, Union, Tuple
 from pydantic import BaseModel, Field
 from langchain_core.tools import tool, StructuredTool
@@ -10,6 +11,10 @@ class RunPythonInput(BaseModel):
 
 class RunShellInput(BaseModel):
     command: str = Field(description="The shell command to execute.")
+
+class DownloadFileInput(BaseModel):
+    remote_path: str = Field(description="The absolute path to the file in the sandbox (e.g., '/home/user/cleaned_data.csv').")
+    local_filename: Optional[str] = Field(description="The name to save the file as locally. If not provided, the remote filename will be used.", default=None)
 
 class E2BTools:
     def __init__(self, sandbox: AsyncSandbox, update_state_callback: Optional[callable] = None):
@@ -30,8 +35,11 @@ class E2BTools:
             execution = await self.sandbox.run_code(code)
             
             outputs, logs = self._process_logs(execution.logs)
-            artifacts, media_outputs = self._process_results(execution.results)
+            artifacts, media_outputs, text_results = self._process_results(execution.results)
+            
             outputs.extend(media_outputs)
+            # Add the text results (last expression values) to the logs returned to the LLM
+            logs.extend(text_results)
             
             if execution.error:
                 error_output, error_msg = self._process_error(execution.error)
@@ -69,9 +77,10 @@ class E2BTools:
             
         return outputs, log_lines
 
-    def _process_results(self, results: List[Any]) -> Tuple[List[str], List[Dict[str, Any]]]:
+    def _process_results(self, results: List[Any]) -> Tuple[List[str], List[Dict[str, Any]], List[str]]:
         artifacts = []
         outputs = []
+        text_results = []
         
         for result in results:
             data = None
@@ -90,6 +99,7 @@ class E2BTools:
                 mime_type = 'image/svg+xml'
                 artifacts.append("image.svg")
             elif result.text:
+                text_results.append(result.text)
                 outputs.append({'type': 'result', 'data': {'text/plain': result.text}})
                 continue
             
@@ -100,7 +110,7 @@ class E2BTools:
                     'mime_type': mime_type
                 })
                 
-        return artifacts, outputs
+        return artifacts, outputs, text_results
 
     def _process_error(self, error_obj) -> Tuple[Dict[str, Any], str]:
         error_msg = f"{error_obj.name}: {error_obj.value}\n{error_obj.traceback}"
@@ -127,6 +137,28 @@ class E2BTools:
         except Exception as e:
             return f"Status: Error\nOutput: System Error - {str(e)}"
 
+    async def download_file(self, remote_path: str, local_filename: Optional[str] = None) -> str:
+        """
+        Downloads a file from the sandbox to the local filesystem.
+        """
+        try:
+            if not local_filename:
+                local_filename = remote_path.split('/')[-1]
+            
+            # Read from sandbox
+            content = await self.sandbox.files.read(remote_path)
+            
+            # Determine mode based on content type
+            mode = 'wb' if isinstance(content, bytes) else 'w'
+            encoding = 'utf-8' if isinstance(content, str) else None
+            
+            with open(local_filename, mode, encoding=encoding) as f:
+                f.write(content)
+                
+            return f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filename)}"
+        except Exception as e:
+            return f"Status: Error\nOutput: Failed to download file - {str(e)}"
+
     def get_tools(self) -> List[StructuredTool]:
         return [
             StructuredTool.from_function(
@@ -140,5 +172,11 @@ class E2BTools:
                 name="run_shell",
                 description="Executes a shell command (e.g., pip install, ls, unzip). Use this for system operations.",
                 args_schema=RunShellInput
+            ),
+            StructuredTool.from_function(
+                coroutine=self.download_file,
+                name="download_file",
+                description="Downloads a file from the sandbox to the local machine. Use this to provide the user with final data files, reports, or generated assets.",
+                args_schema=DownloadFileInput
             )
         ]
