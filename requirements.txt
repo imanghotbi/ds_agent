@@ -1,0 +1,8 @@
+langgraph
+e2b-code-interpreter
+nbformat
+pydantic
+pydantic-settings
+langchain-core
+langchain-openai
+langchain-nvidia-ai-endpoints
