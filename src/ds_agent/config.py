@@ -1,6 +1,14 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import SecretStr
 
+class Nodes:
+    SUPERVISOR = "supervisor"
+    CLEANER = "cleaner"
+    EDA = "eda"
+    TOOLS = "tools"
+    REPORTER = "reporter"
+    FINISH = "FINISH"
+
 class Settings(BaseSettings):
     """
     Application settings and environment variables.

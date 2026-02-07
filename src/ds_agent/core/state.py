@@ -2,7 +2,6 @@ import operator
 from typing import List, Dict, Any, TypedDict, Optional, Annotated
 from langchain_core.messages import BaseMessage
 from langgraph.graph.message import add_messages
-from e2b_code_interpreter import AsyncSandbox
 
 class AgentState(TypedDict):
     """
@@ -11,8 +10,8 @@ class AgentState(TypedDict):
     Attributes:
         messages: List[BaseMessage] (Standard chat history)
         notebook_cells: List[Dict] (To track the notebook structure explicitly)
-        sandbox_session: AsyncSandbox (The active E2B connection)
         cwd: str (Current working directory)
+        next: str (Next agent to run)
     """
     # Use add_messages to append new messages to the history
     messages: Annotated[List[BaseMessage], add_messages]
@@ -21,5 +20,6 @@ class AgentState(TypedDict):
     notebook_cells: Annotated[List[Dict[str, Any]], operator.add]
     
     # These are overwritten (single value)
-    sandbox_session: Optional[AsyncSandbox]
     cwd: str
+    next: str
+    supervisor_instructions: str
