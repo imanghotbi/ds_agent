@@ -7,6 +7,7 @@ class Nodes:
     EDA = "eda"
     FEATURE_ENGINEER = "feature_engineer"
     TRAINER = "trainer"
+    STORYTELLER = "storyteller"
     TOOLS = "tools"
     REPORTER = "reporter"
     FINISH = "FINISH"

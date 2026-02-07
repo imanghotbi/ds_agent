@@ -12,7 +12,7 @@ from ds_agent.utils.helpers import get_llm, invoke_structured_with_recovery
 class SupervisorDecision(BaseModel):
     reasoning: str = Field(description="Review of previous work and justification for the next step.")
     instructions: str = Field(description="Specific, detailed instructions for the next agent.")
-    next_agent: Literal["cleaner", "eda", "feature_engineer", "trainer", "reporter", "FINISH"]
+    next_agent: Literal["cleaner", "eda", "feature_engineer", "trainer", "storyteller", "reporter", "FINISH"]
 
 async def supervisor_node(state: AgentState) -> Dict[str, Any]:
     """
