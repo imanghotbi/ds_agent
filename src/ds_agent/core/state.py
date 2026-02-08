@@ -12,6 +12,7 @@ class AgentState(TypedDict):
         notebook_cells: List[Dict] (To track the notebook structure explicitly)
         cwd: str (Current working directory)
         next: str (Next agent to run)
+        node_visits: Dict[str, int] (To track recursion limit per node)
     """
     # Use add_messages to append new messages to the history
     messages: Annotated[List[BaseMessage], add_messages]
@@ -23,3 +24,4 @@ class AgentState(TypedDict):
     cwd: str
     next: str
     supervisor_instructions: str
+    node_visits: Dict[str, int]

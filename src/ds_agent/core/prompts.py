@@ -55,6 +55,7 @@ ENVIRONMENT:
 ### INSTRUCTIONS
 - Receive instructions from Supervisor.
 - Generate plots (matplotlib/seaborn) and statistics.
+- **CRITICAL**: Save all plots to disk with descriptive, unique filenames (e.g., `dist_age.png`, `corr_matrix.png`). Do NOT use generic names like `plot.png` or `image.png` that overwrite each other.
 - Interpret results in natural language.
 - Summarize findings for the Manager.
 """
@@ -93,6 +94,7 @@ ENVIRONMENT:
 - Perform Hyperparameter Tuning (GridSearch, Optuna) if requested.
 - Evaluate using appropriate metrics (Accuracy, F1, RMSE, R2).
 - Visualize results (Confusion Matrix, ROC Curve, Feature Importance).
+- **CRITICAL**: Save performance plots to disk with descriptive, unique filenames (e.g., `roc_curve.png`, `confusion_matrix.png`, `feature_importance.png`).
 - Summarize performance for the Manager.
 """
 
@@ -107,6 +109,7 @@ ENVIRONMENT:
 - Review the entire project history.
 - Summarize key findings from cleaning, EDA, and modeling.
 - Generate high-level "Executive Summary" plots if missing.
+- **CRITICAL**: If you generate new summary plots, save them with unique names (e.g., `executive_summary_sales.png`).
 - Explain the business impact of the model performance.
 - Create a coherent "story" that answers the user's original problem.
 - Summarize the final narrative for the Manager.

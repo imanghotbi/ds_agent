@@ -13,6 +13,8 @@ def router(state: AgentState) -> str:
     return state["next"]
 
 def worker_router(state: AgentState) -> str:
+    if state.get("next") == Nodes.REPORTER:
+        return Nodes.REPORTER
     last_message = state['messages'][-1]
     if hasattr(last_message, 'tool_calls') and last_message.tool_calls:
         return Nodes.TOOLS
@@ -55,31 +57,31 @@ def create_graph() -> StateGraph:
     workflow.add_conditional_edges(
         Nodes.CLEANER,
         worker_router,
-        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR, Nodes.REPORTER: Nodes.REPORTER}
     )
     
     workflow.add_conditional_edges(
         Nodes.EDA,
         worker_router,
-        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR, Nodes.REPORTER: Nodes.REPORTER}
     )
 
     workflow.add_conditional_edges(
         Nodes.FEATURE_ENGINEER,
         worker_router,
-        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR, Nodes.REPORTER: Nodes.REPORTER}
     )
 
     workflow.add_conditional_edges(
         Nodes.TRAINER,
         worker_router,
-        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR, Nodes.REPORTER: Nodes.REPORTER}
     )
 
     workflow.add_conditional_edges(
         Nodes.STORYTELLER,
         worker_router,
-        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR}
+        {Nodes.TOOLS: Nodes.TOOLS, Nodes.SUPERVISOR: Nodes.SUPERVISOR, Nodes.REPORTER: Nodes.REPORTER}
     )
     
     workflow.add_conditional_edges(
@@ -90,7 +92,8 @@ def create_graph() -> StateGraph:
             Nodes.EDA: Nodes.EDA,
             Nodes.FEATURE_ENGINEER: Nodes.FEATURE_ENGINEER,
             Nodes.TRAINER: Nodes.TRAINER,
-            Nodes.STORYTELLER: Nodes.STORYTELLER
+            Nodes.STORYTELLER: Nodes.STORYTELLER,
+            Nodes.REPORTER: Nodes.REPORTER
         }
     )
     

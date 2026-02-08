@@ -17,7 +17,8 @@ async def main():
         "messages": [],
         "notebook_cells": [],
         "cwd": "/home/user",
-        "next": Nodes.SUPERVISOR
+        "next": Nodes.SUPERVISOR,
+        "node_visits": {}
     }
     
     print("\nAgent ready. Type 'exit' or 'quit' to stop.")
@@ -60,7 +61,7 @@ async def main():
                     state["messages"].append(HumanMessage(content=user_input))
                     
                     config = {
-                        "recursion_limit": 50,
+                        "recursion_limit": 1000,
                         "configurable": {"sandbox": sandbox}
                     }
                     

@@ -16,6 +16,11 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
     It uses the E2BTools class to ensure consistent file handling.
     """
     logger.info("Reporter node: Finalizing results and downloading artifacts...")
+    
+    # Track node visits
+    node_visits = state.get("node_visits", {}).copy()
+    node_visits[Nodes.REPORTER] = node_visits.get(Nodes.REPORTER, 0) + 1
+    
     sandbox = get_sandbox(config)
     e2b_tools = E2BTools(sandbox)
     
@@ -58,5 +63,6 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
     
     return {
         "messages": [AIMessage(content=summary)],
-        "next": "END"
+        "next": "END",
+        "node_visits": node_visits
     }

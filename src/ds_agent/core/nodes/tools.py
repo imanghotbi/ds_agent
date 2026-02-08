@@ -6,12 +6,18 @@ from ds_agent.core.state import AgentState
 from ds_agent.utils.helpers import get_sandbox
 from ds_agent.tools.e2b import E2BTools
 from ds_agent.utils.logger import logger
+from ds_agent.config import Nodes
 
 async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]:
     """
     Executes tools requested by the LLM.
     """
     logger.info("Tool node execution")
+    
+    # Track node visits
+    node_visits = state.get("node_visits", {}).copy()
+    node_visits[Nodes.TOOLS] = node_visits.get(Nodes.TOOLS, 0) + 1
+    
     sandbox = get_sandbox(config)
         
     new_cells = []
@@ -48,5 +54,6 @@ async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]
 
     return {
         "messages": results,
-        "notebook_cells": new_cells
+        "notebook_cells": new_cells,
+        "node_visits": node_visits
     }

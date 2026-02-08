@@ -6,8 +6,8 @@ from e2b_code_interpreter import AsyncSandbox
 
 from ds_agent.core.state import AgentState
 from ds_agent.tools.e2b import E2BTools
-from ds_agent.config import settings
-from ds_agent.utils.logger import logger
+from ds_agent.config import settings , Nodes
+from ds_agent.utils.logger import logger 
 from ds_agent.core.llm import LLMFactory
 
 def get_llm(model_name: Optional[str] = None):
@@ -43,6 +43,19 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str) ->
         Dict update for the state.
     """
     logger.info(f"{sender_name} agent started")
+    
+    # Track node visits
+    node_visits = state.get("node_visits", {}).copy()
+    node_visits[sender_name] = node_visits.get(sender_name, 0) + 1
+    
+    if node_visits[sender_name] > settings.node_recursion_limit:
+        logger.warning(f"Node {sender_name} exceeded recursion limit ({settings.node_recursion_limit}). Routing to Reporter.")
+        return {
+            "next": Nodes.REPORTER,
+            "node_visits": node_visits,
+            "messages": [SystemMessage(content=f"System: Node '{sender_name}' reached recursion limit. Terminating workflow.")]
+        }
+
     llm = get_llm()
     
     # We instantiate tools with None just to get definitions for binding
@@ -62,7 +75,7 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str) ->
     current_messages = [SystemMessage(content=system_prompt)] + state['messages']
     
     response = await llm_with_tools.ainvoke(current_messages)
-    return {"messages": [response], "sender": sender_name}
+    return {"messages": [response], "sender": sender_name, "node_visits": node_visits}
 
 def _prompt_to_text(prompt_value: Union[str, List[BaseMessage]]) -> str:
     """Helper to serialize a list of messages into a string for raw prompting."""

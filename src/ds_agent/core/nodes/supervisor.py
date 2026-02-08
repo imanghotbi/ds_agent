@@ -5,6 +5,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from ds_agent.core.state import AgentState
 from ds_agent.utils.helpers import get_llm
 from ds_agent.utils.logger import logger
+from ds_agent.config import settings, Nodes
 from ds_agent.core.prompts import SUPERVISOR_PROMPT
 from ds_agent.utils.helpers import get_llm, invoke_structured_with_recovery
 
@@ -20,6 +21,19 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
     Uses robust recovery to ensure structured output.
     """
     logger.info("Supervisor deciding next step...")
+    
+    # Track node visits
+    node_visits = state.get("node_visits", {}).copy()
+    node_visits[Nodes.SUPERVISOR] = node_visits.get(Nodes.SUPERVISOR, 0) + 1
+    
+    if node_visits[Nodes.SUPERVISOR] > settings.node_recursion_limit:
+        logger.warning(f"Supervisor exceeded recursion limit ({settings.node_recursion_limit}). Routing to Reporter.")
+        return {
+            "next": Nodes.REPORTER,
+            "node_visits": node_visits,
+            "messages": [SystemMessage(content="System: Supervisor reached recursion limit. Terminating workflow.")]
+        }
+
     llm = get_llm(model_name='qwen/qwen3-235b-a22b')
     
     messages = [SystemMessage(content=SUPERVISOR_PROMPT)] + state['messages']
@@ -45,6 +59,7 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
     return {
         "next": next_agent,
         "supervisor_instructions": response.instructions,
+        "node_visits": node_visits,
         # We append the Supervisor's thought process to the history so it persists
         "messages": [HumanMessage(content=f"**Supervisor Decision:**\n*Reasoning:* {response.reasoning}\n*Instructions:* {response.instructions}")]
     }
