@@ -50,7 +50,20 @@ async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]
         else:
             output = f"Error: Tool '{tool_name}' not found"
             
-        results.append(ToolMessage(tool_call_id=tool_id, name=tool_name, content=str(output)))
+        # Handle multimodal output (text + images)
+        if isinstance(output, dict) and "text" in output and "images" in output:
+            content = [{"type": "text", "text": output["text"]}]
+            for img in output["images"]:
+                content.append({
+                    "type": "image_url",
+                    "image_url": {
+                        "url": f"data:{img['mime_type']};base64,{img['data']}"
+                    }
+                })
+        else:
+            content = str(output)
+            
+        results.append(ToolMessage(tool_call_id=tool_id, name=tool_name, content=content))
 
     return {
         "messages": results,

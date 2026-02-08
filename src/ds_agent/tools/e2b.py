@@ -26,7 +26,7 @@ class E2BTools:
         self.sandbox = sandbox
         self.update_state_callback = update_state_callback
 
-    async def run_python(self, code: str) -> str:
+    async def run_python(self, code: str) -> Union[str, Dict[str, Any]]:
         """
         Executes Python code in a persistent Jupyter kernel.
         Captures stdout, stderr, and images (plots).
@@ -56,7 +56,17 @@ class E2BTools:
             if self.update_state_callback:
                 self.update_state_callback(cell_data)
 
-            return self._format_response(logs, artifacts, execution.error)
+            response_text = self._format_response(logs, artifacts, execution.error)
+            
+            # Filter for image outputs to return to the LLM
+            images = [o for o in outputs if o.get('type') == 'image']
+            
+            if images:
+                return {
+                    "text": response_text,
+                    "images": images
+                }
+            return response_text
 
         except Exception as e:
             return f"Status: Error\nOutput: System Error - {str(e)}"
