@@ -32,6 +32,10 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
         
         downloaded = []
         for file in files:
+            # Skip directories
+            if getattr(file, 'is_dir', False):
+                continue
+                
             if any(file.name.endswith(ext) for ext in important_extensions):
                 logger.info(f"Downloading artifact via tool: {file.name}")
                 # Use the tool logic

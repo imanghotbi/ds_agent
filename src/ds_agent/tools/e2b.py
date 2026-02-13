@@ -102,15 +102,12 @@ class E2BTools:
             if result.png:
                 data = result.png
                 mime_type = 'image/png'
-                artifacts.append("image.png")
             elif result.jpeg:
                 data = result.jpeg
                 mime_type = 'image/jpeg'
-                artifacts.append("image.jpeg")
             elif result.svg:
                 data = result.svg
                 mime_type = 'image/svg+xml'
-                artifacts.append("image.svg")
             elif result.text:
                 text_results.append(result.text)
                 outputs.append({'type': 'result', 'data': {'text/plain': result.text}})
@@ -158,14 +155,11 @@ class E2BTools:
             if not local_filename:
                 local_filename = remote_path.split('/')[-1]
             
-            # Read from sandbox
-            content = await self.sandbox.files.read(remote_path)
+            # Use download_file for reliable binary retrieval
+            content = await self.sandbox.download_file(remote_path)
             
-            # Determine mode based on content type
-            mode = 'wb' if isinstance(content, bytes) else 'w'
-            encoding = 'utf-8' if isinstance(content, str) else None
-            
-            with open(local_filename, mode, encoding=encoding) as f:
+            # Always write as binary to prevent corruption of images/pickles
+            with open(local_filename, 'wb') as f:
                 f.write(content)
                 
             return f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filename)}"
