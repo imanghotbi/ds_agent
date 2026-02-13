@@ -34,7 +34,7 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
             "messages": [SystemMessage(content="System: Supervisor reached recursion limit. Terminating workflow.")]
         }
 
-    llm = get_llm(model_name='qwen/qwen3-235b-a22b')
+    llm = get_llm(model_name=settings.supervisor_model_name)
     
     messages = [SystemMessage(content=SUPERVISOR_PROMPT)] + state['messages']
     

@@ -22,7 +22,11 @@ class Settings(BaseSettings):
     e2b_api_key: SecretStr
     
     # Optional settings with defaults
-    model_name: str = "moonshotai/kimi-k2.5"
+    model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
+    supervisor_model_name: str = "qwen/qwen3-235b-a22b"
+    worker_model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
+    storyteller_model_name: str = "qwen/qwen3-235b-a22b"
+    reporter_model_name: str = "qwen/qwen3-235b-a22b"
     temperature: float = 0.0
     log_level: str = "INFO"
     log_file_path: str = "./logs/app.log"

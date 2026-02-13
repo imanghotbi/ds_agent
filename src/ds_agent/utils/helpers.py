@@ -30,7 +30,7 @@ def get_sandbox(config: RunnableConfig) -> AsyncSandbox:
         raise ValueError("Sandbox not found in config. Ensure 'sandbox' is passed in 'configurable'.")
     return sandbox
 
-async def run_worker(state: AgentState, system_prompt: str, sender_name: str) -> Dict[str, Any]:
+async def run_worker(state: AgentState, system_prompt: str, sender_name: str, model_name: Optional[str] = None) -> Dict[str, Any]:
     """
     Generic worker execution logic.
     
@@ -38,6 +38,7 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str) ->
         state: The current agent state.
         system_prompt: The persona/instructions for this worker.
         sender_name: The name of the worker (used for tracking).
+        model_name: Optional model name to use for this worker.
         
     Returns:
         Dict update for the state.
@@ -56,7 +57,7 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str) ->
             "messages": [SystemMessage(content=f"System: Node '{sender_name}' reached recursion limit. Terminating workflow.")]
         }
 
-    llm = get_llm()
+    llm = get_llm(model_name=model_name)
     
     # We instantiate tools with None just to get definitions for binding
     tool_defs = E2BTools(None).get_tools()
