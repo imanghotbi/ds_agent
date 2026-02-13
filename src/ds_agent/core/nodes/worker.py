@@ -9,25 +9,25 @@ async def cleaner_node(state: AgentState) -> Dict[str, Any]:
     """
     Data Cleaning Agent.
     """
-    return await run_worker(state, CLEANER_PROMPT, Nodes.CLEANER, model_name=settings.worker_model_name)
+    return await run_worker(state, CLEANER_PROMPT, Nodes.CLEANER, model_name=settings.cleaner_model_name)
 
 async def eda_node(state: AgentState) -> Dict[str, Any]:
     """
     EDA Agent.
     """
-    return await run_worker(state, EDA_PROMPT, Nodes.EDA, model_name=settings.worker_model_name)
+    return await run_worker(state, EDA_PROMPT, Nodes.EDA, model_name=settings.eda_model_name)
 
 async def feature_engineer_node(state: AgentState) -> Dict[str, Any]:
     """
     Feature Engineering Agent.
     """
-    return await run_worker(state, FE_PROMPT, Nodes.FEATURE_ENGINEER, model_name=settings.worker_model_name)
+    return await run_worker(state, FE_PROMPT, Nodes.FEATURE_ENGINEER, model_name=settings.feature_engineer_model_name)
 
 async def trainer_node(state: AgentState) -> Dict[str, Any]:
     """
     Model Training Agent.
     """
-    return await run_worker(state, TRAINER_PROMPT, Nodes.TRAINER, model_name=settings.worker_model_name)
+    return await run_worker(state, TRAINER_PROMPT, Nodes.TRAINER, model_name=settings.trainer_model_name)
 
 async def storyteller_node(state: AgentState) -> Dict[str, Any]:
     """

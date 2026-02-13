@@ -24,7 +24,10 @@ class Settings(BaseSettings):
     # Optional settings with defaults
     model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
     supervisor_model_name: str = "qwen/qwen3-235b-a22b"
-    worker_model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
+    cleaner_model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
+    eda_model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
+    feature_engineer_model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
+    trainer_model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
     storyteller_model_name: str = "qwen/qwen3-235b-a22b"
     reporter_model_name: str = "qwen/qwen3-235b-a22b"
     temperature: float = 0.0

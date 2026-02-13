@@ -75,8 +75,14 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
     # Prepend the specialized system prompt to the message history
     current_messages = [SystemMessage(content=system_prompt)] + state['messages']
     
-    response = await llm_with_tools.ainvoke(current_messages)
-    return {"messages": [response], "sender": sender_name, "node_visits": node_visits}
+    try:
+        response = await llm_with_tools.ainvoke(current_messages)
+        return {"messages": [response], "sender": sender_name, "node_visits": node_visits}
+    except Exception as e:
+        logger.error(f"Error in node {sender_name}: {e}", exc_info=True)
+        # Return a system message describing the error so the agent/supervisor is aware
+        error_message = SystemMessage(content=f"Error executing {sender_name}: {str(e)}")
+        return {"messages": [error_message], "sender": sender_name, "node_visits": node_visits}
 
 def _prompt_to_text(prompt_value: Union[str, List[BaseMessage]]) -> str:
     """Helper to serialize a list of messages into a string for raw prompting."""

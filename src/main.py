@@ -1,3 +1,6 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 import asyncio
 import os
 from langchain_core.messages import HumanMessage

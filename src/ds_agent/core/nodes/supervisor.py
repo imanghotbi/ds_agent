@@ -38,28 +38,36 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
     
     messages = [SystemMessage(content=SUPERVISOR_PROMPT)] + state['messages']
     
-    # Use the recovery helper instead of direct chain invocation
-    response, metadata = await invoke_structured_with_recovery(
-        llm=llm,
-        prompt_value=messages,
-        schema_model=SupervisorDecision
-    )
-    
-    next_agent = response.next_agent
-    
-    # Log the decision for debugging/visibility
-    logger.info(f"Supervisor Reasoning: {response.reasoning}")
-    logger.info(f"Supervisor Instructions: {response.instructions}")
-    logger.info(f"Supervisor routed to: {next_agent}")
-    
-    if metadata:
-        logger.info(f"Supervisor output recovered via: {metadata}")
-    
-    # We return the route AND the instructions to the state
-    return {
-        "next": next_agent,
-        "supervisor_instructions": response.instructions,
-        "node_visits": node_visits,
-        # We append the Supervisor's thought process to the history so it persists
-        "messages": [HumanMessage(content=f"**Supervisor Decision:**\n*Reasoning:* {response.reasoning}\n*Instructions:* {response.instructions}")]
-    }
+    try:
+        # Use the recovery helper instead of direct chain invocation
+        response, metadata = await invoke_structured_with_recovery(
+            llm=llm,
+            prompt_value=messages,
+            schema_model=SupervisorDecision
+        )
+        
+        next_agent = response.next_agent
+        
+        # Log the decision for debugging/visibility
+        logger.info(f"Supervisor Reasoning: {response.reasoning}")
+        logger.info(f"Supervisor Instructions: {response.instructions}")
+        logger.info(f"Supervisor routed to: {next_agent}")
+        
+        if metadata:
+            logger.info(f"Supervisor output recovered via: {metadata}")
+        
+        # We return the route AND the instructions to the state
+        return {
+            "next": next_agent,
+            "supervisor_instructions": response.instructions,
+            "node_visits": node_visits,
+            # We append the Supervisor's thought process to the history so it persists
+            "messages": [HumanMessage(content=f"**Supervisor Decision:**\n*Reasoning:* {response.reasoning}\n*Instructions:* {response.instructions}")]
+        }
+    except Exception as e:
+        logger.error(f"Error in Supervisor node: {e}", exc_info=True)
+        return {
+            "next": Nodes.REPORTER,
+            "node_visits": node_visits,
+            "messages": [SystemMessage(content=f"Supervisor encountered a critical error: {str(e)}. Terminating workflow.")]
+        }

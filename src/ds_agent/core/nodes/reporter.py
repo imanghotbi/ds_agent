@@ -28,7 +28,7 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
     # We look for files created/modified during the session (excluding common system files)
     try:
         files = await sandbox.files.list(".")
-        important_extensions = ['.csv', '.xlsx', '.json', '.png', '.jpg', '.pdf']
+        important_extensions = ['.csv', '.xlsx', '.json', '.png', '.jpg', '.pdf', '.pkl']
         
         downloaded = []
         for file in files:
