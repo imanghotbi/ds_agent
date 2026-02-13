@@ -15,6 +15,10 @@ Your goal is to orchestrate a data science project by delegating tasks to your t
 - **storyteller**: (Optional) Synthesizes results into a coherent narrative with key insights.
 - **reporter**: (Final Step) Downloads files and saves the notebook. Call this ONLY when the *entire* project is done.
 
+### DOCUMENTATION
+- **STORYTELLING**: The `storyteller` MUST use the `create_markdown` tool to synthesize the final narrative in the notebook.
+- **INTERMEDIATE STEPS**: For other agents (`cleaner`, `eda`, etc.), using `create_markdown` to document steps and findings is **optional but highly encouraged** to make the final notebook professional and readable.
+
 ### STANDARD WORKFLOW
 1. **cleaner**: Load and fix data (`df_cleaned`).
 2. **eda**: Understand the data distribution.
@@ -108,6 +112,7 @@ ENVIRONMENT:
 ### INSTRUCTIONS
 - Review the entire project history.
 - Summarize key findings from cleaning, EDA, and modeling.
+- **CRITICAL**: Use the `create_markdown` tool to write the final data story directly into the notebook. Use headers, bullet points, and clear formatting.
 - Generate high-level "Executive Summary" plots if missing.
 - **CRITICAL**: If you generate new summary plots, save them with unique names (e.g., `executive_summary_sales.png`).
 - Explain the business impact of the model performance.

@@ -12,6 +12,9 @@ class RunPythonInput(BaseModel):
 class RunShellInput(BaseModel):
     command: str = Field(description="The shell command to execute.")
 
+class CreateMarkdownInput(BaseModel):
+    content: str = Field(description="The markdown content to add to the notebook. Use this for titles, explanations, and summarizing findings in the generated notebook.")
+
 class DownloadFileInput(BaseModel):
     remote_path: str = Field(description="The absolute path to the file in the sandbox (e.g., '/home/user/cleaned_data.csv').")
     local_filename: Optional[str] = Field(description="The name to save the file as locally. If not provided, the remote filename will be used.", default=None)
@@ -169,6 +172,19 @@ class E2BTools:
         except Exception as e:
             return f"Status: Error\nOutput: Failed to download file - {str(e)}"
 
+    async def create_markdown(self, content: str) -> str:
+        """
+        Adds a markdown cell to the notebook.
+        """
+        cell_data = {
+            'cell_type': 'markdown',
+            'source': content,
+            'outputs': []
+        }
+        if self.update_state_callback:
+            self.update_state_callback(cell_data)
+        return "Status: Success\nMarkdown cell added to the notebook."
+
     def get_tools(self) -> List[StructuredTool]:
         return [
             StructuredTool.from_function(
@@ -176,6 +192,12 @@ class E2BTools:
                 name="run_python",
                 description="Executes Python code in a persistent Jupyter kernel. Use this for data analysis, visualization, and variable definition.",
                 args_schema=RunPythonInput
+            ),
+            StructuredTool.from_function(
+                coroutine=self.create_markdown,
+                name="create_markdown",
+                description="Adds a markdown cell to the notebook. Use this for adding titles, descriptions, and analysis narratives to the final .ipynb file.",
+                args_schema=CreateMarkdownInput
             ),
             StructuredTool.from_function(
                 coroutine=self.run_shell,
