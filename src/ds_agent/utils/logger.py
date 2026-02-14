@@ -24,7 +24,7 @@ class LoggerSetup:
         log_level = getattr(logging, log_level_str, logging.INFO)
 
         # 2. Create the Logger
-        self.logger = logging.getLogger("Finance Agent System")
+        self.logger = logging.getLogger("DataScience Agent System")
         self.logger.setLevel(log_level)
 
         # Prevent adding duplicate handlers if script is re-imported

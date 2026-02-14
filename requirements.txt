@@ -6,3 +6,4 @@ pydantic-settings
 langchain-core
 langchain-openai
 langchain-nvidia-ai-endpoints
+chainlit
