@@ -94,6 +94,8 @@ class E2BTools:
         artifacts = []
         outputs = []
         text_results = []
+        seen_image_hashes = set()
+        import hashlib
         
         for result in results:
             data = None
@@ -114,6 +116,12 @@ class E2BTools:
                 continue
             
             if data and mime_type:
+                # Deduplicate within the same result set
+                img_hash = hashlib.md5(data.encode() if isinstance(data, str) else data).hexdigest()
+                if img_hash in seen_image_hashes:
+                    continue
+                seen_image_hashes.add(img_hash)
+
                 outputs.append({
                     'type': 'image',
                     'data': data,

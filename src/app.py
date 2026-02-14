@@ -2,6 +2,8 @@ import os
 import chainlit as cl
 from langchain_core.messages import HumanMessage
 from e2b_code_interpreter import AsyncSandbox
+import base64
+import hashlib
 
 from ds_agent.core.graph import create_graph
 from ds_agent.config import settings, Nodes
@@ -17,6 +19,9 @@ async def start():
     Initialize the E2B sandbox and setup the initial agent state.
     """
     try:
+        # Initialize hash tracking for images
+        cl.user_session.set("displayed_image_hashes", set())
+
         # 1. Initialize E2B Sandbox
         sandbox = await AsyncSandbox.create(
             api_key=settings.e2b_api_key.get_secret_value(),
@@ -41,6 +46,33 @@ async def start():
         logger.error(f"Failed to initialize sandbox: {e}")
         await cl.ErrorMessage(content=f"Failed to initialize E2B sandbox: {str(e)}").send()
 
+async def get_images_from_markdown(content: str, sandbox):
+    """
+    Scans markdown for local image references, downloads them from the sandbox,
+    and returns a list of cl.Image elements.
+    """
+    import re
+    # Matches ![alt](path), ![alt]( <path> ), etc.
+    # Pattern: ![ followed by anything ] followed by ( optional space optional < captured path optional > optional space )
+    pattern = r"!\[.*?\]\(\s*<?(.*?)\s*>?\)"
+    image_matches = re.findall(pattern, content)
+    
+    elements = []
+    for img_path in image_matches:
+        img_path = img_path.strip()
+        if not img_path or img_path.startswith("http"):
+            continue
+            
+        try:
+            logger.info(f"Loading image from sandbox for markdown: {img_path}")
+            img_bytes = await sandbox.files.read(img_path, format="bytes")
+            # The 'name' must match the path in the markdown for Chainlit to link them
+            elements.append(cl.Image(content=img_bytes, name=img_path, display="inline"))
+        except Exception as e:
+            logger.warning(f"Failed to load markdown image {img_path}: {e}")
+            
+    return elements
+
 @cl.on_message
 async def main(message: cl.Message):
     """
@@ -52,6 +84,9 @@ async def main(message: cl.Message):
     if not state or not sandbox:
         await cl.ErrorMessage(content="Session not initialized properly.").send()
         return
+
+    # Reset displayed image hashes for the new turn
+    cl.user_session.set("displayed_image_hashes", set())
 
     # 1. Handle File Uploads
     if message.elements:
@@ -114,10 +149,18 @@ async def main(message: cl.Message):
                             if isinstance(ui_obj, cl.Step):
                                 current_output = ui_obj.output if ui_obj.output else ""
                                 ui_obj.output = (current_output + "\n\n" + last_msg.content).strip()
+                                # Scan for and attach images
+                                elements = await get_images_from_markdown(ui_obj.output, sandbox)
+                                if elements:
+                                    ui_obj.elements = (ui_obj.elements or []) + elements
                                 await ui_obj.update()
                             else:
                                 current_content = ui_obj.content if ui_obj.content else ""
                                 ui_obj.content = (current_content + "\n\n" + last_msg.content).strip()
+                                # Scan for and attach images
+                                elements = await get_images_from_markdown(ui_obj.content, sandbox)
+                                if elements:
+                                    ui_obj.elements = (ui_obj.elements or []) + elements
                                 await ui_obj.update()
 
                         # Handle Tool Calls
@@ -128,20 +171,27 @@ async def main(message: cl.Message):
                                 # Content formatting
                                 if tool_name == "run_python" and "code" in tc['args']:
                                     tool_content = f"```python\n{tc['args']['code']}\n```"
+                                    image_elements = []
                                 elif tool_name == "run_shell" and "command" in tc['args']:
                                     tool_content = f"```bash\n{tc['args']['command']}\n```"
+                                    image_elements = []
                                 elif tool_name == "create_markdown" and "content" in tc['args']:
                                     tool_content = tc['args']['content']
+                                    # Scan tool arguments for images
+                                    image_elements = await get_images_from_markdown(tool_content, sandbox)
                                 else:
                                     tool_content = f"```json\n{str(tc['args'])}\n```"
+                                    image_elements = []
 
                                 # UI Display: Step for Supervisor, Message for others
                                 if node_name == Nodes.SUPERVISOR:
                                     tool_step = cl.Step(name=f"Calling: {tool_name}", parent_id=ui_obj.id)
                                     tool_step.output = tool_content
+                                    if image_elements:
+                                        tool_step.elements = image_elements
                                     await tool_step.send()
                                 else:
-                                    await cl.Message(content=tool_content, author=f"{node_name} (Tool)").send()
+                                    await cl.Message(content=tool_content, author=f"{node_name} (Tool)", elements=image_elements).send()
 
                     if "next" in value and value["next"] != Nodes.FINISH:
                         logger.debug(f"Routing to {value['next']}")
@@ -174,6 +224,45 @@ async def main(message: cl.Message):
                             await tool_res_step.send()
                         else:
                             await cl.Message(content=formatted_content, author=f"{last_worker_node} (Result)").send()
+
+                    # Check for and display images from Jupyter outputs
+                    displayed_hashes = cl.user_session.get("displayed_image_hashes", set())
+
+                    for cell in value.get("notebook_cells", []):
+                        if cell.get("cell_type") == "code":
+                            for output in cell.get("outputs", []):
+                                if output.get("type") == "image":
+                                    try:
+                                        img_data = output.get("data")
+                                        if isinstance(img_data, str):
+                                            # Handle possible base64 padding or prefixes
+                                            if "," in img_data:
+                                                img_data = img_data.split(",")[1]
+                                            img_bytes = base64.b64decode(img_data)
+                                        else:
+                                            img_bytes = img_data
+                                        
+                                        # Deduplicate by hash
+                                        img_hash = hashlib.md5(img_bytes).hexdigest()
+                                        if img_hash in displayed_hashes:
+                                            logger.info("Skipping duplicate image (Jupyter output)")
+                                            continue
+                                        
+                                        displayed_hashes.add(img_hash)
+                                        cl.user_session.set("displayed_image_hashes", displayed_hashes)
+
+                                        image = cl.Image(
+                                            content=img_bytes, 
+                                            name="plot.png", 
+                                            display="inline"
+                                        )
+                                        await cl.Message(
+                                            content="", 
+                                            elements=[image], 
+                                            author=f"{last_worker_node} (Plot)"
+                                        ).send()
+                                    except Exception as img_err:
+                                        logger.error(f"Failed to display image: {img_err}")
 
         # Final Cleanup and Artifact Delivery
         # Find files downloaded by the Reporter
