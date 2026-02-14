@@ -40,7 +40,7 @@ async def start():
         }
         cl.user_session.set("state", state)
 
-        await cl.Message(content="Hello! I'm your Data Science Agent. I have a persistent E2B sandbox ready. How can I help you today? You can upload datasets using the attachment button.").send()
+        await cl.Message(content="سلام! من دستیار علم داده شما هستم. یک محیط مجازی E2B پایدار برای شما آماده است. چطور می‌توانم امروز کمکتان کنم؟ می‌توانید با استفاده از دکمه پیوست، مجموعه داده‌های خود را آپلود کنید.").send()
 
     except Exception as e:
         logger.error(f"Failed to initialize sandbox: {e}")
@@ -94,7 +94,7 @@ async def main(message: cl.Message):
             if isinstance(element, cl.File):
                 filename = element.name
                 
-                await cl.Message(content=f"Uploading `{filename}` to sandbox...").send()
+                await cl.Message(content=f"در حال آپلود `{filename}` به محیط مجازی...").send()
                 
                 # Write to sandbox - read from path as content might be None in some versions
                 if element.path and os.path.exists(element.path):
@@ -109,7 +109,7 @@ async def main(message: cl.Message):
                 
                 # Notify state
                 state["messages"].append(HumanMessage(content=f"[System: User uploaded file '{filename}']"))
-                await cl.Message(content=f"Successfully uploaded `{filename}` to `{state['cwd']}`.").send()
+                await cl.Message(content=f"فایل `{filename}` با موفقیت به مسیر `{state['cwd']}` آپلود شد.").send()
 
     # 2. Process User Prompt
     state["messages"].append(HumanMessage(content=message.content))
