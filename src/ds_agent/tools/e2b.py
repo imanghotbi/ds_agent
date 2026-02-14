@@ -155,8 +155,8 @@ class E2BTools:
             if not local_filename:
                 local_filename = remote_path.split('/')[-1]
             
-            # Use download_file for reliable binary retrieval
-            content = await self.sandbox.download_file(remote_path)
+            # Use sandbox.files.read with format="bytes" for reliable binary retrieval in SDK v2
+            content = await self.sandbox.files.read(remote_path, format="bytes")
             
             # Always write as binary to prevent corruption of images/pickles
             with open(local_filename, 'wb') as f:

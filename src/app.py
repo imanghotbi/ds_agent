@@ -1,6 +1,6 @@
 import os
 import chainlit as cl
-from langchain_core.messages import HumanMessage, BaseMessage
+from langchain_core.messages import HumanMessage
 from e2b_code_interpreter import AsyncSandbox
 
 from ds_agent.core.graph import create_graph
@@ -85,43 +85,65 @@ async def main(message: cl.Message):
     }
 
     # 3. Execute Graph and Stream results
-    active_steps = {} # To track cl.Step instances by node name
+    active_steps = {} # To track cl.Step/Message instances by node name
+    last_worker_node = None # To track which node last called a tool
 
     try:
         async for event in graph.astream(state, config=config):
             for node_name, value in event.items():
-                # Create a step for the node if it doesn't exist
-                if node_name not in active_steps:
-                    step = cl.Step(name=node_name)
-                    active_steps[node_name] = step
-                    await step.send()
+                # Create a UI object for the node if it doesn't exist
+                if node_name not in active_steps and node_name != Nodes.TOOLS:
+                    if node_name == Nodes.SUPERVISOR:
+                        ui_obj = cl.Step(name=node_name,parent_id=cl.context.current_step.id)
+                    else:
+                        ui_obj = cl.Message(content="", author=node_name)
+                    active_steps[node_name] = ui_obj
+                    await ui_obj.send()
                 else:
-                    step = active_steps[node_name]
+                    ui_obj = active_steps.get(node_name)
 
-                # Update step content or send sub-messages
+                # Update UI content or send sub-messages
                 if node_name in [Nodes.CLEANER, Nodes.EDA, Nodes.SUPERVISOR, Nodes.TRAINER, Nodes.STORYTELLER, Nodes.REPORTER, Nodes.FEATURE_ENGINEER]:
+                    last_worker_node = node_name
                     if "messages" in value:
                         last_msg = value["messages"][-1]
                         state["messages"].append(last_msg)
                         
                         if last_msg.content:
-                            step.output = last_msg.content
-                            await step.update()
+                            # Accumulate messages
+                            if isinstance(ui_obj, cl.Step):
+                                current_output = ui_obj.output if ui_obj.output else ""
+                                ui_obj.output = (current_output + "\n\n" + last_msg.content).strip()
+                                await ui_obj.update()
+                            else:
+                                current_content = ui_obj.content if ui_obj.content else ""
+                                ui_obj.content = (current_content + "\n\n" + last_msg.content).strip()
+                                await ui_obj.update()
 
-                            # If it's a final summary or story, show it in the main chat clearly
-                            if node_name in [Nodes.STORYTELLER, Nodes.REPORTER]:
-                                await cl.Message(content=last_msg.content).send()
-                        
                         # Handle Tool Calls
                         if hasattr(last_msg, 'tool_calls') and last_msg.tool_calls:
                             for tc in last_msg.tool_calls:
-                                tool_step = cl.Step(name=f"Calling: {tc['name']}", parent_id=step.id)
-                                args_str = str(tc['args'])
-                                tool_step.output = f"```json\n{args_str}\n```"
-                                await tool_step.send()
+                                tool_name = tc['name']
+                                
+                                # Content formatting
+                                if tool_name == "run_python" and "code" in tc['args']:
+                                    tool_content = f"```python\n{tc['args']['code']}\n```"
+                                elif tool_name == "run_shell" and "command" in tc['args']:
+                                    tool_content = f"```bash\n{tc['args']['command']}\n```"
+                                elif tool_name == "create_markdown" and "content" in tc['args']:
+                                    tool_content = tc['args']['content']
+                                else:
+                                    tool_content = f"```json\n{str(tc['args'])}\n```"
+
+                                # UI Display: Step for Supervisor, Message for others
+                                if node_name == Nodes.SUPERVISOR:
+                                    tool_step = cl.Step(name=f"Calling: {tool_name}", parent_id=ui_obj.id)
+                                    tool_step.output = tool_content
+                                    await tool_step.send()
+                                else:
+                                    await cl.Message(content=tool_content, author=f"{node_name} (Tool)").send()
 
                     if "next" in value and value["next"] != Nodes.FINISH:
-                        # Optional: Log routing
                         logger.debug(f"Routing to {value['next']}")
 
                 elif node_name == Nodes.TOOLS:
@@ -130,20 +152,28 @@ async def main(message: cl.Message):
                     
                     # Display tool results
                     for msg in value["messages"]:
-                        # Truncate content for UI
+                        # Skip markdown and download success messages
+                        if msg.name in ["create_markdown", "download_file"]:
+                            continue
+
+                        # Format content
                         display_content = msg.content
                         if len(display_content) > 3000:
-                            display_content = display_content[:3000] + "\n\n... (output truncated for UI) ..."
+                            display_content = display_content[:3000] + "\n\n... (output truncated) ..."
                         
-                        # Use code blocks for python/shell results
                         if msg.name in ["run_python", "run_shell"]:
                             formatted_content = f"```python\n{display_content}\n```"
                         else:
                             formatted_content = display_content
 
-                        tool_res_step = cl.Step(name=f"Result: {msg.name}", parent_id=step.id)
-                        tool_res_step.output = formatted_content
-                        await tool_res_step.send()
+                        # UI Display: Nested Step for Supervisor, Simple Message for others
+                        parent_ui = active_steps.get(last_worker_node)
+                        if last_worker_node == Nodes.SUPERVISOR and parent_ui:
+                            tool_res_step = cl.Step(name=f"Result: {msg.name}", parent_id=parent_ui.id)
+                            tool_res_step.output = formatted_content
+                            await tool_res_step.send()
+                        else:
+                            await cl.Message(content=formatted_content, author=f"{last_worker_node} (Result)").send()
 
         # Final Cleanup and Artifact Delivery
         # Find files downloaded by the Reporter
