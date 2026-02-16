@@ -30,7 +30,7 @@ def get_sandbox(config: RunnableConfig) -> AsyncSandbox:
         raise ValueError("Sandbox not found in config. Ensure 'sandbox' is passed in 'configurable'.")
     return sandbox
 
-async def run_worker(state: AgentState, system_prompt: str, sender_name: str, model_name: Optional[str] = None) -> Dict[str, Any]:
+async def run_worker(state: AgentState, system_prompt: str, sender_name: str, model_name: Optional[str] = None, include_download: bool = False) -> Dict[str, Any]:
     """
     Generic worker execution logic.
     
@@ -39,6 +39,7 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
         system_prompt: The persona/instructions for this worker.
         sender_name: The name of the worker (used for tracking).
         model_name: Optional model name to use for this worker.
+        include_download: Whether to allow the worker to download files (default: False).
         
     Returns:
         Dict update for the state.
@@ -54,13 +55,13 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
         return {
             "next": Nodes.REPORTER,
             "node_visits": node_visits,
-            "messages": [SystemMessage(content=f"System: Node '{sender_name}' reached recursion limit. Terminating workflow.")]
+            "messages": [SystemMessage(content=f"سیستم: عامل '{sender_name}' به حد مجاز تکرار رسید. پایان دادن به جریان کاری.")]
         }
 
     llm = get_llm(model_name=model_name)
     
     # We instantiate tools with None just to get definitions for binding
-    tool_defs = E2BTools(None).get_tools()
+    tool_defs = E2BTools(None).get_tools(include_download=include_download)
     llm_with_tools = llm.bind_tools(tool_defs)
     
     # Apply retries AFTER binding tools
@@ -81,7 +82,7 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
     except Exception as e:
         logger.error(f"Error in node {sender_name}: {e}", exc_info=True)
         # Return a system message describing the error so the agent/supervisor is aware
-        error_message = SystemMessage(content=f"Error executing {sender_name}: {str(e)}")
+        error_message = SystemMessage(content=f"خطا در اجرای {sender_name}: {str(e)}")
         return {"messages": [error_message], "sender": sender_name, "node_visits": node_visits}
 
 def _prompt_to_text(prompt_value: Union[str, List[BaseMessage]]) -> str:

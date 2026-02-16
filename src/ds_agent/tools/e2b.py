@@ -147,7 +147,8 @@ class E2BTools:
 
     async def run_shell(self, command: str) -> str:
         try:
-            result = await self.sandbox.commands.run(command, timeout=60) 
+            # Increased timeout for long-running shell commands
+            result = await self.sandbox.commands.run(command, timeout=300) 
             output = f"stdout: {result.stdout}\nstderr: {result.stderr}"
             if result.error:
                  output += f"\nError: {result.error}"
@@ -187,30 +188,39 @@ class E2BTools:
             self.update_state_callback(cell_data)
         return "Status: Success\nMarkdown cell added to the notebook."
 
-    def get_tools(self) -> List[StructuredTool]:
-        return [
-            StructuredTool.from_function(
-                coroutine=self.run_python,
-                name="run_python",
-                description="Executes Python code in a persistent Jupyter kernel. Use this for data analysis, visualization, and variable definition.",
-                args_schema=RunPythonInput
-            ),
-            StructuredTool.from_function(
-                coroutine=self.create_markdown,
-                name="create_markdown",
-                description="Adds a markdown cell to the notebook. Use this for adding titles, descriptions, and analysis narratives to the final .ipynb file.",
-                args_schema=CreateMarkdownInput
-            ),
-            StructuredTool.from_function(
-                coroutine=self.run_shell,
-                name="run_shell",
-                description="Executes a shell command (e.g., pip install, ls, unzip). Use this for system operations.",
-                args_schema=RunShellInput
-            ),
-            StructuredTool.from_function(
-                coroutine=self.download_file,
-                name="download_file",
-                description="Downloads a file from the sandbox to the local machine. Use this to provide the user with final data files, reports, or generated assets.",
-                args_schema=DownloadFileInput
-            )
-        ]
+    def get_tools(self, include_download: bool = True) -> List[StructuredTool]:
+            tools = [
+                StructuredTool.from_function(
+                    coroutine=self.run_python,
+                    name="run_python",
+                    description="Executes Python code in a persistent Jupyter kernel. Use this for data analysis, visualization, and variable definition.",
+                    args_schema=RunPythonInput
+                ),
+                StructuredTool.from_function(
+                    coroutine=self.create_markdown,
+                    name="create_markdown",
+                    description="Adds a markdown cell to the notebook. Use this for adding titles, descriptions, and analysis narratives to the final .ipynb file.",
+                    args_schema=CreateMarkdownInput
+                ),
+                StructuredTool.from_function(
+                    coroutine=self.run_shell,
+                    name="run_shell",
+                    description="Executes a shell command (e.g., pip install, ls, unzip). Use this for system operations.",
+                    args_schema=RunShellInput
+                )
+            ]
+
+            if include_download:
+                tools.append(
+                    StructuredTool.from_function(
+                        coroutine=self.download_file,
+                        name="download_file",
+                        description="Downloads a file from the sandbox to the local machine. Use this to provide the user with final data files, reports, or generated assets.",
+                        args_schema=DownloadFileInput
+                    )
+
+                )
+
+                
+
+            return tools

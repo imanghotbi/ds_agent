@@ -31,7 +31,7 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
         return {
             "next": Nodes.REPORTER,
             "node_visits": node_visits,
-            "messages": [SystemMessage(content="System: Supervisor reached recursion limit. Terminating workflow.")]
+            "messages": [SystemMessage(content="سیستم: ناظر به حد مجاز تکرار رسید. پایان دادن به جریان کاری.")]
         }
 
     llm = get_llm(model_name=settings.supervisor_model_name)
@@ -62,12 +62,12 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
             "supervisor_instructions": response.instructions,
             "node_visits": node_visits,
             # We append the Supervisor's thought process to the history so it persists
-            "messages": [HumanMessage(content=f"**Supervisor Decision:**\n*Reasoning:* {response.reasoning}\n*Instructions:* {response.instructions}")]
+            "messages": [HumanMessage(content=f"**تصمیم ناظر:**\n*استدلال:* {response.reasoning}\n*دستورالعمل‌ها:* {response.instructions}")]
         }
     except Exception as e:
         logger.error(f"Error in Supervisor node: {e}", exc_info=True)
         return {
             "next": Nodes.REPORTER,
             "node_visits": node_visits,
-            "messages": [SystemMessage(content=f"Supervisor encountered a critical error: {str(e)}. Terminating workflow.")]
+            "messages": [SystemMessage(content=f"ناظر با یک خطای بحرانی مواجه شد: {str(e)}. پایان دادن به جریان کاری.")]
         }

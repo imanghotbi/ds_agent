@@ -59,10 +59,9 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
 
     # 3. Create Final Summary Message
     summary = (
-        "### Workflow Completed Successfully! ###\n\n"
-        f"**1. Notebook Exported:** `{notebook_path}`\n"
-        f"**2. Files Downloaded:** {', '.join([f'`{d}`' for d in downloaded]) if downloaded else 'None'}\n\n"
-        "All variables and files are preserved in the shared sandbox for this session."
+        "### جریان کار با موفقیت به اتمام رسید! ###\n\n"
+        f"**1. نوت بوک ایجاد شده:** `{notebook_path}`\n"
+        f"**2. فایل خروجی:** {', '.join([f'`{d}`' for d in downloaded]) if downloaded else 'هیچکدام'}\n\n"
     )
     
     return {

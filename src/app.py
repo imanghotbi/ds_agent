@@ -44,7 +44,7 @@ async def start():
 
     except Exception as e:
         logger.error(f"Failed to initialize sandbox: {e}")
-        await cl.ErrorMessage(content=f"Failed to initialize E2B sandbox: {str(e)}").send()
+        await cl.ErrorMessage(content=f"خطا در راه‌اندازی محیط مجازی E2B: {str(e)}").send()
 
 async def get_images_from_markdown(content: str, sandbox):
     """
@@ -82,7 +82,7 @@ async def main(message: cl.Message):
     sandbox = cl.user_session.get("sandbox")
 
     if not state or not sandbox:
-        await cl.ErrorMessage(content="Session not initialized properly.").send()
+        await cl.ErrorMessage(content="نشست (Session) به درستی راه‌اندازی نشده است.").send()
         return
 
     # Reset displayed image hashes for the new turn
@@ -104,7 +104,7 @@ async def main(message: cl.Message):
                 elif element.content:
                     await sandbox.files.write(filename, element.content)
                 else:
-                    await cl.ErrorMessage(content=f"Could not read content of `{filename}`").send()
+                    await cl.ErrorMessage(content=f"عدم امکان خواندن محتوای فایل `{filename}`").send()
                     continue
                 
                 # Notify state
@@ -278,11 +278,11 @@ async def main(message: cl.Message):
                     files_to_send.append(cl.File(path=f, name=f))
         
         if files_to_send:
-            await cl.Message(content="### Download Session Artifacts ###", elements=files_to_send).send()
+            await cl.Message(content="### دانلود خروجی‌های نشست ###", elements=files_to_send).send()
 
     except Exception as e:
         logger.error(f"Error during graph execution: {e}", exc_info=True)
-        await cl.ErrorMessage(content=f"An error occurred: {str(e)}").send()
+        await cl.ErrorMessage(content=f"یک خطا رخ داد: {str(e)}").send()
 
 @cl.on_chat_end
 async def end(*args):
@@ -295,7 +295,7 @@ async def end(*args):
     if state and state.get("notebook_cells"):
         try:
             filename = save_session_to_ipynb(state, "chainlit_analysis.ipynb")
-            await cl.Message(content=f"Session exported to `{filename}`").send()
+            await cl.Message(content=f"نشست با موفقیت در فایل `{filename}` ذخیره شد.").send()
         except Exception as e:
             logger.error(f"Failed to export notebook: {e}")
 

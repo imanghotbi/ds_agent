@@ -46,9 +46,9 @@ async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]
                 output = await tool_instance.ainvoke(tool_args)
             except Exception as e:
                 logger.error(f"Error executing {tool_name}: {e}", exc_info=True)
-                output = f"Error executing tool {tool_name}: {str(e)}"
+                output = f"خطا در اجرای ابزار {tool_name}: {str(e)}"
         else:
-            output = f"Error: Tool '{tool_name}' not found"
+            output = f"خطا: ابزار '{tool_name}' یافت نشد"
             
         if isinstance(output, dict) and "text" in output:
             content = output["text"]
