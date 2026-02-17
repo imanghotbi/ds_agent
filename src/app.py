@@ -19,6 +19,12 @@ async def start():
     Initialize the E2B sandbox and setup the initial agent state.
     """
     try:
+        session_id = cl.context.session.id
+        logger.info(f"New chat session started. Session ID: {session_id}")
+    except Exception as e:
+        logger.warning(f"Could not get session ID on start: {e}")
+    
+    try:
         # Initialize hash tracking for images
         cl.user_session.set("displayed_image_hashes", set())
 
@@ -50,24 +56,51 @@ async def get_images_from_markdown(content: str, sandbox):
     """
     Scans markdown for local image references, downloads them from the sandbox,
     and returns a list of cl.Image elements.
+    Uses a session-based cache to avoid redundant downloads.
     """
     import re
     # Matches ![alt](path), ![alt]( <path> ), etc.
-    # Pattern: ![ followed by anything ] followed by ( optional space optional < captured path optional > optional space )
     pattern = r"!\[.*?\]\(\s*<?(.*?)\s*>?\)"
     image_matches = re.findall(pattern, content)
     
+    # Use session cache to avoid redundant downloads from sandbox
+    cache = cl.user_session.get("image_cache", {})
+    
     elements = []
+    seen_paths = set()
+    displayed_hashes = cl.user_session.get("displayed_image_hashes", set())
+
     for img_path in image_matches:
         img_path = img_path.strip()
-        if not img_path or img_path.startswith("http"):
+        if not img_path or img_path.startswith("http") or img_path in seen_paths:
             continue
             
         try:
-            logger.info(f"Loading image from sandbox for markdown: {img_path}")
-            img_bytes = await sandbox.files.read(img_path, format="bytes")
-            # The 'name' must match the path in the markdown for Chainlit to link them
-            elements.append(cl.Image(content=img_bytes, name=img_path, display="inline"))
+            if img_path in cache:
+                img_bytes = cache[img_path]
+            else:
+                logger.info(f"Loading image from sandbox for markdown: {img_path}")
+                img_bytes = await sandbox.files.read(img_path, format="bytes")
+                cache[img_path] = img_bytes
+                cl.user_session.set("image_cache", cache)
+            
+            # Deduplicate by content hash
+            img_hash = hashlib.md5(img_bytes).hexdigest()
+            
+            # If we've already shown this image hash in this TURN (as a standalone plot or in another message)
+            # we set display="hidden". This allows markdown references to work without 
+            # showing the image again at the bottom of the message.
+            is_duplicate = img_hash in displayed_hashes
+            
+            displayed_hashes.add(img_hash)
+            cl.user_session.set("displayed_image_hashes", displayed_hashes)
+
+            elements.append(cl.Image(
+                content=img_bytes, 
+                name=img_path, 
+                display="hidden" if is_duplicate else "inline"
+            ))
+            seen_paths.add(img_path)
         except Exception as e:
             logger.warning(f"Failed to load markdown image {img_path}: {e}")
             
@@ -78,6 +111,7 @@ async def main(message: cl.Message):
     """
     Process incoming messages and run the agent graph.
     """
+    logger.info(f"Received message: {message.content[:50]}...")
     state = cl.user_session.get("state")
     sandbox = cl.user_session.get("sandbox")
 
@@ -85,14 +119,16 @@ async def main(message: cl.Message):
         await cl.ErrorMessage(content="نشست (Session) به درستی راه‌اندازی نشده است.").send()
         return
 
-    # Reset displayed image hashes for the new turn
+    # Reset displayed image hashes and cache for the new turn
     cl.user_session.set("displayed_image_hashes", set())
+    cl.user_session.set("image_cache", {})
 
     # 1. Handle File Uploads
     if message.elements:
         for element in message.elements:
             if isinstance(element, cl.File):
                 filename = element.name
+                logger.info(f"User is uploading file: {filename}")
                 
                 await cl.Message(content=f"در حال آپلود `{filename}` به محیط مجازی...").send()
                 
@@ -123,6 +159,7 @@ async def main(message: cl.Message):
     active_steps = {} # To track cl.Step/Message instances by node name
     last_worker_node = None # To track which node last called a tool
 
+    logger.info("Starting graph execution...")
     try:
         async for event in graph.astream(state, config=config):
             for node_name, value in event.items():
@@ -150,17 +187,13 @@ async def main(message: cl.Message):
                                 current_output = ui_obj.output if ui_obj.output else ""
                                 ui_obj.output = (current_output + "\n\n" + last_msg.content).strip()
                                 # Scan for and attach images
-                                elements = await get_images_from_markdown(ui_obj.output, sandbox)
-                                if elements:
-                                    ui_obj.elements = (ui_obj.elements or []) + elements
+                                ui_obj.elements = await get_images_from_markdown(ui_obj.output, sandbox)
                                 await ui_obj.update()
                             else:
                                 current_content = ui_obj.content if ui_obj.content else ""
                                 ui_obj.content = (current_content + "\n\n" + last_msg.content).strip()
                                 # Scan for and attach images
-                                elements = await get_images_from_markdown(ui_obj.content, sandbox)
-                                if elements:
-                                    ui_obj.elements = (ui_obj.elements or []) + elements
+                                ui_obj.elements = await get_images_from_markdown(ui_obj.content, sandbox)
                                 await ui_obj.update()
 
                         # Handle Tool Calls
@@ -279,6 +312,8 @@ async def main(message: cl.Message):
         
         if files_to_send:
             await cl.Message(content="### دانلود خروجی‌های نشست ###", elements=files_to_send).send()
+
+        logger.info("Graph execution completed successfully.")
 
     except Exception as e:
         logger.error(f"Error during graph execution: {e}", exc_info=True)
