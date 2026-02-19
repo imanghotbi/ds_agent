@@ -4,7 +4,7 @@ from langchain_core.messages import AIMessage
 from langchain_core.runnables import RunnableConfig
 
 from ds_agent.core.state import AgentState
-from ds_agent.config import Nodes
+from ds_agent.config import Nodes  , settings
 from ds_agent.utils.helpers import get_sandbox
 from ds_agent.utils.logger import logger
 from ds_agent.utils.notebook import save_session_to_ipynb
@@ -50,7 +50,7 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
         downloaded = []
 
     # 2. Export Notebook
-    notebook_path = "final_analysis.ipynb"
+    notebook_path = f"{settings.local_artifacts_dir}/final_analysis.ipynb"
     try:
         notebook_path = save_session_to_ipynb(state, notebook_path)
     except Exception as e:
@@ -60,7 +60,7 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
     # 3. Create Final Summary Message
     summary = (
         "### جریان کار با موفقیت به اتمام رسید! ###\n\n"
-        f"**1. نوت بوک ایجاد شده:** `{notebook_path}`\n"
+        f"**1. نوت بوک ایجاد شده:** `final_analysis.ipynb`\n"
         f"**2. فایل خروجی:** {', '.join([f'`{d}`' for d in downloaded]) if downloaded else 'هیچکدام'}\n\n"
     )
     

@@ -31,6 +31,7 @@ class Settings(BaseSettings):
     storyteller_model_name: str = "qwen/qwen3-235b-a22b"
     reporter_model_name: str = "qwen/qwen3-235b-a22b"
     temperature: float = 0.0
+
     log_level: str = "INFO"
     log_file_path: str = "./logs/app.log"
     log_max_bytes:int = 30 * 1024 * 1024 #30 MB
@@ -38,6 +39,8 @@ class Settings(BaseSettings):
     sandbox_timeout: int = 3600
     max_retries: int = 3
     node_recursion_limit: int = 50
+
+    local_artifacts_dir: str = "public/downloads"
 
 # Create a singleton instance
 settings = Settings()

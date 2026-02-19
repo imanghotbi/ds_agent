@@ -1,5 +1,5 @@
+import os
 import nbformat
-from typing import Dict, List, Any
 from ds_agent.core.state import AgentState
 
 def save_session_to_ipynb(state: AgentState, filename: str = 'analysis.ipynb') -> str:
@@ -65,6 +65,10 @@ def save_session_to_ipynb(state: AgentState, filename: str = 'analysis.ipynb') -
 
     nb.cells = cells
     
+    output_dir = os.path.dirname(filename)
+    if output_dir:
+        os.makedirs(output_dir, exist_ok=True)
+
     with open(filename, 'w', encoding='utf-8') as f:
         nbformat.write(nb, f)
         

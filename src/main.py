@@ -121,7 +121,7 @@ async def main():
         if state["notebook_cells"]:
             logger.info("Exporting session to notebook...")
             try:
-                filename = save_session_to_ipynb(state, "analysis.ipynb")
+                filename = save_session_to_ipynb(state, f"{settings.local_artifacts_dir}/analysis.ipynb")
                 print(f"\nNotebook exported to {filename}")
             except Exception as e:
                 logger.error(f"Failed to save notebook: {e}")

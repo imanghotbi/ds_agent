@@ -57,6 +57,8 @@ async def get_images_from_markdown(content: str, sandbox):
     Scans markdown for local image references, downloads them from the sandbox,
     and returns a list of cl.Image elements.
     Uses a session-based cache to avoid redundant downloads.
+    Deduplicates by both MD5 hash (content) and filename to prevent double-display
+    with notebook-cell images that share the same file bytes.
     """
     import re
     # Matches ![alt](path), ![alt]( <path> ), etc.
@@ -69,37 +71,53 @@ async def get_images_from_markdown(content: str, sandbox):
     elements = []
     seen_paths = set()
     displayed_hashes = cl.user_session.get("displayed_image_hashes", set())
+    displayed_filenames = cl.user_session.get("displayed_image_filenames", set())
 
     for img_path in image_matches:
         img_path = img_path.strip()
         if not img_path or img_path.startswith("http") or img_path in seen_paths:
             continue
+
+        img_basename = os.path.basename(img_path)
+
+        # Filename-based dedup: skip if the same file was already shown via notebook-cells
+        if img_basename in displayed_filenames:
+            logger.info(f"Skipping markdown image (already shown via notebook cell): {img_basename}")
+            seen_paths.add(img_path)
+            continue
+            
+        # Strip local artifacts prefix if present, as files are at root in sandbox
+        sandbox_path = img_path
+        prefix = settings.local_artifacts_dir.strip("/")
+        if sandbox_path.startswith(f"{prefix}/"):
+            sandbox_path = sandbox_path.replace(f"{prefix}/", "")
+        elif sandbox_path.startswith(f"/{prefix}/"):
+            sandbox_path = sandbox_path.replace(f"/{prefix}/", "")
             
         try:
             if img_path in cache:
                 img_bytes = cache[img_path]
             else:
-                logger.info(f"Loading image from sandbox for markdown: {img_path}")
-                img_bytes = await sandbox.files.read(img_path, format="bytes")
+                logger.info(f"Loading image from sandbox for markdown: {sandbox_path}")
+                img_bytes = await sandbox.files.read(sandbox_path, format="bytes")
                 cache[img_path] = img_bytes
                 cl.user_session.set("image_cache", cache)
             
-            # Deduplicate by content hash
+            # Hash-based dedup (secondary guard)
             img_hash = hashlib.md5(img_bytes).hexdigest()
-            
-            # If we've already shown this image hash in this TURN (as a standalone plot or in another message)
-            # we set display="hidden". This allows markdown references to work without 
-            # showing the image again at the bottom of the message.
             is_duplicate = img_hash in displayed_hashes
-            
-            displayed_hashes.add(img_hash)
-            cl.user_session.set("displayed_image_hashes", displayed_hashes)
 
-            elements.append(cl.Image(
-                content=img_bytes, 
-                name=img_path, 
-                display="hidden" if is_duplicate else "inline"
-            ))
+            displayed_hashes.add(img_hash)
+            displayed_filenames.add(img_basename)
+            cl.user_session.set("displayed_image_hashes", displayed_hashes)
+            cl.user_session.set("displayed_image_filenames", displayed_filenames)
+
+            if not is_duplicate:
+                elements.append(cl.Image(
+                    content=img_bytes, 
+                    name=img_path, 
+                    display="inline"
+                ))
             seen_paths.add(img_path)
         except Exception as e:
             logger.warning(f"Failed to load markdown image {img_path}: {e}")
@@ -119,8 +137,9 @@ async def main(message: cl.Message):
         await cl.ErrorMessage(content="نشست (Session) به درستی راه‌اندازی نشده است.").send()
         return
 
-    # Reset displayed image hashes and cache for the new turn
+    # Reset displayed image hashes, filenames, and cache for the new turn
     cl.user_session.set("displayed_image_hashes", set())
+    cl.user_session.set("displayed_image_filenames", set())
     cl.user_session.set("image_cache", {})
 
     # 1. Handle File Uploads
@@ -260,11 +279,19 @@ async def main(message: cl.Message):
 
                     # Check for and display images from Jupyter outputs
                     displayed_hashes = cl.user_session.get("displayed_image_hashes", set())
+                    displayed_filenames = cl.user_session.get("displayed_image_filenames", set())
 
                     for cell in value.get("notebook_cells", []):
                         if cell.get("cell_type") == "code":
                             for output in cell.get("outputs", []):
                                 if output.get("type") == "image":
+                                    filename = output.get("filename")  # set by e2b.py for file-based outputs
+
+                                    # Filename-based dedup (primary): skip if already shown via markdown
+                                    if filename and filename in displayed_filenames:
+                                        logger.info(f"Skipping duplicate notebook-cell image (already shown via markdown): {filename}")
+                                        continue
+
                                     try:
                                         img_data = output.get("data")
                                         if isinstance(img_data, str):
@@ -275,18 +302,21 @@ async def main(message: cl.Message):
                                         else:
                                             img_bytes = img_data
                                         
-                                        # Deduplicate by hash
+                                        # Hash-based dedup (secondary guard)
                                         img_hash = hashlib.md5(img_bytes).hexdigest()
                                         if img_hash in displayed_hashes:
-                                            logger.info("Skipping duplicate image (Jupyter output)")
+                                            logger.info("Skipping duplicate image (Jupyter output, hash match)")
                                             continue
                                         
                                         displayed_hashes.add(img_hash)
+                                        if filename:
+                                            displayed_filenames.add(filename)
                                         cl.user_session.set("displayed_image_hashes", displayed_hashes)
+                                        cl.user_session.set("displayed_image_filenames", displayed_filenames)
 
                                         image = cl.Image(
                                             content=img_bytes, 
-                                            name="plot.png", 
+                                            name=filename or "plot.png",
                                             display="inline"
                                         )
                                         await cl.Message(
@@ -302,13 +332,18 @@ async def main(message: cl.Message):
         important_extensions = ['.csv', '.xlsx', '.json', '.png', '.jpg', '.pdf', '.pkl', '.ipynb']
         files_to_send = []
         
-        # Search current local directory for artifacts
+        # Search local artifacts directory for generated files
         import time
-        for f in os.listdir("."):
-            if any(f.endswith(ext) for ext in important_extensions):
+        if os.path.isdir(settings.local_artifacts_dir):
+            for f in os.listdir(settings.local_artifacts_dir):
+                full_path = os.path.join(settings.local_artifacts_dir, f)
+                if not os.path.isfile(full_path):
+                    continue
+                if not any(f.endswith(ext) for ext in important_extensions):
+                    continue
                 # Basic heuristic: files modified in the last 5 minutes are likely artifacts
-                if time.time() - os.path.getmtime(f) < 300:
-                    files_to_send.append(cl.File(path=f, name=f))
+                if time.time() - os.path.getmtime(full_path) < 300:
+                    files_to_send.append(cl.File(path=full_path, name=f))
         
         if files_to_send:
             await cl.Message(content="### دانلود خروجی‌های نشست ###", elements=files_to_send).send()
@@ -317,7 +352,7 @@ async def main(message: cl.Message):
 
     except Exception as e:
         logger.error(f"Error during graph execution: {e}", exc_info=True)
-        await cl.ErrorMessage(content=f"یک خطا رخ داد: {str(e)}").send()
+        await cl.ErrorMessage(content=f"ÛŒÚ© Ø®Ø·Ø§ Ø±Ø® Ø¯Ø§Ø¯: {str(e)}").send()
 
 @cl.on_chat_end
 async def end(*args):
@@ -329,7 +364,7 @@ async def end(*args):
 
     if state and state.get("notebook_cells"):
         try:
-            filename = save_session_to_ipynb(state, "chainlit_analysis.ipynb")
+            filename = save_session_to_ipynb(state, f"{settings.local_artifacts_dir}/chainlit_analysis.ipynb")
             await cl.Message(content=f"نشست با موفقیت در فایل `{filename}` ذخیره شد.").send()
         except Exception as e:
             logger.error(f"Failed to export notebook: {e}")

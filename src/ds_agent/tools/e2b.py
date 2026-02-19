@@ -1,10 +1,14 @@
 import base64
-import json
+import hashlib
 import os
+import uuid
 from typing import List, Optional, Dict, Any, Union, Tuple
 from pydantic import BaseModel, Field
 from langchain_core.tools import tool, StructuredTool
 from e2b_code_interpreter import AsyncSandbox
+
+from ds_agent.config import settings
+from ds_agent.utils.logger import logger
 
 class RunPythonInput(BaseModel):
     code: str = Field(description="The Python code to execute.")
@@ -33,17 +37,65 @@ class E2BTools:
         """
         Executes Python code in a persistent Jupyter kernel.
         Captures stdout, stderr, and images (plots).
+        Automatically downloads any new image files created to the local artifacts directory.
+
+        KEY DESIGN: Image outputs stored in cell_data use the raw bytes read directly from
+        the sandbox file system (not Jupyter's inline capture). This guarantees the MD5 hash
+        of a notebook-cell image is identical to the hash produced by sandbox.files.read(),
+        which is what get_images_from_markdown uses — eliminating duplicate display.
         """
         try:
+            # Get initial file list to track new creations or modifications
+            try:
+                initial_files = {f.name: f.modified_time for f in await self.sandbox.files.list(".")}
+            except:
+                initial_files = {}
+
             execution = await self.sandbox.run_code(code)
-            
+
+            # Process logs first so `logs` is defined before we append to it
             outputs, logs = self._process_logs(execution.logs)
-            artifacts, media_outputs, text_results = self._process_results(execution.results)
-            
-            outputs.extend(media_outputs)
-            # Add the text results (last expression values) to the logs returned to the LLM
+
+            # Detect new/updated image files; read their bytes once for both local
+            # save and notebook-cell output (ensures byte-level consistency).
+            file_image_outputs: List[Dict[str, Any]] = []
+            image_exts = ('.png', '.jpg', '.jpeg', '.svg')
+            try:
+                final_files = await self.sandbox.files.list(".")
+                for f in final_files:
+                    is_new = f.name not in initial_files
+                    is_updated = not is_new and f.modified_time > initial_files[f.name]
+                    if (is_new or is_updated) and f.name.lower().endswith(image_exts):
+                        logger.info(f"Detected {'new' if is_new else 'updated'} image file: {f.name}. Downloading...")
+                        # Read once — use the same bytes for both local save and cell output
+                        file_bytes = await self.sandbox.files.read(f.name, format="bytes")
+                        os.makedirs(settings.local_artifacts_dir, exist_ok=True)
+                        local_path = os.path.join(settings.local_artifacts_dir, f.name)
+                        with open(local_path, "wb") as fp:
+                            fp.write(file_bytes)
+                        file_image_outputs.append({
+                            "type": "image",
+                            "data": file_bytes,       # raw bytes — NOT base64
+                            "mime_type": "image/png",
+                            "filename": f.name,       # used for filename-based dedup in app.py
+                        })
+                        logs.append(f"System: Automatically downloaded {f.name} to local artifacts.")
+            except Exception as e:
+                logger.warning(f"Failed to auto-download new/updated files: {e}")
+
+            # Process execution results (text + inline Jupyter image captures)
+            _, media_outputs, text_results = self._process_results(execution.results)
+
+            if file_image_outputs:
+                # Prefer file-based image outputs so hashes are consistent with
+                # sandbox.files.read() calls made later in get_images_from_markdown.
+                outputs.extend(file_image_outputs)
+            else:
+                # No files written to disk — fall back to Jupyter inline captures
+                outputs.extend(media_outputs)
+
             logs.extend(text_results)
-            
+
             if execution.error:
                 error_output, error_msg = self._process_error(execution.error)
                 logs.append(f"Error: {error_msg}")
@@ -53,22 +105,17 @@ class E2BTools:
                 'cell_type': 'code',
                 'source': code,
                 'outputs': outputs,
-                'execution_count': None
+                'execution_count': None,
             }
 
             if self.update_state_callback:
                 self.update_state_callback(cell_data)
 
-            response_text = self._format_response(logs, artifacts, execution.error)
-            
-            # Filter for image outputs to return to the LLM
+            response_text = self._format_response(logs, [], execution.error)
+
             images = [o for o in outputs if o.get('type') == 'image']
-            
             if images:
-                return {
-                    "text": response_text,
-                    "images": images
-                }
+                return {"text": response_text, "images": images}
             return response_text
 
         except Exception as e:
@@ -95,7 +142,6 @@ class E2BTools:
         outputs = []
         text_results = []
         seen_image_hashes = set()
-        import hashlib
         
         for result in results:
             data = None
@@ -164,14 +210,20 @@ class E2BTools:
             if not local_filename:
                 local_filename = remote_path.split('/')[-1]
             
+            # Ensure local artifacts directory exists
+            os.makedirs(settings.local_artifacts_dir, exist_ok=True)
+            
+            # Use settings.local_artifacts_dir as the base directory
+            local_filepath = os.path.join(settings.local_artifacts_dir, local_filename)
+
             # Use sandbox.files.read with format="bytes" for reliable binary retrieval in SDK v2
             content = await self.sandbox.files.read(remote_path, format="bytes")
             
             # Always write as binary to prevent corruption of images/pickles
-            with open(local_filename, 'wb') as f:
+            with open(local_filepath, 'wb') as f:
                 f.write(content)
                 
-            return f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filename)}"
+            return f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filepath)}"
         except Exception as e:
             return f"Status: Error\nOutput: Failed to download file - {str(e)}"
 
@@ -220,7 +272,5 @@ class E2BTools:
                     )
 
                 )
-
-                
 
             return tools
