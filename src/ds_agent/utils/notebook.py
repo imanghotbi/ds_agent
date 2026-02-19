@@ -1,5 +1,7 @@
 import os
 import nbformat
+import base64 as b64
+
 from ds_agent.core.state import AgentState
 
 def save_session_to_ipynb(state: AgentState, filename: str = 'analysis.ipynb') -> str:
@@ -35,6 +37,10 @@ def save_session_to_ipynb(state: AgentState, filename: str = 'analysis.ipynb') -
                 elif output_type == 'image':
                     image_data = output.get('data')
                     mime_type = output.get('mime_type', 'image/png')
+
+                    if isinstance(image_data, (bytes, bytearray)):
+                        image_data = b64.b64encode(image_data).decode('ascii')
+                        
                     nb_output = nbformat.v4.new_output(
                         output_type='display_data',
                         data={mime_type: image_data}
