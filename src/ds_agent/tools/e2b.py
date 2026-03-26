@@ -37,12 +37,11 @@ class E2BTools:
         """
         Executes Python code in a persistent Jupyter kernel.
         Captures stdout, stderr, and images (plots).
-        Automatically downloads any new image files created to the local artifacts directory.
 
         KEY DESIGN: Image outputs stored in cell_data use the raw bytes read directly from
         the sandbox file system (not Jupyter's inline capture). This guarantees the MD5 hash
         of a notebook-cell image is identical to the hash produced by sandbox.files.read(),
-        which is what get_images_from_markdown uses — eliminating duplicate display.
+        which is what downstream exports use.
         """
         try:
             # Get initial file list to track new creations or modifications
@@ -66,22 +65,17 @@ class E2BTools:
                     is_new = f.name not in initial_files
                     is_updated = not is_new and f.modified_time > initial_files[f.name]
                     if (is_new or is_updated) and f.name.lower().endswith(image_exts):
-                        logger.info(f"Detected {'new' if is_new else 'updated'} image file: {f.name}. Downloading...")
-                        # Read once — use the same bytes for both local save and cell output
+                        logger.info(f"Detected {'new' if is_new else 'updated'} image file: {f.name}.")
                         file_bytes = await self.sandbox.files.read(f.name, format="bytes")
-                        os.makedirs(settings.local_artifacts_dir, exist_ok=True)
-                        local_path = os.path.join(settings.local_artifacts_dir, f.name)
-                        with open(local_path, "wb") as fp:
-                            fp.write(file_bytes)
                         file_image_outputs.append({
                             "type": "image",
                             "data": file_bytes,       # raw bytes — NOT base64
                             "mime_type": "image/png",
                             "filename": f.name,       # used for filename-based dedup in app.py
                         })
-                        logs.append(f"System: Automatically downloaded {f.name} to local artifacts.")
+                        logs.append(f"System: Detected generated image file {f.name}.")
             except Exception as e:
-                logger.warning(f"Failed to auto-download new/updated files: {e}")
+                logger.warning(f"Failed to inspect new/updated files: {e}")
 
             # Process execution results (text + inline Jupyter image captures)
             _, media_outputs, text_results = self._process_results(execution.results)

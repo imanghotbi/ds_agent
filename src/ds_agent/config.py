@@ -1,5 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import SecretStr
+from urllib.parse import quote_plus
 
 class Nodes:
     SUPERVISOR = "supervisor"
@@ -31,6 +32,7 @@ class Settings(BaseSettings):
     storyteller_model_name: str = "qwen/qwen3-235b-a22b"
     reporter_model_name: str = "qwen/qwen3-235b-a22b"
     temperature: float = 0.0
+    max_tokens: int = 10_000
 
     log_level: str = "INFO"
     log_file_path: str = "./logs/app.log"
@@ -41,6 +43,24 @@ class Settings(BaseSettings):
     node_recursion_limit: int = 50
 
     local_artifacts_dir: str = "public/downloads"
+    scenario_dir: str = "scenario"
+
+    mongo_enabled: bool = True
+    mongo_host: str
+    mongo_port: int = 27017
+    mongo_root_user: str
+    mongo_root_password: SecretStr
+    mongo_auth_database: str = "admin"
+    mongo_database: str = "ds_agent"
+    mongo_collection: str = "llm_logs"
+    mongo_logs_timeout_ms: int = 5000
+
+    @property
+    def mongo_uri(self) -> str:
+        username = quote_plus(self.mongo_root_user)
+        password = quote_plus(self.mongo_root_password.get_secret_value())
+        auth_database = quote_plus(self.mongo_auth_database)
+        return f"mongodb://{username}:{password}@{self.mongo_host}:{self.mongo_port}/?authSource={auth_database}"
 
 # Create a singleton instance
 settings = Settings()

@@ -10,27 +10,7 @@ old_factory = logging.getLogRecordFactory()
 
 def record_factory(*args, **kwargs):
     record = old_factory(*args, **kwargs)
-    
-    # Default value
-    record.session_id = "system"
-    
-    try:
-        import chainlit as cl
-        # Try to get session info from Chainlit context
-        # Use get_context() as it's the safest way to check if we are in a task
-        from chainlit.context import get_context
-        ctx = get_context()
-        if ctx and hasattr(ctx, "session") and ctx.session:
-            session = ctx.session
-            session_id = session.id[:8] if session.id else "no-id"
-            user_id = "anon"
-            if session.user and hasattr(session.user, "identifier") and session.user.identifier:
-                user_id = session.user.identifier
-            record.session_id = f"{user_id}:{session_id}"
-    except Exception:
-        # This handles cases where we are outside a Chainlit task context
-        pass
-        
+    record.session_id = getattr(record, "session_id", "system")
     return record
 
 logging.setLogRecordFactory(record_factory)

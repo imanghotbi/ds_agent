@@ -3,11 +3,10 @@ from pydantic import BaseModel, Field
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from ds_agent.core.state import AgentState
-from ds_agent.utils.helpers import get_llm
 from ds_agent.utils.logger import logger
 from ds_agent.config import settings, Nodes
 from ds_agent.core.prompts import SUPERVISOR_PROMPT
-from ds_agent.utils.helpers import get_llm, invoke_structured_with_recovery
+from ds_agent.utils.helpers import build_runtime_context, get_llm, get_session_id, invoke_structured_with_recovery
 
 # --- Models ---
 class SupervisorDecision(BaseModel):
@@ -36,14 +35,17 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
 
     llm = get_llm(model_name=settings.supervisor_model_name)
     
-    messages = [SystemMessage(content=SUPERVISOR_PROMPT)] + state['messages']
+    supervisor_prompt = f"{SUPERVISOR_PROMPT}{build_runtime_context(state)}"
+    messages = [SystemMessage(content=supervisor_prompt)] + state['messages']
     
     try:
         # Use the recovery helper instead of direct chain invocation
         response, metadata = await invoke_structured_with_recovery(
             llm=llm,
             prompt_value=messages,
-            schema_model=SupervisorDecision
+            schema_model=SupervisorDecision,
+            node_name=Nodes.SUPERVISOR,
+            session_id=get_session_id(state=state),
         )
         
         next_agent = response.next_agent

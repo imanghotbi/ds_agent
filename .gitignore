@@ -49,3 +49,4 @@ GEMINI.md
 t.txt
 *.csv
 .files/
+mongo_data/

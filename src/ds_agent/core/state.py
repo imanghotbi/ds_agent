@@ -1,5 +1,5 @@
 import operator
-from typing import List, Dict, Any, TypedDict, Optional, Annotated
+from typing import List, Dict, Any, TypedDict, Annotated
 from langchain_core.messages import BaseMessage
 from langgraph.graph.message import add_messages
 
@@ -25,3 +25,8 @@ class AgentState(TypedDict):
     next: str
     supervisor_instructions: str
     node_visits: Dict[str, int]
+    session_id: str
+    scenario_name: str
+    scenario_path: str
+    output_dir: str
+    sandbox_file_manifest: str

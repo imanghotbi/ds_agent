@@ -1,4 +1,13 @@
-from typing import Dict, Any, List, Optional, Type, Union, Tuple
+import argparse
+import base64
+import json
+import os
+import shlex
+import tempfile
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Dict, Any, List, Optional, Type, Union, Tuple, Iterable
 from pydantic import BaseModel, ValidationError
 from langchain_core.messages import SystemMessage, BaseMessage
 from langchain_core.runnables import RunnableConfig
@@ -9,6 +18,21 @@ from ds_agent.tools.e2b import E2BTools
 from ds_agent.config import settings , Nodes
 from ds_agent.utils.logger import logger 
 from ds_agent.core.llm import LLMFactory
+from ds_agent.utils.mongo_logger import mongo_llm_logger
+
+def parse_scenario_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Run ds-agent scenarios from disk.")
+    parser.add_argument(
+        "--scenario-dir",
+        default=settings.scenario_dir,
+        help="Directory containing numbered scenario folders.",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Re-run scenarios even if metadata marks them as successful.",
+    )
+    return parser.parse_args()
 
 def get_llm(model_name: Optional[str] = None):
     """
@@ -29,6 +53,170 @@ def get_sandbox(config: RunnableConfig) -> AsyncSandbox:
     if not sandbox:
         raise ValueError("Sandbox not found in config. Ensure 'sandbox' is passed in 'configurable'.")
     return sandbox
+
+def get_session_id(state: Optional[AgentState] = None, config: Optional[RunnableConfig] = None) -> str:
+    if config:
+        session_id = config.get("configurable", {}).get("session_id")
+        if session_id:
+            return session_id
+    if state:
+        session_id = state.get("session_id")
+        if session_id:
+            return session_id
+    return "system"
+
+def build_scenario_session_id(folder_name: str) -> str:
+    return f"session_id_{folder_name}_{uuid.uuid4().hex}"
+
+def utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+def write_json_atomic(path: Path, payload: Dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+        handle.flush()
+        os.fsync(handle.fileno())
+        temp_name = handle.name
+    os.replace(temp_name, path)
+
+def write_text_atomic(path: Path, content: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=path.parent, delete=False) as handle:
+        handle.write(content)
+        handle.flush()
+        os.fsync(handle.fileno())
+        temp_name = handle.name
+    os.replace(temp_name, path)
+
+def json_safe(value: Any) -> Any:
+    if isinstance(value, dict):
+        return {str(key): json_safe(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [json_safe(item) for item in value]
+    if isinstance(value, tuple):
+        return [json_safe(item) for item in value]
+    if isinstance(value, bytes):
+        return {
+            "__type__": "base64_bytes",
+            "data": base64.b64encode(value).decode("ascii"),
+        }
+    if isinstance(value, (str, int, float, bool)) or value is None:
+        return value
+    return str(value)
+
+def message_to_dict(message: BaseMessage) -> Dict[str, Any]:
+    payload: Dict[str, Any] = {
+        "type": message.type,
+        "content": message.content,
+    }
+    if getattr(message, "name", None):
+        payload["name"] = message.name
+    if getattr(message, "tool_calls", None):
+        payload["tool_calls"] = message.tool_calls
+    if getattr(message, "tool_call_id", None):
+        payload["tool_call_id"] = message.tool_call_id
+    if getattr(message, "response_metadata", None):
+        payload["response_metadata"] = message.response_metadata
+    if getattr(message, "usage_metadata", None):
+        payload["usage_metadata"] = message.usage_metadata
+    return json_safe(payload)
+
+def serialize_state(state: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "messages": [message_to_dict(message) for message in state.get("messages", [])],
+        "notebook_cells": json_safe(state.get("notebook_cells", [])),
+        "cwd": state.get("cwd", "/home/user"),
+        "next": state.get("next", Nodes.SUPERVISOR),
+        "supervisor_instructions": state.get("supervisor_instructions", ""),
+        "node_visits": state.get("node_visits", {}),
+        "session_id": state.get("session_id", "system"),
+        "scenario_name": state.get("scenario_name", ""),
+        "scenario_path": state.get("scenario_path", ""),
+        "output_dir": state.get("output_dir", ""),
+        "sandbox_file_manifest": state.get("sandbox_file_manifest", ""),
+    }
+
+def append_transcript_line(transcript: List[str], node_name: str, message: BaseMessage) -> None:
+    transcript.append(f"## {node_name}")
+    transcript.append(f"- type: {message.type}")
+    if getattr(message, "name", None):
+        transcript.append(f"- name: {message.name}")
+    if getattr(message, "tool_calls", None):
+        transcript.append(f"- tool_calls: {json.dumps(message.tool_calls, ensure_ascii=False)}")
+    transcript.append("")
+    transcript.append(str(message.content))
+    transcript.append("")
+
+def scenario_directories(root: Path) -> Iterable[Path]:
+    numeric_dirs: List[Path] = []
+    for child in root.iterdir():
+        if child.is_dir() and child.name.isdigit():
+            numeric_dirs.append(child)
+    return sorted(numeric_dirs, key=lambda item: int(item.name))
+
+def load_metadata(path: Path) -> Dict[str, Any]:
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+async def upload_file_to_sandbox(sandbox: AsyncSandbox, local_path: Path, remote_path: str) -> None:
+    remote_dir = os.path.dirname(remote_path)
+    if remote_dir:
+        await sandbox.commands.run(f"mkdir -p {shlex.quote(remote_dir)}", timeout=60)
+    with local_path.open("rb") as handle:
+        await sandbox.files.write(remote_path, handle.read())
+
+async def upload_data_directory_to_sandbox(sandbox: AsyncSandbox, data_dir: Path) -> List[str]:
+    uploaded: List[str] = []
+    for file_path in sorted(path for path in data_dir.rglob("*") if path.is_file()):
+        relative_path = file_path.relative_to(data_dir).as_posix()
+        remote_path = f"data/{relative_path}"
+        await upload_file_to_sandbox(sandbox, file_path, remote_path)
+        uploaded.append(remote_path)
+    return uploaded
+
+def build_sandbox_file_manifest(uploaded_files: List[str]) -> str:
+    if not uploaded_files:
+        return ""
+    return (
+        "The following files are available under the `data/` directory in the sandbox:\n"
+        + "\n".join(uploaded_files)
+    )
+
+def build_runtime_context(state: Dict[str, Any]) -> str:
+    parts: List[str] = []
+    file_manifest = state.get("sandbox_file_manifest", "").strip()
+    if file_manifest:
+        parts.append(file_manifest)
+    if not parts:
+        return ""
+    return "\n\n### RUNTIME CONTEXT ###\n" + "\n\n".join(parts)
+
+def build_initial_state(session_id: str, scenario_dir: Path, output_dir: Path) -> Dict[str, Any]:
+    return {
+        "messages": [],
+        "notebook_cells": [],
+        "cwd": "/home/user",
+        "next": Nodes.SUPERVISOR,
+        "supervisor_instructions": "",
+        "node_visits": {},
+        "session_id": session_id,
+        "scenario_name": scenario_dir.name,
+        "scenario_path": str(scenario_dir),
+        "output_dir": str(output_dir),
+        "sandbox_file_manifest": "",
+    }
+
+async def log_llm_response(node_name: str, session_id: str, response: Any) -> None:
+    await mongo_llm_logger.store_llm_call_log(
+        node_name=node_name,
+        session_id=session_id,
+        response=response,
+    )
 
 async def run_worker(state: AgentState, system_prompt: str, sender_name: str, model_name: Optional[str] = None, include_download: bool = False) -> Dict[str, Any]:
     """
@@ -70,6 +258,9 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
     
     # Inject Supervisor Instructions if available
     instructions = state.get("supervisor_instructions", "")
+    runtime_context = build_runtime_context(state)
+    if runtime_context:
+        system_prompt = f"{system_prompt}{runtime_context}"
     if instructions:
         system_prompt = f"{system_prompt}\n\n### MANAGER INSTRUCTIONS ###\n{instructions}"
     
@@ -78,6 +269,7 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
     
     try:
         response = await llm_with_tools.ainvoke(current_messages)
+        await log_llm_response(sender_name, get_session_id(state=state), response)
         return {"messages": [response], "sender": sender_name, "node_visits": node_visits}
     except Exception as e:
         logger.error(f"Error in node {sender_name}: {e}", exc_info=True)
@@ -97,6 +289,8 @@ async def invoke_structured_with_recovery(
     llm: Any,
     prompt_value: Any,
     schema_model: Type[BaseModel],
+    node_name: str,
+    session_id: str,
     fallback_prompt: Optional[str] = None,
 ) -> Tuple[BaseModel, Optional[Dict[str, str]]]:
     """
@@ -106,13 +300,18 @@ async def invoke_structured_with_recovery(
     try:
         # 1. Primary Attempt: Standard tool/function calling mechanism
         logger.info(f"Attempting structured output for {schema_model.__name__}...")
-        chain = llm.with_structured_output(schema_model)
+        chain = llm.with_structured_output(schema_model, include_raw=True)
         out = await chain.ainvoke(prompt_value)
-        
-        if out is None:
+
+        parsed = out.get("parsed") if isinstance(out, dict) else out
+        raw_response = out.get("raw") if isinstance(out, dict) else None
+        if raw_response is not None:
+            await log_llm_response(node_name, session_id, raw_response)
+
+        if parsed is None:
             raise ValueError("LLM returned None for structured output")
-            
-        return out, None
+
+        return parsed, None
 
     except Exception as e:
         logger.warning(f"Structured output failed ({type(e).__name__}: {e}). Attempting recovery...")
@@ -138,6 +337,7 @@ async def invoke_structured_with_recovery(
         
         try:
             raw_msg = await llm.ainvoke(fix_prompt)
+            await log_llm_response(node_name, session_id, raw_msg)
             raw = raw_msg.content if hasattr(raw_msg, "content") else str(raw_msg)
             
             # Clean common markdown wrappers
@@ -161,6 +361,7 @@ async def invoke_structured_with_recovery(
             final_prompt = f"{fallback_prompt}\n\nCONTEXT:\n{prompt_text}"
             
             raw2_msg = await llm.ainvoke(final_prompt)
+            await log_llm_response(node_name, session_id, raw2_msg)
             raw2 = raw2_msg.content if hasattr(raw2_msg, "content") else str(raw2_msg)
             raw2_cleaned = raw2.replace('```json', '').replace('```', '').strip()
             
