@@ -50,3 +50,4 @@ t.txt
 *.csv
 .files/
 mongo_data/
+scenario/output/
