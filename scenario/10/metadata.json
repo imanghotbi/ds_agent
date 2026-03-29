@@ -1,5 +1,34 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_csv_excel_4",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_csv_excel_4",
+    "subject": "data_preprocessing",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Quality Checking",
+                "Data Cleaning"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Pattern Discovery",
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Decision Support",
+                "Deliverables"
+            ]
+        }
+    ]
 }

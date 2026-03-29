@@ -1,5 +1,25 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_dl_prompt_fa_14",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_dl_prompt_fa_14",
+    "subject": "exploratory_data_analysis",
+    "task": [
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Transformation"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Descriptive Analysis"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

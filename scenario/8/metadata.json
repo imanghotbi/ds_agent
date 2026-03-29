@@ -1,5 +1,35 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_csv_excel_9",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_csv_excel_9",
+    "subject": "exploratory_data_analysis",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access",
+                "Data Combination"
+            ]
+        },
+        {
+            "task": "Feature Engineering",
+            "subtask": [
+                "Feature Creation",
+                "Label Construction"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Descriptive Analysis",
+                "Pattern Discovery"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Decision Support",
+                "Deliverables"
+            ]
+        }
+    ]
 }

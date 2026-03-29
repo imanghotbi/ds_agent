@@ -1,5 +1,32 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_dl_prompt_fa_1",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_dl_prompt_fa_1",
+    "subject": "optimization",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Supervised Learning",
+                "Optimization-Based Modeling"
+            ]
+        },
+        {
+            "task": "Evaluation and Validation",
+            "subtask": [
+                "Performance Measurement"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

@@ -1,5 +1,33 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_csv_excel_45",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_csv_excel_45",
+    "subject": "recommendation_systems",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Feature Engineering",
+            "subtask": [
+                "Representation",
+                "Feature Creation"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Recommendation and Similarity"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Prediction Generation",
+                "Deliverables"
+            ]
+        }
+    ]
 }

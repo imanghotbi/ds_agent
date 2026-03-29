@@ -1,5 +1,40 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_human_prompt_fa_13",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_human_prompt_fa_13",
+    "subject": "unsupervised_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Transformation"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Descriptive Analysis",
+                "Pattern Discovery",
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Unsupervised Learning and Pattern Mining",
+            "subtask": [
+                "Clustering",
+                "Cluster Interpretation"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

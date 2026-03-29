@@ -1,5 +1,19 @@
 {
-    "level" : "easy",
-    "source_dataset" : "DataSciBench_human_prompt_fa_19",
-    "task" : []
+    "level": "easy",
+    "source_dataset": "DataSciBench_human_prompt_fa_19",
+    "subject": "data_visualization",
+    "task": [
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

@@ -1,5 +1,40 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_human_prompt_fa_8",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_human_prompt_fa_8",
+    "subject": "exploratory_data_analysis",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Cleaning"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Descriptive Analysis",
+                "Pattern Discovery",
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Unsupervised Learning and Pattern Mining",
+            "subtask": [
+                "Clustering",
+                "Rule Mining"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

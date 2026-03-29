@@ -1,5 +1,27 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_csv_excel_24",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_csv_excel_24",
+    "subject": "optimization",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access",
+                "Schema Understanding"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Optimization-Based Modeling"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Decision Support",
+                "Deliverables"
+            ]
+        }
+    ]
 }

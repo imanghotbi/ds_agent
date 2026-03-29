@@ -1,5 +1,28 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_csv_excel_33",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_csv_excel_33",
+    "subject": "unsupervised_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access",
+                "Schema Understanding"
+            ]
+        },
+        {
+            "task": "Unsupervised Learning and Pattern Mining",
+            "subtask": [
+                "Clustering",
+                "Cluster Interpretation"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Decision Support",
+                "Deliverables"
+            ]
+        }
+    ]
 }

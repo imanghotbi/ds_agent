@@ -1,5 +1,41 @@
 {
-    "level" : "easy",
-    "source_dataset" : "DataSciBench_csv_excel_39",
-    "task" : []
+    "level": "easy",
+    "source_dataset": "DataSciBench_csv_excel_39",
+    "subject": "exploratory_data_analysis",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access",
+                "Schema Understanding"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Cleaning",
+                "Data Transformation"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Descriptive Analysis",
+                "Pattern Discovery"
+            ]
+        },
+        {
+            "task": "Feature Engineering",
+            "subtask": [
+                "Feature Creation",
+                "Label Construction"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

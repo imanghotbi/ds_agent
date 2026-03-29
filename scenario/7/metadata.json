@@ -1,5 +1,44 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_csv_excel_46",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_csv_excel_46",
+    "subject": "machine_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Transformation"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Supervised Learning"
+            ]
+        },
+        {
+            "task": "Evaluation and Validation",
+            "subtask": [
+                "Performance Measurement",
+                "Model Comparison"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

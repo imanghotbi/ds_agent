@@ -1,5 +1,46 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_human_prompt_fa_10",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_human_prompt_fa_10",
+    "subject": "machine_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Cleaning",
+                "Data Transformation"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Descriptive Analysis",
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Supervised Learning"
+            ]
+        },
+        {
+            "task": "Evaluation and Validation",
+            "subtask": [
+                "Performance Measurement"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Prediction Generation",
+                "Deliverables"
+            ]
+        }
+    ]
 }

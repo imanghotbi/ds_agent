@@ -1,5 +1,33 @@
 {
-    "level" : "medium",
-    "source_dataset" : "da-dev-questions_124",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "da-dev-questions_124",
+    "subject": "statistics",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Cleaning"
+            ]
+        },
+        {
+            "task": "Statistical Inference",
+            "subtask": [
+                "Hypothesis Setup",
+                "Statistical Testing",
+                "Interpretation"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }

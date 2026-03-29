@@ -1,5 +1,39 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_csv_excel_11",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_csv_excel_11",
+    "subject": "machine_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access",
+                "Data Combination"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Supervised Learning"
+            ]
+        },
+        {
+            "task": "Evaluation and Validation",
+            "subtask": [
+                "Performance Measurement"
+            ]
+        },
+        {
+            "task": "Exploratory Analysis and Visualization",
+            "subtask": [
+                "Visualization"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Prediction Generation",
+                "Deliverables"
+            ]
+        }
+    ]
 }

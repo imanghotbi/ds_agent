@@ -1,5 +1,39 @@
 {
-    "level" : "medium",
-    "source_dataset" : "DataSciBench_csv_excel_32",
-    "task" : []
+    "level": "medium",
+    "source_dataset": "DataSciBench_csv_excel_32",
+    "subject": "deep_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Data Preparation and Quality",
+            "subtask": [
+                "Data Cleaning",
+                "Data Transformation"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Supervised Learning"
+            ]
+        },
+        {
+            "task": "Evaluation and Validation",
+            "subtask": [
+                "Performance Measurement"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Prediction Generation",
+                "Deliverables"
+            ]
+        }
+    ]
 }

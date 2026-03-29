@@ -1,5 +1,31 @@
 {
-    "level" : "hard",
-    "source_dataset" : "DataSciBench_dl_prompt_fa_15",
-    "task" : []
+    "level": "hard",
+    "source_dataset": "DataSciBench_dl_prompt_fa_15",
+    "subject": "deep_learning",
+    "task": [
+        {
+            "task": "Data Acquisition and Integration",
+            "subtask": [
+                "Data Access"
+            ]
+        },
+        {
+            "task": "Predictive Modeling",
+            "subtask": [
+                "Supervised Learning"
+            ]
+        },
+        {
+            "task": "Evaluation and Validation",
+            "subtask": [
+                "Performance Measurement"
+            ]
+        },
+        {
+            "task": "Prediction and Decision Outputs",
+            "subtask": [
+                "Deliverables"
+            ]
+        }
+    ]
 }
