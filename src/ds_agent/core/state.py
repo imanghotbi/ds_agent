@@ -24,9 +24,12 @@ class AgentState(TypedDict):
     cwd: str
     next: str
     supervisor_instructions: str
+    supervisor_contract: Dict[str, Any]
     node_visits: Dict[str, int]
     session_id: str
     scenario_name: str
     scenario_path: str
     output_dir: str
     sandbox_file_manifest: str
+    requirements: Dict[str, Any]
+    runtime_state: Dict[str, Any]

@@ -1,7 +1,6 @@
-import base64
 import hashlib
+import json
 import os
-import uuid
 from typing import List, Optional, Dict, Any, Union, Tuple
 from pydantic import BaseModel, Field
 from langchain_core.tools import tool, StructuredTool
@@ -33,7 +32,44 @@ class E2BTools:
         self.sandbox = sandbox
         self.update_state_callback = update_state_callback
 
-    async def run_python(self, code: str) -> Union[str, Dict[str, Any]]:
+    async def _snapshot_files(self) -> Dict[str, Any]:
+        try:
+            return {f.name: f.modified_time for f in await self.sandbox.files.list(".")}
+        except Exception:
+            return {}
+
+    async def _snapshot_variables(self) -> Dict[str, Any]:
+        try:
+            inspection = await self.sandbox.run_code(
+                """
+import json
+
+summary = {}
+for name, value in globals().items():
+    if name.startswith("_"):
+        continue
+    if name in {"json", "summary"}:
+        continue
+    type_name = type(value).__name__
+    meta = {"type": type_name}
+    try:
+        shape = getattr(value, "shape", None)
+        if shape is not None:
+            meta["shape"] = list(shape)
+    except Exception:
+        pass
+    summary[name] = meta
+
+print(json.dumps(summary, ensure_ascii=False))
+"""
+            )
+            if inspection.logs.stdout:
+                return json.loads("\n".join(inspection.logs.stdout))
+        except Exception:
+            pass
+        return {}
+
+    async def run_python(self, code: str) -> Dict[str, Any]:
         """
         Executes Python code in a persistent Jupyter kernel.
         Captures stdout, stderr, and images (plots).
@@ -44,11 +80,7 @@ class E2BTools:
         which is what downstream exports use.
         """
         try:
-            # Get initial file list to track new creations or modifications
-            try:
-                initial_files = {f.name: f.modified_time for f in await self.sandbox.files.list(".")}
-            except:
-                initial_files = {}
+            initial_files = await self._snapshot_files()
 
             execution = await self.sandbox.run_code(code)
 
@@ -58,15 +90,23 @@ class E2BTools:
             # Detect new/updated image files; read their bytes once for both local
             # save and notebook-cell output (ensures byte-level consistency).
             file_image_outputs: List[Dict[str, Any]] = []
+            created_files: List[str] = []
+            modified_files: List[str] = []
+            produced_images: List[str] = []
             image_exts = ('.png', '.jpg', '.jpeg', '.svg')
             try:
                 final_files = await self.sandbox.files.list(".")
                 for f in final_files:
                     is_new = f.name not in initial_files
                     is_updated = not is_new and f.modified_time > initial_files[f.name]
+                    if is_new:
+                        created_files.append(f.name)
+                    elif is_updated:
+                        modified_files.append(f.name)
                     if (is_new or is_updated) and f.name.lower().endswith(image_exts):
                         logger.info(f"Detected {'new' if is_new else 'updated'} image file: {f.name}.")
                         file_bytes = await self.sandbox.files.read(f.name, format="bytes")
+                        produced_images.append(f.name)
                         file_image_outputs.append({
                             "type": "image",
                             "data": file_bytes,       # raw bytes — NOT base64
@@ -106,14 +146,38 @@ class E2BTools:
                 self.update_state_callback(cell_data)
 
             response_text = self._format_response(logs, [], execution.error)
+            variables = await self._snapshot_variables()
 
-            images = [o for o in outputs if o.get('type') == 'image']
-            if images:
-                return {"text": response_text, "images": images}
-            return response_text
+            return {
+                "ok": execution.error is None,
+                "tool_name": "run_python",
+                "summary": response_text,
+                "stdout": "\n".join(execution.logs.stdout) if execution.logs.stdout else "",
+                "stderr": "\n".join(execution.logs.stderr) if execution.logs.stderr else "",
+                "error_type": execution.error.name if execution.error else None,
+                "error_message": str(execution.error.value) if execution.error else None,
+                "created_files": created_files,
+                "modified_files": modified_files,
+                "produced_images": produced_images,
+                "variables": variables,
+                "text": response_text,
+            }
 
         except Exception as e:
-            return f"Status: Error\nOutput: System Error - {str(e)}"
+            return {
+                "ok": False,
+                "tool_name": "run_python",
+                "summary": f"Status: Error\nOutput: System Error - {str(e)}",
+                "stdout": "",
+                "stderr": "",
+                "error_type": "system_error",
+                "error_message": str(e),
+                "created_files": [],
+                "modified_files": [],
+                "produced_images": [],
+                "variables": {},
+                "text": f"Status: Error\nOutput: System Error - {str(e)}",
+            }
 
     def _process_logs(self, logs_obj) -> Tuple[List[Dict[str, Any]], List[str]]:
         outputs = []
@@ -185,18 +249,51 @@ class E2BTools:
             return f"Status: Error\nOutput: {chr(10).join(logs)}"
         return f"Status: Success\nOutput: {chr(10).join(logs)}\nArtifacts: {artifacts}"
 
-    async def run_shell(self, command: str) -> str:
+    async def run_shell(self, command: str) -> Dict[str, Any]:
         try:
-            # Increased timeout for long-running shell commands
+            initial_files = await self._snapshot_files()
             result = await self.sandbox.commands.run(command, timeout=300) 
+            final_files = await self._snapshot_files()
+            created_files = sorted(set(final_files) - set(initial_files))
+            modified_files = sorted(
+                path for path in final_files
+                if path in initial_files and final_files[path] > initial_files[path]
+            )
+            ok = result.error is None
             output = f"stdout: {result.stdout}\nstderr: {result.stderr}"
             if result.error:
                  output += f"\nError: {result.error}"
-            return f"Status: Success\nOutput: {output}"
+            return {
+                "ok": ok,
+                "tool_name": "run_shell",
+                "summary": f"Status: {'Success' if ok else 'Error'}\nOutput: {output}",
+                "stdout": result.stdout,
+                "stderr": result.stderr,
+                "error_type": "command_error" if result.error else None,
+                "error_message": str(result.error) if result.error else None,
+                "created_files": created_files,
+                "modified_files": modified_files,
+                "produced_images": [path for path in created_files + modified_files if path.lower().endswith(('.png', '.jpg', '.jpeg', '.svg'))],
+                "variables": {},
+                "text": f"Status: {'Success' if ok else 'Error'}\nOutput: {output}",
+            }
         except Exception as e:
-            return f"Status: Error\nOutput: System Error - {str(e)}"
+            return {
+                "ok": False,
+                "tool_name": "run_shell",
+                "summary": f"Status: Error\nOutput: System Error - {str(e)}",
+                "stdout": "",
+                "stderr": "",
+                "error_type": "system_error",
+                "error_message": str(e),
+                "created_files": [],
+                "modified_files": [],
+                "produced_images": [],
+                "variables": {},
+                "text": f"Status: Error\nOutput: System Error - {str(e)}",
+            }
 
-    async def download_file(self, remote_path: str, local_filename: Optional[str] = None) -> str:
+    async def download_file(self, remote_path: str, local_filename: Optional[str] = None) -> Dict[str, Any]:
         """
         Downloads a file from the sandbox to the local filesystem.
         """
@@ -217,11 +314,37 @@ class E2BTools:
             with open(local_filepath, 'wb') as f:
                 f.write(content)
                 
-            return f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filepath)}"
+            return {
+                "ok": True,
+                "tool_name": "download_file",
+                "summary": f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filepath)}",
+                "stdout": "",
+                "stderr": "",
+                "error_type": None,
+                "error_message": None,
+                "created_files": [local_filepath],
+                "modified_files": [],
+                "produced_images": [],
+                "variables": {},
+                "text": f"Status: Success\nFile downloaded successfully to: {os.path.abspath(local_filepath)}",
+            }
         except Exception as e:
-            return f"Status: Error\nOutput: Failed to download file - {str(e)}"
+            return {
+                "ok": False,
+                "tool_name": "download_file",
+                "summary": f"Status: Error\nOutput: Failed to download file - {str(e)}",
+                "stdout": "",
+                "stderr": "",
+                "error_type": "download_error",
+                "error_message": str(e),
+                "created_files": [],
+                "modified_files": [],
+                "produced_images": [],
+                "variables": {},
+                "text": f"Status: Error\nOutput: Failed to download file - {str(e)}",
+            }
 
-    async def create_markdown(self, content: str) -> str:
+    async def create_markdown(self, content: str) -> Dict[str, Any]:
         """
         Adds a markdown cell to the notebook.
         """
@@ -232,7 +355,20 @@ class E2BTools:
         }
         if self.update_state_callback:
             self.update_state_callback(cell_data)
-        return "Status: Success\nMarkdown cell added to the notebook."
+        return {
+            "ok": True,
+            "tool_name": "create_markdown",
+            "summary": "Status: Success\nMarkdown cell added to the notebook.",
+            "stdout": "",
+            "stderr": "",
+            "error_type": None,
+            "error_message": None,
+            "created_files": [],
+            "modified_files": [],
+            "produced_images": [],
+            "variables": {},
+            "text": "Status: Success\nMarkdown cell added to the notebook.",
+        }
 
     def get_tools(self, include_download: bool = True) -> List[StructuredTool]:
             tools = [

@@ -15,6 +15,7 @@ from ds_agent.utils.helpers import (
     build_initial_state,
     build_sandbox_file_manifest,
     build_scenario_session_id,
+    extract_requirements,
     load_metadata,
     parse_scenario_args,
     scenario_directories,
@@ -118,6 +119,7 @@ class ScenarioRunner:
                 write_json_atomic(metadata_path, metadata)
 
                 state["messages"].append(HumanMessage(content=prompt_text))
+                state["requirements"] = extract_requirements(prompt_text)
                 write_json_atomic(state_path, serialize_state(state))
 
                 config = {
@@ -139,7 +141,7 @@ class ScenarioRunner:
                         if "notebook_cells" in value:
                             state["notebook_cells"].extend(value["notebook_cells"])
 
-                        for key in ("next", "node_visits", "supervisor_instructions", "sender"):
+                        for key in ("next", "node_visits", "supervisor_instructions", "supervisor_contract", "runtime_state", "sender"):
                             if key in value:
                                 state[key] = value[key]
 
@@ -149,7 +151,13 @@ class ScenarioRunner:
                         write_text_atomic(transcript_path, "\n".join(transcript_lines))
                         write_json_atomic(metadata_path, metadata)
 
-                metadata["status"] = "successful"
+                final_qa = (state.get("runtime_state") or {}).get("final_qa", {})
+                metadata["status"] = "successful" if final_qa.get("passed", True) else "incomplete"
+                if not final_qa.get("passed", True):
+                    metadata["error"] = (
+                        "Final QA failed: "
+                        + ", ".join(final_qa.get("missing_required", []) or final_qa.get("unresolved_errors", []) or ["unknown issue"])
+                    )
                 metadata["completed_at"] = utc_now()
                 metadata["duration_seconds"] = round(time.monotonic() - start_time, 3)
                 write_json_atomic(state_path, serialize_state(state))

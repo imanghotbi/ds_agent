@@ -1,9 +1,10 @@
 from typing import Dict, Any
+import json
 from langchain_core.messages import ToolMessage
 from langchain_core.runnables import RunnableConfig
 
 from ds_agent.core.state import AgentState
-from ds_agent.utils.helpers import get_sandbox
+from ds_agent.utils.helpers import get_sandbox, update_runtime_state
 from ds_agent.tools.e2b import E2BTools
 from ds_agent.utils.logger import logger
 from ds_agent.config import Nodes
@@ -29,6 +30,8 @@ async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]
     
     last_message = state['messages'][-1]
     results = []
+    runtime_state = state.get("runtime_state", {})
+    producer = state.get("next", "unknown")
     
     if not hasattr(last_message, 'tool_calls'):
          logger.warning("Tool node called but last message has no tool_calls")
@@ -46,12 +49,37 @@ async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]
                 output = await tool_instance.ainvoke(tool_args)
             except Exception as e:
                 logger.error(f"Error executing {tool_name}: {e}", exc_info=True)
-                output = f"خطا در اجرای ابزار {tool_name}: {str(e)}"
+                output = {
+                    "ok": False,
+                    "tool_name": tool_name,
+                    "summary": f"خطا در اجرای ابزار {tool_name}: {str(e)}",
+                    "error_type": "tool_execution_error",
+                    "error_message": str(e),
+                    "created_files": [],
+                    "modified_files": [],
+                    "produced_images": [],
+                    "variables": {},
+                    "text": f"خطا در اجرای ابزار {tool_name}: {str(e)}",
+                }
         else:
-            output = f"خطا: ابزار '{tool_name}' یافت نشد"
-            
+            output = {
+                "ok": False,
+                "tool_name": tool_name,
+                "summary": f"خطا: ابزار '{tool_name}' یافت نشد",
+                "error_type": "tool_not_found",
+                "error_message": f"Tool {tool_name} not found",
+                "created_files": [],
+                "modified_files": [],
+                "produced_images": [],
+                "variables": {},
+                "text": f"خطا: ابزار '{tool_name}' یافت نشد",
+            }
+
+        if isinstance(output, dict):
+            runtime_state = update_runtime_state(runtime_state, output, producer=producer)
+
         if isinstance(output, dict) and "text" in output:
-            content = output["text"]
+            content = json.dumps(output, ensure_ascii=False)
         else:
             content = str(output)
             
@@ -60,5 +88,6 @@ async def tool_node(state: AgentState, config: RunnableConfig) -> Dict[str, Any]
     return {
         "messages": results,
         "notebook_cells": new_cells,
-        "node_visits": node_visits
+        "node_visits": node_visits,
+        "runtime_state": runtime_state,
     }

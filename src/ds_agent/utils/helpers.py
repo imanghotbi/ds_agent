@@ -2,6 +2,7 @@ import argparse
 import base64
 import json
 import os
+import re
 import shlex
 import tempfile
 import uuid
@@ -129,12 +130,15 @@ def serialize_state(state: Dict[str, Any]) -> Dict[str, Any]:
         "cwd": state.get("cwd", "/home/user"),
         "next": state.get("next", Nodes.SUPERVISOR),
         "supervisor_instructions": state.get("supervisor_instructions", ""),
+        "supervisor_contract": json_safe(state.get("supervisor_contract", {})),
         "node_visits": state.get("node_visits", {}),
         "session_id": state.get("session_id", "system"),
         "scenario_name": state.get("scenario_name", ""),
         "scenario_path": state.get("scenario_path", ""),
         "output_dir": state.get("output_dir", ""),
         "sandbox_file_manifest": state.get("sandbox_file_manifest", ""),
+        "requirements": json_safe(state.get("requirements", {})),
+        "runtime_state": json_safe(state.get("runtime_state", {})),
     }
 
 def append_transcript_line(transcript: List[str], node_name: str, message: BaseMessage) -> None:
@@ -192,9 +196,128 @@ def build_runtime_context(state: Dict[str, Any]) -> str:
     file_manifest = state.get("sandbox_file_manifest", "").strip()
     if file_manifest:
         parts.append(file_manifest)
+    runtime_summary = build_runtime_summary(state)
+    if runtime_summary:
+        parts.append(runtime_summary)
     if not parts:
         return ""
     return "\n\n### RUNTIME CONTEXT ###\n" + "\n\n".join(parts)
+
+def extract_requirements(prompt_text: str) -> Dict[str, Any]:
+    filename_matches = re.findall(
+        r"\b[\w,\- ]+\.(?:csv|xlsx|xls|json|png|jpg|jpeg|svg|pdf|pkl|joblib|ipynb|txt)\b",
+        prompt_text,
+        flags=re.IGNORECASE,
+    )
+    required_filenames = sorted({match.strip() for match in filename_matches})
+
+    prompt_lower = prompt_text.lower()
+    task_type = "unknown"
+    if any(token in prompt_lower for token in ("classification", "classify", "classifier")):
+        task_type = "classification"
+    elif any(token in prompt_lower for token in ("regression", "predict price", "predict value")):
+        task_type = "regression"
+    elif "clustering" in prompt_lower:
+        task_type = "clustering"
+    elif "time-series" in prompt_lower or "time series" in prompt_lower:
+        task_type = "time-series"
+
+    requested_stages = {
+        "cleaning_only": "eda" not in prompt_lower and "train" not in prompt_lower and "model" not in prompt_lower and "feature" not in prompt_lower,
+        "eda_only": "eda" in prompt_lower and "train" not in prompt_lower and "model" not in prompt_lower,
+    }
+
+    return {
+        "task_type": task_type,
+        "required_filenames": required_filenames,
+        "requested_stages": requested_stages,
+    }
+
+def build_runtime_summary(state: Dict[str, Any]) -> str:
+    runtime_state = state.get("runtime_state") or {}
+    requirements = state.get("requirements") or {}
+
+    artifacts = runtime_state.get("artifacts", [])
+    variables = runtime_state.get("variables", {})
+    last_execution = runtime_state.get("last_execution")
+    unresolved_errors = runtime_state.get("unresolved_errors", [])
+
+    lines: List[str] = []
+    if requirements:
+        lines.append(f"Requirements: {json.dumps(requirements, ensure_ascii=False)}")
+    if artifacts:
+        lines.append(
+            "Artifacts: "
+            + json.dumps(
+                [
+                    {
+                        "path": item.get("path"),
+                        "type": item.get("type"),
+                        "producer": item.get("producer"),
+                        "exists": item.get("exists", True),
+                    }
+                    for item in artifacts[-20:]
+                ],
+                ensure_ascii=False,
+            )
+        )
+    if variables:
+        lines.append(f"Variables: {json.dumps(variables, ensure_ascii=False)}")
+    if last_execution:
+        lines.append(f"Last execution: {json.dumps(last_execution, ensure_ascii=False)}")
+    if unresolved_errors:
+        lines.append(f"Unresolved errors: {json.dumps(unresolved_errors[-10:], ensure_ascii=False)}")
+    return "\n".join(lines)
+
+def _upsert_artifact(artifacts: List[Dict[str, Any]], artifact: Dict[str, Any]) -> List[Dict[str, Any]]:
+    filtered = [item for item in artifacts if item.get("path") != artifact.get("path")]
+    filtered.append(artifact)
+    return filtered
+
+def update_runtime_state(
+    current_runtime_state: Optional[Dict[str, Any]],
+    tool_result: Dict[str, Any],
+    producer: str,
+) -> Dict[str, Any]:
+    runtime_state = dict(current_runtime_state or {})
+    artifacts = list(runtime_state.get("artifacts", []))
+    variables = dict(runtime_state.get("variables", {}))
+    unresolved_errors = list(runtime_state.get("unresolved_errors", []))
+
+    for path in tool_result.get("created_files", []):
+        artifacts = _upsert_artifact(
+            artifacts,
+            {"path": path, "type": "file", "producer": producer, "exists": True},
+        )
+    for path in tool_result.get("modified_files", []):
+        artifacts = _upsert_artifact(
+            artifacts,
+            {"path": path, "type": "file", "producer": producer, "exists": True},
+        )
+    for path in tool_result.get("produced_images", []):
+        artifacts = _upsert_artifact(
+            artifacts,
+            {"path": path, "type": "image", "producer": producer, "exists": True},
+        )
+
+    for name, meta in (tool_result.get("variables", {}) or {}).items():
+        variables[name] = meta
+
+    if tool_result.get("ok"):
+        unresolved_errors = []
+    elif tool_result.get("error_message"):
+        unresolved_errors.append(tool_result["error_message"])
+
+    runtime_state["artifacts"] = artifacts
+    runtime_state["variables"] = variables
+    runtime_state["last_execution"] = {
+        "tool_name": tool_result.get("tool_name"),
+        "ok": tool_result.get("ok"),
+        "summary": tool_result.get("summary"),
+        "producer": producer,
+    }
+    runtime_state["unresolved_errors"] = unresolved_errors[-20:]
+    return runtime_state
 
 def build_initial_state(session_id: str, scenario_dir: Path, output_dir: Path) -> Dict[str, Any]:
     return {
@@ -203,12 +326,20 @@ def build_initial_state(session_id: str, scenario_dir: Path, output_dir: Path) -
         "cwd": "/home/user",
         "next": Nodes.SUPERVISOR,
         "supervisor_instructions": "",
+        "supervisor_contract": {},
         "node_visits": {},
         "session_id": session_id,
         "scenario_name": scenario_dir.name,
         "scenario_path": str(scenario_dir),
         "output_dir": str(output_dir),
         "sandbox_file_manifest": "",
+        "requirements": {},
+        "runtime_state": {
+            "artifacts": [],
+            "variables": {},
+            "last_execution": None,
+            "unresolved_errors": [],
+        },
     }
 
 async def log_llm_response(node_name: str, session_id: str, response: Any) -> None:
@@ -258,11 +389,17 @@ async def run_worker(state: AgentState, system_prompt: str, sender_name: str, mo
     
     # Inject Supervisor Instructions if available
     instructions = state.get("supervisor_instructions", "")
+    supervisor_contract = state.get("supervisor_contract", {})
     runtime_context = build_runtime_context(state)
     if runtime_context:
         system_prompt = f"{system_prompt}{runtime_context}"
     if instructions:
         system_prompt = f"{system_prompt}\n\n### MANAGER INSTRUCTIONS ###\n{instructions}"
+    if supervisor_contract:
+        system_prompt = (
+            f"{system_prompt}\n\n### MANAGER CONTRACT ###\n"
+            f"{json.dumps(supervisor_contract, ensure_ascii=False)}"
+        )
     
     # Prepend the specialized system prompt to the message history
     current_messages = [SystemMessage(content=system_prompt)] + state['messages']

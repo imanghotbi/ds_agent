@@ -12,6 +12,9 @@ from ds_agent.utils.helpers import build_runtime_context, get_llm, get_session_i
 class SupervisorDecision(BaseModel):
     reasoning: str = Field(description="Review of previous work and justification for the next step.")
     instructions: str = Field(description="Specific, detailed instructions for the next agent.")
+    success_criteria: list[str] = Field(default_factory=list, description="Concrete checks the next agent must satisfy.")
+    expected_artifacts: list[str] = Field(default_factory=list, description="Files or artifacts that should exist after the next step.")
+    verification_steps: list[str] = Field(default_factory=list, description="How the next step should be verified before advancing.")
     next_agent: Literal["cleaner", "eda", "feature_engineer", "trainer", "storyteller", "reporter", "FINISH"]
 
 async def supervisor_node(state: AgentState) -> Dict[str, Any]:
@@ -62,9 +65,21 @@ async def supervisor_node(state: AgentState) -> Dict[str, Any]:
         return {
             "next": next_agent,
             "supervisor_instructions": response.instructions,
+            "supervisor_contract": {
+                "success_criteria": response.success_criteria,
+                "expected_artifacts": response.expected_artifacts,
+                "verification_steps": response.verification_steps,
+            },
             "node_visits": node_visits,
             # We append the Supervisor's thought process to the history so it persists
-            "messages": [HumanMessage(content=f"**تصمیم ناظر:**\n*استدلال:* {response.reasoning}\n*دستورالعمل‌ها:* {response.instructions}")]
+            "messages": [HumanMessage(content=(
+                f"**تصمیم ناظر:**\n"
+                f"*استدلال:* {response.reasoning}\n"
+                f"*دستورالعمل‌ها:* {response.instructions}\n"
+                f"*معیارهای موفقیت:* {response.success_criteria}\n"
+                f"*خروجی‌های مورد انتظار:* {response.expected_artifacts}\n"
+                f"*گام‌های راستی‌آزمایی:* {response.verification_steps}"
+            ))]
         }
     except Exception as e:
         logger.error(f"Error in Supervisor node: {e}", exc_info=True)
