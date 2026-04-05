@@ -109,6 +109,7 @@ class ScenarioRunner:
             async with await AsyncSandbox.create(
                 api_key=settings.e2b_api_key.get_secret_value(),
                 timeout=settings.sandbox_timeout,
+                template=settings.sandbox_template
             ) as sandbox:
                 uploaded_files: List[str] = []
                 if data_dir.exists() and data_dir.is_dir():

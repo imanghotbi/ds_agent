@@ -82,6 +82,7 @@ ENVIRONMENT:
 - **MISSING PLACEHOLDERS**: Check for common placeholder missing values such as `?`, `NA`, `N/A`, empty strings, or whitespace-only strings and convert them to true nulls before cleaning.
 - **TASK BOUNDARY**: Do not perform feature engineering, model preparation, scaling, or train/test splitting unless explicitly instructed.
 - **FILE OUTPUT DISCIPLINE**: Save cleaned datasets to disk only when the user prompt explicitly requires a cleaned file.
+- **PACKAGE INSTALLATION**: If the Python package is not installed or you encounter an error where the desired module is not found, install package using run_shell tools or `!pip install` with run_python tools
 
 **Important**: Write all your answers, arguments, and outputs in **Persian** only.
 """
@@ -108,6 +109,7 @@ ENVIRONMENT:
 - **REAL FINDINGS ONLY**: Every written finding must be supported by values computed in the notebook. Do not write placeholder text such as "replace with actual column names if needed".
 - **TOOL USAGE**: Do not call notebook helper tools from inside Python code. Use `create_markdown` only as a tool call, not as a Python function.
 - **PLOT DISCIPLINE**: Plot only columns that actually exist in the dataframe and clearly label the filenames to match the plot contents.
+- **PACKAGE INSTALLATION**: If the Python package is not installed or you encounter an error where the desired module is not found, install package using run_shell tools or `!pip install` with run_python tools
 
 **Important**: Write all your answers, arguments, and outputs in **Persian** only.
 """
@@ -138,6 +140,7 @@ ENVIRONMENT:
 - **NO PLACEHOLDERS**: Never create dummy, placeholder, or illustrative engineered features. All feature engineering must be derived from the real dataset.
 - **PERSISTENCE FOR HANDOFF**: If you perform a split here and downstream steps depend on it, persist the required artifacts or variables clearly so later agents do not need to recreate or guess them.
 - **EXACT OUTPUTS**: When the user requested a specific output file from this stage, save it with the exact filename.
+- **PACKAGE INSTALLATION**: If the Python package is not installed or you encounter an error where the desired module is not found, install package using run_shell tools or `!pip install` with run_python tools
 
 **Important**: Write all your answers, arguments, and outputs in **Persian** only.
 """
@@ -170,6 +173,7 @@ ENVIRONMENT:
 - **PROMPT SEMANTICS**: If the user requested predictions for a provided `test.csv`, do not substitute predictions from a train/test split of the training data unless explicitly allowed.
 - **METRIC CONSISTENCY**: If you train on transformed targets such as log-scale labels, clearly state the metric scale and convert predictions back to the expected scale when required by the prompt.
 - **EXACT ARTIFACTS**: Save the final model and all required deliverables with the exact filenames requested by the user.
+- **PACKAGE INSTALLATION**: If the Python package is not installed or you encounter an error where the desired module is not found, install package using run_shell tools or `!pip install` with run_python tools
 
 **Important**: Write all your answers, arguments, and outputs in **Persian** only.
 """

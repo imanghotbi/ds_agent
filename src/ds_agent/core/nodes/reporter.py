@@ -5,7 +5,7 @@ from langchain_core.runnables import RunnableConfig
 
 from ds_agent.core.state import AgentState
 from ds_agent.config import Nodes
-from ds_agent.utils.helpers import get_sandbox
+from ds_agent.utils.helpers import get_sandbox, required_file_exists
 from ds_agent.utils.logger import logger
 from ds_agent.utils.notebook import save_session_to_ipynb
 
@@ -56,8 +56,6 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
     artifacts_dir = os.path.join(output_dir, "sandbox_artifacts") if output_dir else "sandbox_artifacts"
     
     downloaded = await _download_sandbox_files(sandbox, artifacts_dir)
-    downloaded_set = set(downloaded)
-
     # 2. Export Notebook
     notebook_path = os.path.join(output_dir, "final_analysis.ipynb") if output_dir else "final_analysis.ipynb"
     try:
@@ -69,7 +67,10 @@ async def reporter_node(state: AgentState, config: RunnableConfig) -> Dict[str, 
     requirements = state.get("requirements", {})
     runtime_state = state.get("runtime_state", {})
     required_filenames = requirements.get("required_filenames", [])
-    missing_required = [name for name in required_filenames if name not in downloaded_set]
+    missing_required = [
+        name for name in required_filenames
+        if not required_file_exists(name, downloaded)
+    ]
     unresolved_errors = runtime_state.get("unresolved_errors", [])
     notebook_ok = os.path.exists(notebook_path)
     qa_passed = notebook_ok and not missing_required and not unresolved_errors

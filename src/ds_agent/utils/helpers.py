@@ -35,7 +35,7 @@ def parse_scenario_args() -> argparse.Namespace:
     )
     return parser.parse_args()
 
-def get_llm(model_name: Optional[str] = None):
+def get_llm(model_name: Optional[str] = None, **kwargs):
     """
     Creates a configured LLM instance using the LLMFactory.
     Returns the RAW LLM (without retry wrapper) to allow binding tools/structured output.
@@ -43,7 +43,7 @@ def get_llm(model_name: Optional[str] = None):
     if model_name is None:
         model_name = settings.model_name
         
-    llm_factory = LLMFactory(model_name=model_name)
+    llm_factory = LLMFactory(model_name=model_name, **kwargs)
     return llm_factory.create()
 
 def get_sandbox(config: RunnableConfig) -> AsyncSandbox:
@@ -318,6 +318,27 @@ def update_runtime_state(
     }
     runtime_state["unresolved_errors"] = unresolved_errors[-20:]
     return runtime_state
+
+def normalize_relative_path(path: str) -> str:
+    normalized = path.replace("\\", "/").strip()
+    while normalized.startswith("./"):
+        normalized = normalized[2:]
+    return normalized.strip("/")
+
+def required_file_exists(required_name: str, downloaded_files: List[str]) -> bool:
+    required_normalized = normalize_relative_path(required_name)
+    required_basename = os.path.basename(required_normalized)
+
+    for downloaded in downloaded_files:
+        downloaded_normalized = normalize_relative_path(downloaded)
+        if downloaded_normalized == required_normalized:
+            return True
+        if downloaded_normalized.endswith(f"/{required_normalized}"):
+            return True
+        if os.path.basename(downloaded_normalized) == required_basename:
+            return True
+
+    return False
 
 def build_initial_state(session_id: str, scenario_dir: Path, output_dir: Path) -> Dict[str, Any]:
     return {

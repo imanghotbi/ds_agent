@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import SecretStr
 from urllib.parse import quote_plus
+from typing import Optional
 
 class Nodes:
     SUPERVISOR = "supervisor"
@@ -21,7 +22,8 @@ class Settings(BaseSettings):
 
     model_api_key: SecretStr
     e2b_api_key: SecretStr
-    
+    sandbox_template: Optional[str] = None
+
     # Optional settings with defaults
     model_name: str = "qwen/qwen3-coder-480b-a35b-instruct"
     supervisor_model_name: str = "qwen/qwen3-235b-a22b"
@@ -32,7 +34,7 @@ class Settings(BaseSettings):
     storyteller_model_name: str = "qwen/qwen3-235b-a22b"
     reporter_model_name: str = "qwen/qwen3-235b-a22b"
     temperature: float = 0.0
-    max_tokens: int = 10_000
+    max_tokens: int = 15_000
 
     log_level: str = "INFO"
     log_file_path: str = "./logs/app.log"
