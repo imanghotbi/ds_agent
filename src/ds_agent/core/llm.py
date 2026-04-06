@@ -1,5 +1,4 @@
-# from langchain_openai import ChatOpenAI
-from langchain_nvidia import ChatNVIDIA
+from langchain_openai import ChatOpenAI
 from ds_agent.config import settings
 
 class LLMFactory:
@@ -22,12 +21,11 @@ class LLMFactory:
         """
         Creates and returns a configured ChatNVIDIA instance.
         """
-        return ChatNVIDIA(
+        return ChatOpenAI(
             model=self.model_name,
+            base_url=settings.base_url,
             temperature=self.temperature,
             api_key=settings.model_api_key.get_secret_value(),
             max_tokens=self.max_output_tokens or settings.max_tokens,
-            verify_ssl=False,
-            # top_p= top_p or settings.top_p,
-            model_kwargs = {'chat_template_kwargs':{'thinking':self.thinking}},
+            reasoning_effort="low" if self.thinking else None,
         )

@@ -21,6 +21,8 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8", extra="ignore",case_sensitive=False,)
 
     model_api_key: SecretStr
+    base_url:Optional[str] = None
+    
     e2b_api_key: SecretStr
     sandbox_template: Optional[str] = None
 
