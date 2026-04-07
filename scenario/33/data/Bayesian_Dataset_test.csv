@@ -1,0 +1,2001 @@
+年纪,工作性质,家庭收入,学位,婚姻状况,工作类型,家庭情况,族裔,性别,工作地点,标签
+25,Unemployed,52968,Bachelor,Divorced,Intern,Living Alone,Other,Female,Urban,1
+62,Private,158694,Highschool,Married,Part-time,Living Alone,Asian,Female,Urban,1
+67,Private,107520,Highschool,Divorced,Intern,Living Alone,Other,Female,Suburban,1
+21,Private,135570,Highschool,Divorced,Full-time,Living Alone,Black,Male,Rural,1
+59,Private,34950,Master,Single,Part-time,Living with Family,White,Female,Rural,0
+37,Private,148126,PhD,Divorced,Contract,Living with Roommates,Hispanic,Male,Rural,1
+28,Government,142256,Highschool,Single,Full-time,Living with Family,Asian,Female,Suburban,1
+24,Government,189457,Master,Married,Intern,Living with Family,Other,Male,Rural,1
+56,Unemployed,76759,Highschool,Single,Full-time,Living with Roommates,Hispanic,Female,Urban,1
+57,Private,104186,Highschool,Married,Part-time,Living Alone,Asian,Female,Rural,1
+21,Private,154597,Master,Married,Intern,Living Alone,Black,Male,Urban,1
+58,Self-emp,196283,PhD,Married,Contract,Living with Family,White,Male,Rural,1
+52,Unemployed,42499,Highschool,Single,Intern,Living with Roommates,White,Male,Suburban,0
+18,Private,44826,Master,Divorced,Part-time,Living with Family,Black,Male,Rural,0
+26,Government,31359,Bachelor,Single,Part-time,Living Alone,Other,Female,Suburban,0
+50,Unemployed,89107,Bachelor,Married,Intern,Living with Family,Black,Male,Rural,1
+44,Government,152989,Master,Divorced,Contract,Living with Family,Hispanic,Male,Urban,1
+21,Government,12474,Highschool,Married,Intern,Living with Roommates,Asian,Male,Urban,0
+52,Unemployed,80809,Highschool,Divorced,Part-time,Living with Family,White,Male,Urban,1
+59,Unemployed,66281,Bachelor,Widowed,Contract,Living with Family,Other,Male,Rural,1
+27,Government,13117,PhD,Single,Contract,Living Alone,White,Male,Suburban,0
+21,Self-emp,49827,Master,Single,Part-time,Living with Family,Black,Female,Urban,0
+70,Self-emp,78820,Bachelor,Widowed,Intern,Living with Roommates,White,Female,Urban,1
+45,Government,168590,PhD,Married,Full-time,Living Alone,Asian,Female,Urban,1
+45,Private,22110,PhD,Divorced,Contract,Living with Roommates,Other,Female,Urban,0
+41,Government,30106,Bachelor,Married,Intern,Living Alone,Black,Female,Urban,0
+36,Government,10158,Master,Single,Intern,Living with Family,Black,Male,Suburban,0
+18,Unemployed,172330,Bachelor,Single,Contract,Living Alone,Black,Male,Suburban,1
+70,Unemployed,106907,Master,Married,Contract,Living with Roommates,Other,Male,Urban,1
+65,Government,71264,PhD,Single,Intern,Living Alone,Other,Male,Rural,1
+55,Government,198315,Bachelor,Divorced,Part-time,Living with Family,Black,Male,Urban,1
+54,Self-emp,92178,Master,Widowed,Part-time,Living with Family,Other,Male,Suburban,1
+32,Government,119190,Bachelor,Widowed,Full-time,Living Alone,White,Male,Suburban,1
+69,Self-emp,80605,Highschool,Married,Part-time,Living with Family,Black,Female,Urban,1
+44,Self-emp,156715,Master,Single,Part-time,Living with Family,Black,Female,Suburban,1
+65,Private,109875,Master,Married,Full-time,Living Alone,Black,Male,Urban,1
+40,Unemployed,56345,PhD,Widowed,Intern,Living with Family,Hispanic,Male,Suburban,1
+58,Self-emp,96480,Bachelor,Widowed,Full-time,Living Alone,Other,Female,Urban,1
+19,Government,119609,PhD,Widowed,Intern,Living Alone,White,Female,Rural,1
+22,Private,45710,PhD,Divorced,Contract,Living with Roommates,Black,Male,Urban,0
+25,Private,72431,Master,Divorced,Contract,Living Alone,Black,Male,Suburban,1
+18,Private,126154,Master,Divorced,Contract,Living with Family,Black,Male,Urban,1
+48,Unemployed,162114,Highschool,Widowed,Contract,Living Alone,Black,Female,Rural,1
+37,Self-emp,191443,Master,Single,Full-time,Living with Family,Hispanic,Female,Urban,1
+63,Unemployed,154495,Bachelor,Divorced,Part-time,Living with Roommates,Hispanic,Male,Rural,1
+67,Government,49826,Master,Single,Contract,Living with Roommates,Other,Female,Rural,0
+34,Government,126087,Bachelor,Widowed,Contract,Living with Family,Other,Female,Rural,1
+42,Private,180937,Highschool,Widowed,Part-time,Living with Family,Hispanic,Female,Rural,1
+68,Self-emp,189518,Master,Widowed,Full-time,Living with Family,Other,Female,Rural,1
+63,Self-emp,20569,Bachelor,Divorced,Part-time,Living Alone,Black,Female,Urban,0
+61,Unemployed,73173,Bachelor,Married,Contract,Living Alone,Asian,Male,Suburban,1
+32,Unemployed,54462,Master,Widowed,Contract,Living with Family,Other,Female,Rural,1
+25,Unemployed,183031,Master,Married,Full-time,Living with Family,Black,Male,Suburban,1
+45,Unemployed,104227,PhD,Widowed,Contract,Living with Family,Asian,Male,Suburban,1
+44,Private,139346,Highschool,Single,Full-time,Living Alone,White,Female,Suburban,1
+51,Government,193430,Master,Divorced,Intern,Living with Family,Hispanic,Male,Suburban,1
+27,Private,112263,Master,Married,Full-time,Living with Family,White,Male,Urban,1
+20,Unemployed,93297,Highschool,Divorced,Full-time,Living Alone,White,Female,Suburban,1
+30,Self-emp,158394,Bachelor,Widowed,Contract,Living with Roommates,White,Male,Urban,1
+29,Unemployed,165811,Highschool,Widowed,Part-time,Living Alone,Hispanic,Male,Urban,1
+47,Private,99086,Highschool,Widowed,Part-time,Living Alone,White,Male,Suburban,1
+19,Private,99838,PhD,Married,Full-time,Living Alone,Hispanic,Male,Rural,1
+22,Self-emp,121326,PhD,Divorced,Intern,Living with Roommates,Black,Female,Rural,1
+66,Government,175355,PhD,Divorced,Contract,Living Alone,Black,Male,Rural,1
+40,Self-emp,186720,Highschool,Single,Contract,Living with Roommates,Hispanic,Male,Urban,1
+59,Government,77088,PhD,Married,Intern,Living with Family,White,Female,Rural,1
+36,Private,190681,Highschool,Divorced,Part-time,Living with Family,Hispanic,Male,Suburban,1
+36,Self-emp,28993,Highschool,Married,Intern,Living Alone,White,Female,Urban,0
+18,Unemployed,53950,Bachelor,Single,Contract,Living with Family,Hispanic,Male,Rural,1
+27,Unemployed,167462,PhD,Married,Intern,Living with Family,Asian,Female,Urban,1
+61,Private,132000,PhD,Single,Part-time,Living with Roommates,White,Male,Urban,1
+38,Self-emp,77722,PhD,Single,Intern,Living with Family,Other,Female,Suburban,1
+26,Private,27652,Bachelor,Widowed,Intern,Living Alone,Other,Male,Rural,0
+46,Government,47027,Master,Divorced,Intern,Living Alone,Black,Female,Urban,0
+36,Government,41127,Master,Divorced,Contract,Living with Roommates,Black,Female,Urban,0
+59,Self-emp,101329,PhD,Widowed,Full-time,Living with Roommates,Black,Male,Rural,1
+56,Government,80964,Highschool,Divorced,Part-time,Living Alone,Black,Male,Rural,1
+36,Government,124989,Highschool,Single,Contract,Living with Roommates,Other,Female,Rural,1
+69,Unemployed,98424,Bachelor,Divorced,Part-time,Living Alone,Black,Male,Suburban,1
+26,Private,185663,Highschool,Divorced,Full-time,Living with Family,Asian,Female,Suburban,1
+52,Unemployed,180049,Highschool,Single,Contract,Living with Family,White,Male,Suburban,1
+34,Government,146908,PhD,Widowed,Intern,Living Alone,Asian,Female,Urban,1
+23,Self-emp,189415,PhD,Married,Full-time,Living Alone,Hispanic,Male,Urban,1
+22,Government,130693,PhD,Widowed,Full-time,Living with Family,White,Female,Rural,1
+41,Unemployed,107606,Bachelor,Married,Intern,Living Alone,White,Female,Suburban,1
+51,Unemployed,186570,Bachelor,Widowed,Full-time,Living with Family,Hispanic,Male,Suburban,1
+18,Private,101960,Bachelor,Widowed,Part-time,Living with Family,Asian,Male,Urban,1
+32,Unemployed,61001,Master,Married,Intern,Living Alone,Hispanic,Male,Suburban,1
+45,Private,78004,PhD,Single,Contract,Living with Family,Other,Male,Suburban,1
+24,Government,197419,Master,Widowed,Part-time,Living with Family,Other,Male,Urban,1
+64,Unemployed,79804,Bachelor,Widowed,Contract,Living with Roommates,Black,Male,Urban,1
+53,Self-emp,176180,Master,Single,Full-time,Living Alone,Hispanic,Female,Suburban,1
+29,Private,139788,Highschool,Divorced,Contract,Living Alone,Black,Female,Suburban,1
+43,Private,171353,Bachelor,Single,Full-time,Living with Family,Hispanic,Male,Suburban,1
+59,Government,111466,Master,Single,Contract,Living Alone,Asian,Male,Urban,1
+33,Government,68303,Master,Widowed,Contract,Living Alone,Black,Male,Rural,1
+21,Government,86953,PhD,Divorced,Part-time,Living with Roommates,Black,Male,Urban,1
+19,Self-emp,96432,Bachelor,Divorced,Full-time,Living Alone,Black,Female,Rural,1
+26,Unemployed,133833,Master,Married,Intern,Living with Family,Black,Female,Urban,1
+45,Private,77067,Highschool,Widowed,Contract,Living with Family,Hispanic,Female,Suburban,1
+41,Self-emp,61648,Master,Single,Contract,Living with Roommates,Black,Female,Urban,1
+35,Self-emp,171271,Master,Married,Intern,Living Alone,Other,Female,Urban,1
+37,Government,196336,PhD,Widowed,Contract,Living with Roommates,Black,Male,Suburban,1
+61,Government,108497,PhD,Divorced,Full-time,Living with Family,Other,Female,Rural,1
+26,Private,190536,Bachelor,Married,Contract,Living with Family,Black,Female,Suburban,1
+66,Self-emp,42251,Highschool,Divorced,Contract,Living Alone,Black,Male,Suburban,0
+38,Private,181066,PhD,Divorced,Intern,Living with Family,Hispanic,Male,Suburban,1
+32,Unemployed,11794,Highschool,Widowed,Full-time,Living Alone,White,Female,Rural,0
+62,Government,64586,Highschool,Divorced,Full-time,Living with Roommates,Other,Female,Rural,1
+21,Government,78940,Master,Single,Contract,Living Alone,Black,Male,Urban,1
+42,Private,184951,Master,Single,Intern,Living Alone,Hispanic,Female,Urban,1
+41,Unemployed,63735,Highschool,Single,Intern,Living with Roommates,Hispanic,Female,Suburban,1
+67,Unemployed,177560,Bachelor,Widowed,Part-time,Living Alone,Hispanic,Female,Rural,1
+35,Unemployed,36064,PhD,Widowed,Contract,Living Alone,Hispanic,Male,Urban,0
+34,Self-emp,186246,Bachelor,Married,Contract,Living with Roommates,White,Female,Suburban,1
+56,Unemployed,111003,Highschool,Divorced,Part-time,Living with Roommates,Asian,Female,Suburban,1
+70,Self-emp,80977,Bachelor,Widowed,Full-time,Living with Family,Black,Female,Suburban,1
+43,Unemployed,132599,Bachelor,Single,Contract,Living Alone,Other,Male,Urban,1
+38,Self-emp,51762,Highschool,Widowed,Intern,Living with Roommates,Asian,Female,Urban,1
+39,Government,16707,Master,Single,Full-time,Living with Roommates,White,Female,Urban,0
+28,Self-emp,44697,PhD,Married,Intern,Living with Roommates,Black,Female,Urban,0
+39,Government,110804,PhD,Widowed,Contract,Living with Roommates,Black,Female,Rural,1
+27,Private,38495,Bachelor,Married,Full-time,Living with Family,Hispanic,Male,Rural,0
+24,Government,106091,Bachelor,Widowed,Intern,Living with Family,Other,Male,Urban,1
+66,Unemployed,15257,Highschool,Single,Contract,Living with Family,Asian,Male,Urban,0
+28,Self-emp,152994,Master,Divorced,Intern,Living with Family,White,Female,Suburban,1
+63,Government,61927,Master,Widowed,Full-time,Living Alone,Black,Female,Suburban,1
+61,Self-emp,67864,Bachelor,Married,Intern,Living Alone,Asian,Female,Suburban,1
+33,Government,13873,Master,Single,Intern,Living with Roommates,Black,Female,Rural,0
+63,Unemployed,102099,Master,Single,Contract,Living with Family,Hispanic,Female,Suburban,1
+62,Private,83842,Highschool,Single,Intern,Living with Family,Asian,Male,Urban,1
+68,Private,152781,Master,Married,Contract,Living with Roommates,Hispanic,Female,Suburban,1
+30,Government,53574,Bachelor,Divorced,Full-time,Living Alone,Asian,Female,Rural,1
+32,Self-emp,115842,Highschool,Married,Part-time,Living with Roommates,White,Male,Rural,1
+21,Self-emp,151703,Highschool,Divorced,Part-time,Living Alone,Black,Female,Rural,1
+26,Private,108824,Highschool,Single,Contract,Living Alone,White,Male,Urban,1
+54,Self-emp,144082,Highschool,Married,Contract,Living with Family,Other,Female,Rural,1
+20,Private,15568,PhD,Divorced,Intern,Living with Family,Other,Female,Rural,0
+53,Self-emp,149760,PhD,Single,Full-time,Living with Family,Other,Female,Suburban,1
+43,Private,69558,Master,Single,Contract,Living Alone,Hispanic,Female,Suburban,1
+54,Private,175732,Bachelor,Widowed,Part-time,Living Alone,Other,Female,Suburban,1
+48,Self-emp,159098,Bachelor,Divorced,Part-time,Living with Family,Asian,Male,Rural,1
+21,Unemployed,18921,Highschool,Widowed,Part-time,Living with Roommates,Black,Male,Suburban,0
+33,Self-emp,53816,Bachelor,Divorced,Full-time,Living with Family,Black,Female,Rural,1
+50,Private,166205,PhD,Widowed,Intern,Living with Family,Hispanic,Male,Suburban,1
+21,Private,55866,Bachelor,Divorced,Full-time,Living with Family,Black,Female,Rural,1
+31,Self-emp,151925,Master,Widowed,Contract,Living Alone,Other,Male,Rural,1
+37,Self-emp,163726,Bachelor,Single,Part-time,Living with Family,White,Female,Suburban,1
+27,Private,12987,Highschool,Married,Part-time,Living with Roommates,Other,Male,Urban,0
+18,Unemployed,125241,Highschool,Widowed,Intern,Living with Roommates,Black,Male,Rural,1
+20,Self-emp,96138,Highschool,Married,Part-time,Living with Family,White,Male,Rural,1
+60,Private,74682,Master,Divorced,Part-time,Living Alone,Black,Female,Urban,1
+70,Unemployed,171009,Bachelor,Married,Intern,Living with Roommates,Hispanic,Male,Rural,1
+46,Private,63417,Bachelor,Widowed,Intern,Living Alone,Hispanic,Male,Suburban,1
+19,Government,164387,Master,Widowed,Intern,Living Alone,Hispanic,Male,Suburban,1
+29,Private,167959,Master,Divorced,Part-time,Living with Family,Black,Male,Suburban,1
+53,Government,144133,Bachelor,Married,Contract,Living with Roommates,Asian,Female,Suburban,1
+69,Private,150982,PhD,Married,Part-time,Living Alone,Hispanic,Male,Suburban,1
+38,Government,150975,Master,Divorced,Intern,Living Alone,Black,Male,Urban,1
+41,Unemployed,138416,Highschool,Married,Part-time,Living Alone,White,Female,Urban,1
+69,Unemployed,62637,Highschool,Single,Contract,Living with Family,Black,Male,Suburban,1
+21,Private,154651,PhD,Married,Part-time,Living Alone,White,Female,Rural,1
+55,Self-emp,195559,Master,Widowed,Contract,Living with Family,Black,Female,Rural,1
+22,Government,166404,Master,Married,Contract,Living with Family,White,Male,Suburban,1
+28,Self-emp,33803,Highschool,Divorced,Contract,Living Alone,White,Male,Rural,0
+39,Private,21646,Highschool,Married,Full-time,Living with Family,Other,Female,Suburban,0
+33,Self-emp,91398,Master,Married,Full-time,Living Alone,Black,Female,Rural,1
+31,Self-emp,98648,Bachelor,Married,Intern,Living Alone,White,Male,Rural,1
+21,Private,147186,Bachelor,Divorced,Intern,Living with Roommates,Black,Male,Rural,1
+59,Private,68513,Bachelor,Married,Full-time,Living Alone,Black,Male,Suburban,1
+57,Unemployed,156098,Bachelor,Divorced,Full-time,Living Alone,Black,Male,Urban,1
+33,Private,116256,PhD,Widowed,Contract,Living Alone,Hispanic,Male,Rural,1
+52,Government,26104,Bachelor,Single,Full-time,Living with Roommates,Hispanic,Male,Rural,0
+42,Government,63018,Master,Widowed,Contract,Living with Roommates,Other,Male,Suburban,1
+48,Private,197744,PhD,Widowed,Contract,Living with Family,Asian,Male,Rural,1
+54,Self-emp,136720,Highschool,Married,Full-time,Living with Roommates,Black,Female,Urban,1
+22,Unemployed,31086,Master,Widowed,Part-time,Living with Family,Black,Female,Rural,0
+29,Self-emp,88862,Highschool,Widowed,Contract,Living with Roommates,Hispanic,Female,Suburban,1
+40,Unemployed,44338,Bachelor,Single,Intern,Living with Roommates,Black,Female,Urban,0
+48,Government,162523,Highschool,Married,Intern,Living with Roommates,Hispanic,Female,Rural,1
+51,Private,14051,Bachelor,Divorced,Intern,Living with Roommates,Hispanic,Female,Suburban,0
+62,Government,167676,Bachelor,Married,Intern,Living with Family,Other,Male,Urban,1
+18,Private,39906,Master,Divorced,Full-time,Living Alone,White,Male,Rural,0
+22,Government,138621,Master,Single,Part-time,Living with Roommates,Hispanic,Female,Urban,1
+30,Self-emp,123673,PhD,Married,Part-time,Living Alone,Hispanic,Female,Suburban,1
+60,Government,26732,PhD,Single,Part-time,Living with Family,Black,Female,Urban,0
+56,Unemployed,52245,Highschool,Widowed,Part-time,Living with Family,Hispanic,Female,Rural,1
+51,Government,196232,Highschool,Single,Intern,Living with Roommates,Black,Female,Rural,1
+53,Unemployed,29569,PhD,Single,Intern,Living with Family,Black,Male,Urban,0
+19,Government,23429,Bachelor,Widowed,Intern,Living Alone,Hispanic,Male,Suburban,0
+18,Unemployed,193681,Bachelor,Single,Intern,Living Alone,Asian,Male,Rural,1
+24,Government,59567,PhD,Widowed,Full-time,Living with Family,White,Female,Suburban,1
+19,Private,54391,Highschool,Widowed,Intern,Living with Family,White,Female,Rural,1
+26,Unemployed,86110,Highschool,Divorced,Contract,Living with Family,White,Male,Rural,1
+51,Government,135465,Bachelor,Married,Intern,Living with Roommates,White,Female,Urban,1
+61,Private,29436,Bachelor,Divorced,Full-time,Living with Roommates,Other,Female,Suburban,0
+21,Private,87868,Master,Divorced,Contract,Living with Roommates,Other,Male,Suburban,1
+24,Unemployed,111753,PhD,Single,Full-time,Living Alone,White,Female,Suburban,1
+33,Private,100500,Highschool,Divorced,Full-time,Living Alone,Asian,Female,Urban,1
+25,Government,164865,Bachelor,Single,Full-time,Living with Family,Black,Female,Suburban,1
+25,Unemployed,64681,Highschool,Single,Part-time,Living with Roommates,Hispanic,Male,Suburban,1
+46,Unemployed,188071,PhD,Married,Full-time,Living with Family,Black,Female,Suburban,1
+38,Unemployed,86462,Highschool,Single,Contract,Living with Family,Black,Female,Suburban,1
+55,Unemployed,77719,Highschool,Widowed,Part-time,Living with Family,Hispanic,Female,Urban,1
+34,Government,157204,Bachelor,Married,Full-time,Living Alone,Other,Female,Suburban,1
+21,Self-emp,67773,Master,Widowed,Contract,Living with Roommates,Asian,Male,Urban,1
+35,Government,198617,PhD,Single,Intern,Living with Roommates,Other,Male,Suburban,1
+30,Private,35723,PhD,Single,Full-time,Living with Roommates,Black,Female,Suburban,0
+61,Self-emp,95529,PhD,Widowed,Intern,Living Alone,Hispanic,Male,Urban,1
+48,Self-emp,59602,Bachelor,Married,Part-time,Living with Roommates,Other,Female,Urban,1
+60,Self-emp,145669,Bachelor,Married,Full-time,Living with Family,Asian,Female,Rural,1
+21,Unemployed,175541,PhD,Married,Full-time,Living with Roommates,Asian,Male,Urban,1
+49,Self-emp,175663,Master,Divorced,Intern,Living with Roommates,Hispanic,Male,Rural,1
+29,Unemployed,52235,Bachelor,Single,Part-time,Living with Family,Black,Female,Urban,1
+63,Unemployed,181982,Master,Married,Intern,Living with Roommates,Black,Male,Urban,1
+65,Unemployed,194712,Master,Widowed,Contract,Living with Family,Other,Male,Suburban,1
+50,Self-emp,152361,PhD,Single,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+33,Unemployed,148736,PhD,Divorced,Full-time,Living with Family,White,Female,Urban,1
+57,Unemployed,45295,PhD,Divorced,Intern,Living with Roommates,Black,Male,Rural,0
+67,Private,83769,Bachelor,Widowed,Part-time,Living with Family,Asian,Female,Suburban,1
+66,Government,105951,PhD,Married,Contract,Living Alone,Black,Male,Rural,1
+64,Self-emp,13452,Bachelor,Married,Intern,Living with Family,White,Female,Rural,0
+29,Unemployed,63298,Master,Married,Full-time,Living with Roommates,Asian,Male,Rural,1
+49,Government,121916,PhD,Married,Contract,Living with Family,Black,Male,Suburban,1
+51,Self-emp,90361,Highschool,Divorced,Part-time,Living with Roommates,Other,Male,Urban,1
+60,Unemployed,160253,PhD,Widowed,Contract,Living with Family,Black,Female,Suburban,1
+26,Private,171642,Highschool,Widowed,Part-time,Living with Family,Other,Female,Urban,1
+66,Private,174605,Bachelor,Single,Intern,Living with Family,Black,Male,Rural,1
+64,Self-emp,178296,Highschool,Single,Intern,Living with Family,White,Female,Rural,1
+53,Self-emp,18433,Master,Single,Intern,Living with Roommates,Hispanic,Female,Rural,0
+21,Private,127635,Bachelor,Married,Contract,Living with Family,White,Male,Urban,1
+36,Government,28914,Highschool,Single,Intern,Living Alone,White,Female,Urban,0
+26,Private,37242,Highschool,Married,Contract,Living with Family,White,Female,Rural,0
+70,Private,158558,Master,Married,Intern,Living Alone,Black,Male,Urban,1
+52,Self-emp,66158,Master,Divorced,Intern,Living with Family,Other,Male,Rural,1
+55,Self-emp,43875,Master,Single,Full-time,Living with Family,White,Female,Rural,0
+29,Self-emp,162578,PhD,Married,Contract,Living with Roommates,Black,Male,Urban,1
+52,Private,181910,PhD,Widowed,Intern,Living Alone,Asian,Female,Urban,1
+54,Unemployed,84438,Bachelor,Married,Part-time,Living with Roommates,Black,Male,Suburban,1
+51,Unemployed,84090,PhD,Widowed,Intern,Living with Roommates,White,Female,Urban,1
+20,Private,42542,PhD,Divorced,Part-time,Living with Roommates,Asian,Male,Rural,0
+46,Government,115017,Master,Married,Full-time,Living with Family,Black,Female,Rural,1
+36,Unemployed,120082,Bachelor,Widowed,Contract,Living Alone,Other,Male,Rural,1
+19,Unemployed,57596,Bachelor,Divorced,Full-time,Living with Family,White,Male,Suburban,1
+24,Self-emp,26508,Highschool,Married,Contract,Living with Family,Asian,Male,Rural,0
+20,Government,139901,PhD,Divorced,Intern,Living with Roommates,Black,Female,Suburban,1
+35,Government,58953,Bachelor,Single,Intern,Living with Family,White,Female,Suburban,1
+42,Government,134528,Bachelor,Single,Part-time,Living Alone,Other,Male,Rural,1
+52,Self-emp,95503,Master,Married,Intern,Living with Family,White,Female,Rural,1
+27,Self-emp,125384,Highschool,Married,Full-time,Living with Roommates,White,Female,Urban,1
+38,Private,139313,Highschool,Widowed,Part-time,Living with Roommates,Hispanic,Male,Rural,1
+65,Unemployed,88702,Master,Widowed,Part-time,Living with Roommates,Other,Female,Urban,1
+33,Self-emp,72704,Master,Divorced,Intern,Living with Family,Other,Female,Suburban,1
+20,Unemployed,104329,Highschool,Divorced,Full-time,Living with Roommates,White,Female,Suburban,1
+29,Unemployed,189905,Bachelor,Single,Part-time,Living Alone,Asian,Male,Urban,1
+26,Self-emp,83372,PhD,Married,Full-time,Living with Roommates,Hispanic,Male,Urban,1
+42,Self-emp,28419,PhD,Married,Full-time,Living Alone,Other,Male,Rural,0
+50,Self-emp,110701,PhD,Married,Intern,Living with Family,Black,Male,Rural,1
+67,Private,52892,PhD,Widowed,Intern,Living with Roommates,Other,Male,Suburban,1
+46,Unemployed,56259,Bachelor,Widowed,Contract,Living Alone,Other,Female,Suburban,1
+29,Government,101052,Highschool,Single,Contract,Living Alone,Black,Female,Urban,1
+61,Unemployed,22005,Master,Widowed,Contract,Living with Roommates,Hispanic,Male,Suburban,0
+26,Unemployed,163016,Master,Married,Contract,Living Alone,Other,Male,Urban,1
+35,Unemployed,112021,Highschool,Married,Part-time,Living with Family,Asian,Female,Urban,1
+63,Self-emp,63787,Highschool,Widowed,Full-time,Living with Roommates,Black,Male,Rural,1
+21,Government,166199,Highschool,Widowed,Full-time,Living with Roommates,Black,Male,Urban,1
+55,Unemployed,191733,Master,Single,Intern,Living with Roommates,White,Male,Urban,1
+59,Government,26038,Bachelor,Divorced,Intern,Living Alone,White,Female,Urban,0
+37,Government,80934,Highschool,Divorced,Contract,Living with Family,Black,Female,Suburban,1
+70,Unemployed,30229,Master,Widowed,Contract,Living with Roommates,White,Male,Suburban,0
+50,Self-emp,23467,Bachelor,Married,Full-time,Living with Family,White,Female,Rural,0
+65,Government,106807,Bachelor,Single,Part-time,Living Alone,Asian,Female,Urban,1
+19,Unemployed,115853,Bachelor,Single,Full-time,Living Alone,Black,Female,Urban,1
+54,Self-emp,54806,PhD,Divorced,Full-time,Living with Roommates,Asian,Female,Rural,1
+21,Self-emp,124998,Highschool,Single,Contract,Living Alone,White,Female,Suburban,1
+34,Self-emp,26143,Master,Divorced,Full-time,Living with Family,Asian,Female,Urban,0
+49,Self-emp,97916,Bachelor,Single,Intern,Living Alone,Asian,Male,Urban,1
+22,Government,149914,Bachelor,Married,Intern,Living with Roommates,Black,Male,Suburban,1
+35,Private,88028,PhD,Divorced,Full-time,Living with Family,Other,Female,Suburban,1
+25,Government,79504,Master,Married,Intern,Living Alone,Black,Male,Rural,1
+67,Private,22247,Master,Divorced,Part-time,Living Alone,White,Female,Urban,0
+29,Unemployed,49275,Bachelor,Divorced,Intern,Living with Family,Hispanic,Male,Suburban,0
+64,Government,107563,Bachelor,Single,Full-time,Living with Roommates,Asian,Female,Suburban,1
+43,Government,113911,Bachelor,Married,Intern,Living Alone,Asian,Female,Urban,1
+65,Government,24481,Highschool,Single,Intern,Living Alone,Asian,Male,Rural,0
+21,Unemployed,107084,Master,Single,Part-time,Living with Family,Other,Female,Urban,1
+20,Private,43769,Bachelor,Widowed,Contract,Living with Roommates,Black,Male,Urban,0
+63,Government,74676,PhD,Divorced,Intern,Living with Roommates,Other,Male,Urban,1
+67,Private,85276,PhD,Widowed,Contract,Living with Family,White,Male,Suburban,1
+49,Government,136648,Master,Single,Contract,Living with Family,Other,Female,Suburban,1
+62,Government,32924,Master,Married,Contract,Living Alone,Asian,Female,Rural,0
+31,Unemployed,59062,PhD,Married,Full-time,Living with Family,Other,Female,Suburban,1
+35,Unemployed,191061,Bachelor,Widowed,Full-time,Living Alone,Other,Female,Rural,1
+45,Unemployed,161707,Highschool,Divorced,Full-time,Living Alone,Other,Female,Suburban,1
+63,Self-emp,182376,Master,Widowed,Intern,Living with Family,Hispanic,Female,Urban,1
+63,Unemployed,104290,Master,Single,Intern,Living Alone,Black,Male,Urban,1
+45,Unemployed,170484,Bachelor,Married,Contract,Living with Family,Asian,Male,Suburban,1
+64,Self-emp,84256,Highschool,Single,Contract,Living with Roommates,Asian,Male,Suburban,1
+46,Self-emp,198840,Master,Married,Intern,Living with Roommates,Hispanic,Female,Suburban,1
+22,Private,155567,Bachelor,Single,Part-time,Living Alone,Black,Male,Urban,1
+49,Self-emp,194243,Master,Widowed,Part-time,Living with Roommates,White,Female,Suburban,1
+57,Government,36949,PhD,Single,Part-time,Living Alone,Black,Male,Rural,0
+47,Self-emp,100941,Master,Single,Part-time,Living with Roommates,Asian,Female,Suburban,1
+50,Unemployed,45143,Bachelor,Married,Part-time,Living with Family,Asian,Female,Rural,0
+67,Private,148101,Bachelor,Married,Part-time,Living Alone,Black,Female,Suburban,1
+60,Government,115076,Master,Divorced,Part-time,Living Alone,Asian,Male,Urban,1
+62,Government,66762,Master,Divorced,Part-time,Living with Family,Black,Male,Suburban,1
+42,Unemployed,114064,Highschool,Married,Intern,Living with Roommates,Hispanic,Male,Rural,1
+56,Unemployed,47508,Highschool,Married,Full-time,Living with Family,Black,Female,Suburban,0
+45,Government,170799,Highschool,Divorced,Intern,Living Alone,Asian,Male,Suburban,1
+64,Self-emp,28341,Master,Married,Contract,Living with Roommates,Asian,Male,Rural,0
+53,Government,27009,Master,Divorced,Part-time,Living with Roommates,Other,Male,Urban,0
+30,Self-emp,81160,PhD,Married,Full-time,Living with Family,Asian,Male,Rural,1
+34,Self-emp,164760,Highschool,Married,Part-time,Living Alone,Hispanic,Female,Rural,1
+34,Self-emp,119929,PhD,Married,Intern,Living with Roommates,Hispanic,Male,Suburban,1
+30,Unemployed,136618,Master,Single,Intern,Living with Roommates,White,Female,Rural,1
+45,Private,149783,PhD,Widowed,Contract,Living with Family,Other,Male,Rural,1
+57,Government,99459,Bachelor,Single,Intern,Living with Roommates,White,Female,Suburban,1
+45,Private,160038,PhD,Divorced,Intern,Living Alone,Asian,Female,Rural,1
+70,Unemployed,140147,Bachelor,Divorced,Part-time,Living with Family,Other,Female,Rural,1
+31,Government,107180,Highschool,Single,Contract,Living Alone,White,Female,Urban,1
+46,Unemployed,195519,Highschool,Single,Contract,Living Alone,Hispanic,Male,Suburban,1
+61,Private,148372,Bachelor,Widowed,Part-time,Living Alone,Asian,Male,Suburban,1
+26,Unemployed,168472,PhD,Widowed,Part-time,Living with Family,Black,Female,Suburban,1
+67,Government,161747,Bachelor,Married,Contract,Living with Family,Black,Female,Rural,1
+21,Unemployed,54543,Master,Single,Contract,Living Alone,Asian,Male,Urban,1
+69,Private,25974,Master,Married,Full-time,Living with Family,Asian,Male,Rural,0
+41,Self-emp,28981,PhD,Married,Contract,Living with Family,Other,Male,Suburban,0
+69,Self-emp,21107,Highschool,Single,Intern,Living with Family,Hispanic,Female,Rural,0
+43,Self-emp,183625,Master,Married,Intern,Living with Roommates,Hispanic,Female,Suburban,1
+39,Government,13271,PhD,Married,Full-time,Living with Roommates,Other,Female,Rural,0
+20,Unemployed,91590,PhD,Single,Intern,Living Alone,Asian,Female,Suburban,1
+37,Self-emp,74946,Bachelor,Single,Full-time,Living with Roommates,Black,Male,Suburban,1
+65,Unemployed,35379,PhD,Married,Intern,Living Alone,Asian,Male,Suburban,0
+37,Government,89093,Bachelor,Divorced,Full-time,Living with Family,White,Male,Suburban,1
+46,Private,13264,Highschool,Divorced,Intern,Living with Family,Black,Male,Suburban,0
+38,Government,31314,Bachelor,Widowed,Contract,Living with Roommates,Asian,Male,Suburban,0
+45,Self-emp,49954,Bachelor,Widowed,Part-time,Living with Roommates,White,Female,Urban,0
+33,Self-emp,108784,PhD,Widowed,Part-time,Living with Family,Hispanic,Female,Urban,1
+38,Unemployed,90296,Highschool,Single,Full-time,Living with Roommates,Asian,Female,Suburban,1
+65,Government,64530,Highschool,Divorced,Intern,Living Alone,Other,Female,Rural,1
+38,Unemployed,69761,Bachelor,Divorced,Contract,Living Alone,Black,Male,Rural,1
+41,Self-emp,179898,Bachelor,Single,Part-time,Living Alone,Black,Male,Suburban,1
+41,Private,196790,PhD,Widowed,Part-time,Living Alone,White,Female,Suburban,1
+33,Private,132192,Bachelor,Divorced,Part-time,Living with Family,Black,Male,Rural,1
+19,Government,71885,Bachelor,Divorced,Intern,Living with Roommates,Asian,Female,Suburban,1
+45,Unemployed,109325,Highschool,Married,Full-time,Living with Roommates,White,Male,Suburban,1
+53,Government,32176,Highschool,Married,Full-time,Living Alone,White,Male,Rural,0
+70,Government,175008,PhD,Married,Full-time,Living with Roommates,Asian,Male,Suburban,1
+62,Private,76284,Bachelor,Divorced,Contract,Living Alone,White,Male,Suburban,1
+70,Government,128681,PhD,Widowed,Intern,Living with Roommates,White,Female,Urban,1
+53,Self-emp,35342,Bachelor,Widowed,Part-time,Living with Family,Asian,Male,Suburban,0
+38,Private,164243,Bachelor,Single,Full-time,Living Alone,Asian,Male,Urban,1
+57,Self-emp,51995,Master,Married,Intern,Living with Roommates,Hispanic,Male,Suburban,1
+43,Self-emp,26715,Master,Widowed,Part-time,Living with Roommates,Black,Female,Rural,0
+33,Government,11232,Highschool,Single,Contract,Living with Family,White,Male,Urban,0
+61,Self-emp,165946,Bachelor,Divorced,Full-time,Living with Roommates,Black,Female,Urban,1
+35,Self-emp,80161,PhD,Divorced,Intern,Living with Family,Other,Female,Suburban,1
+55,Private,38900,Master,Divorced,Intern,Living Alone,White,Male,Rural,0
+29,Private,19670,Highschool,Widowed,Full-time,Living with Family,Asian,Male,Rural,0
+34,Self-emp,26984,Bachelor,Divorced,Part-time,Living Alone,Other,Male,Urban,0
+42,Government,187350,PhD,Divorced,Part-time,Living with Family,White,Female,Rural,1
+43,Self-emp,104682,Master,Widowed,Full-time,Living Alone,Hispanic,Female,Suburban,1
+56,Government,167366,Master,Divorced,Full-time,Living with Roommates,Hispanic,Male,Urban,1
+56,Government,153767,Master,Widowed,Contract,Living with Roommates,Asian,Female,Suburban,1
+60,Government,128579,Bachelor,Single,Contract,Living with Roommates,Hispanic,Male,Urban,1
+70,Self-emp,87666,PhD,Widowed,Intern,Living Alone,Asian,Female,Rural,1
+48,Self-emp,123993,Master,Single,Part-time,Living with Family,Other,Female,Suburban,1
+67,Private,90013,Master,Single,Part-time,Living Alone,Other,Female,Suburban,1
+41,Government,104431,Master,Married,Intern,Living with Roommates,White,Male,Rural,1
+24,Unemployed,152604,PhD,Married,Intern,Living with Family,Hispanic,Female,Rural,1
+45,Private,118248,Master,Married,Part-time,Living with Family,Hispanic,Female,Suburban,1
+70,Government,188375,Master,Widowed,Full-time,Living Alone,Asian,Male,Urban,1
+38,Unemployed,43586,Master,Widowed,Part-time,Living with Roommates,Asian,Male,Urban,0
+33,Government,38828,Bachelor,Married,Contract,Living with Roommates,White,Female,Urban,0
+57,Self-emp,19586,PhD,Married,Part-time,Living with Roommates,Black,Female,Rural,0
+69,Government,46394,Bachelor,Divorced,Intern,Living with Roommates,Asian,Male,Rural,0
+65,Self-emp,97634,PhD,Single,Intern,Living with Family,White,Female,Rural,1
+28,Government,48833,PhD,Widowed,Intern,Living with Roommates,Black,Female,Rural,0
+45,Unemployed,92129,Bachelor,Widowed,Contract,Living with Family,Other,Female,Urban,1
+24,Unemployed,148510,Bachelor,Widowed,Contract,Living Alone,White,Male,Rural,1
+51,Government,76257,Master,Divorced,Contract,Living with Roommates,Other,Male,Rural,1
+47,Unemployed,141602,Bachelor,Widowed,Full-time,Living with Family,Black,Female,Urban,1
+70,Unemployed,67454,Master,Married,Full-time,Living Alone,Other,Male,Suburban,1
+63,Government,101715,PhD,Single,Contract,Living Alone,White,Female,Urban,1
+50,Government,90811,Bachelor,Widowed,Contract,Living with Roommates,Black,Male,Rural,1
+64,Unemployed,64968,Highschool,Widowed,Intern,Living with Family,Black,Male,Urban,1
+22,Unemployed,198033,Bachelor,Single,Contract,Living with Family,White,Female,Suburban,1
+66,Unemployed,85092,Master,Single,Intern,Living with Family,White,Male,Suburban,1
+59,Private,124970,Highschool,Single,Contract,Living Alone,White,Male,Suburban,1
+39,Government,119453,PhD,Single,Contract,Living Alone,Hispanic,Female,Suburban,1
+67,Government,19150,PhD,Widowed,Full-time,Living Alone,White,Male,Suburban,0
+61,Government,84663,Master,Single,Part-time,Living Alone,Black,Female,Rural,1
+42,Private,44211,Bachelor,Single,Contract,Living Alone,Other,Female,Urban,0
+69,Government,183332,Highschool,Married,Full-time,Living with Family,Other,Female,Suburban,1
+27,Unemployed,55274,Highschool,Single,Full-time,Living Alone,Asian,Female,Urban,1
+42,Government,117292,Highschool,Widowed,Part-time,Living with Family,Black,Male,Urban,1
+52,Government,111489,Bachelor,Single,Part-time,Living with Roommates,Asian,Male,Urban,1
+35,Private,77377,Bachelor,Married,Full-time,Living with Roommates,White,Female,Rural,1
+42,Self-emp,25093,Highschool,Widowed,Contract,Living with Roommates,Hispanic,Male,Urban,0
+26,Private,136085,Bachelor,Married,Full-time,Living with Family,White,Female,Urban,1
+20,Government,166974,Bachelor,Married,Part-time,Living with Family,Black,Male,Suburban,1
+20,Unemployed,92512,Highschool,Married,Full-time,Living with Family,White,Male,Rural,1
+46,Self-emp,57706,PhD,Widowed,Intern,Living Alone,Black,Female,Urban,1
+56,Self-emp,76051,Highschool,Widowed,Contract,Living Alone,White,Male,Suburban,1
+39,Private,157357,PhD,Single,Contract,Living with Family,White,Male,Urban,1
+54,Self-emp,199415,Bachelor,Married,Full-time,Living with Roommates,Black,Female,Urban,1
+19,Self-emp,167442,Bachelor,Widowed,Contract,Living with Family,Black,Female,Urban,1
+56,Private,103657,Highschool,Single,Intern,Living Alone,Asian,Male,Urban,1
+35,Private,38557,Master,Married,Contract,Living with Family,Hispanic,Female,Rural,0
+48,Private,189424,PhD,Married,Full-time,Living Alone,Asian,Male,Rural,1
+19,Government,78786,Highschool,Widowed,Full-time,Living with Roommates,Hispanic,Male,Suburban,1
+21,Unemployed,163281,PhD,Married,Full-time,Living with Roommates,Asian,Male,Rural,1
+60,Unemployed,144294,Bachelor,Single,Contract,Living Alone,Other,Male,Rural,1
+29,Self-emp,104942,Master,Divorced,Contract,Living with Family,Hispanic,Female,Rural,1
+24,Government,63113,PhD,Divorced,Contract,Living with Family,Black,Male,Urban,1
+57,Government,24856,Master,Single,Contract,Living with Family,Hispanic,Male,Urban,0
+41,Government,107192,Bachelor,Divorced,Contract,Living with Family,White,Male,Urban,1
+27,Government,184085,Bachelor,Married,Intern,Living with Roommates,Hispanic,Female,Urban,1
+49,Self-emp,33448,Bachelor,Divorced,Part-time,Living with Family,Other,Male,Urban,0
+65,Self-emp,11407,Bachelor,Single,Full-time,Living with Family,Asian,Female,Rural,0
+65,Private,25108,PhD,Single,Intern,Living Alone,Other,Female,Rural,0
+68,Private,143007,Bachelor,Married,Full-time,Living with Roommates,Asian,Male,Rural,1
+64,Self-emp,51484,Master,Single,Full-time,Living with Roommates,White,Female,Rural,1
+64,Unemployed,134099,Bachelor,Single,Full-time,Living with Family,Other,Female,Urban,1
+30,Private,165516,PhD,Widowed,Contract,Living Alone,Black,Female,Rural,1
+35,Government,181351,Highschool,Widowed,Contract,Living with Family,Black,Male,Rural,1
+45,Self-emp,62840,PhD,Widowed,Full-time,Living Alone,Other,Male,Urban,1
+48,Private,188591,PhD,Married,Intern,Living with Roommates,White,Male,Rural,1
+24,Private,31944,Master,Single,Part-time,Living with Roommates,Hispanic,Female,Urban,0
+52,Private,45856,Highschool,Married,Full-time,Living with Family,Black,Male,Urban,0
+46,Private,156276,Highschool,Widowed,Part-time,Living Alone,White,Female,Urban,1
+47,Government,152006,PhD,Married,Full-time,Living Alone,Other,Female,Rural,1
+64,Self-emp,189346,Bachelor,Single,Full-time,Living with Roommates,Asian,Female,Urban,1
+63,Private,120961,Highschool,Single,Full-time,Living with Family,Black,Female,Rural,1
+63,Private,152132,Bachelor,Single,Contract,Living with Family,White,Male,Rural,1
+58,Government,79154,Highschool,Widowed,Contract,Living with Family,Hispanic,Male,Urban,1
+18,Unemployed,91274,Bachelor,Divorced,Intern,Living with Family,Asian,Female,Suburban,1
+21,Government,138046,Master,Single,Intern,Living Alone,White,Male,Urban,1
+56,Self-emp,191483,Highschool,Married,Intern,Living with Roommates,Hispanic,Male,Rural,1
+45,Government,79076,Bachelor,Married,Contract,Living with Roommates,Black,Male,Urban,1
+67,Government,193158,PhD,Widowed,Full-time,Living with Roommates,Asian,Male,Suburban,1
+23,Self-emp,64709,Bachelor,Single,Part-time,Living Alone,Other,Female,Rural,1
+47,Private,168574,Bachelor,Single,Part-time,Living with Family,Other,Female,Urban,1
+52,Unemployed,123728,PhD,Divorced,Full-time,Living with Roommates,Asian,Female,Urban,1
+34,Government,147892,Highschool,Married,Intern,Living with Roommates,Black,Male,Urban,1
+18,Private,37339,Highschool,Married,Full-time,Living Alone,Asian,Male,Suburban,0
+26,Private,72841,PhD,Married,Part-time,Living with Family,Asian,Male,Suburban,1
+36,Private,112699,PhD,Widowed,Full-time,Living with Family,White,Female,Suburban,1
+33,Self-emp,173722,Bachelor,Widowed,Contract,Living Alone,White,Male,Suburban,1
+26,Government,189332,Highschool,Divorced,Part-time,Living with Family,Hispanic,Female,Suburban,1
+33,Private,12157,Master,Divorced,Full-time,Living with Roommates,Asian,Male,Suburban,0
+51,Unemployed,170928,Highschool,Single,Part-time,Living Alone,Hispanic,Male,Suburban,1
+18,Government,93669,PhD,Widowed,Full-time,Living with Family,Asian,Female,Suburban,1
+70,Self-emp,49084,Highschool,Divorced,Part-time,Living Alone,Black,Female,Urban,0
+38,Self-emp,81636,Highschool,Married,Contract,Living with Roommates,Black,Female,Urban,1
+55,Self-emp,171106,Bachelor,Divorced,Full-time,Living Alone,Hispanic,Male,Suburban,1
+20,Private,58621,Master,Divorced,Contract,Living with Roommates,Asian,Male,Suburban,1
+70,Unemployed,131761,Master,Widowed,Intern,Living with Roommates,Hispanic,Male,Suburban,1
+53,Unemployed,164289,Master,Widowed,Intern,Living Alone,Hispanic,Female,Suburban,1
+52,Government,19813,Highschool,Single,Full-time,Living with Family,Black,Male,Urban,0
+61,Self-emp,68754,Bachelor,Single,Full-time,Living Alone,Other,Female,Suburban,1
+33,Private,130284,Highschool,Divorced,Contract,Living with Roommates,White,Male,Urban,1
+65,Private,172994,Bachelor,Single,Intern,Living Alone,White,Female,Suburban,1
+27,Government,108583,Highschool,Single,Intern,Living Alone,Other,Female,Urban,1
+27,Self-emp,168466,Bachelor,Divorced,Full-time,Living Alone,Hispanic,Male,Suburban,1
+33,Unemployed,124616,Bachelor,Married,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+32,Unemployed,164885,Bachelor,Married,Contract,Living with Roommates,Black,Male,Urban,1
+48,Private,118814,Highschool,Married,Full-time,Living Alone,Other,Male,Suburban,1
+54,Private,172702,Master,Married,Full-time,Living with Family,Hispanic,Male,Suburban,1
+52,Unemployed,141823,PhD,Single,Part-time,Living with Roommates,Hispanic,Male,Suburban,1
+43,Private,164347,Bachelor,Married,Part-time,Living with Roommates,Asian,Male,Rural,1
+21,Self-emp,107811,Bachelor,Married,Intern,Living with Roommates,Asian,Female,Rural,1
+28,Unemployed,50205,Master,Widowed,Contract,Living Alone,Black,Male,Rural,1
+20,Private,147046,Master,Married,Contract,Living Alone,Asian,Female,Urban,1
+23,Unemployed,69254,Master,Single,Full-time,Living Alone,Black,Male,Rural,1
+63,Self-emp,33379,Master,Divorced,Part-time,Living with Roommates,Hispanic,Male,Rural,0
+58,Private,13073,Highschool,Divorced,Part-time,Living with Roommates,Asian,Male,Rural,0
+38,Private,93961,PhD,Single,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+69,Government,60948,Bachelor,Divorced,Contract,Living with Roommates,Black,Male,Urban,1
+55,Self-emp,86289,PhD,Widowed,Contract,Living with Family,Other,Male,Rural,1
+21,Private,95341,Master,Single,Part-time,Living Alone,White,Male,Rural,1
+50,Unemployed,86636,Highschool,Single,Part-time,Living Alone,Black,Male,Urban,1
+60,Unemployed,11527,Master,Divorced,Part-time,Living with Family,Other,Male,Suburban,0
+24,Unemployed,104717,Master,Married,Part-time,Living with Family,White,Male,Rural,1
+37,Unemployed,162819,Master,Married,Full-time,Living with Roommates,Asian,Male,Rural,1
+49,Government,126383,Master,Widowed,Part-time,Living Alone,White,Female,Urban,1
+65,Government,50555,Master,Single,Full-time,Living with Roommates,Black,Female,Urban,1
+54,Government,115040,Master,Married,Intern,Living with Family,Hispanic,Male,Urban,1
+46,Private,13425,PhD,Single,Part-time,Living with Roommates,Black,Male,Urban,0
+45,Self-emp,124430,Highschool,Widowed,Intern,Living with Family,Other,Male,Rural,1
+22,Private,118365,Master,Widowed,Full-time,Living with Family,Asian,Female,Suburban,1
+36,Government,122641,PhD,Single,Part-time,Living Alone,Hispanic,Female,Suburban,1
+40,Self-emp,17908,Master,Widowed,Part-time,Living Alone,Asian,Female,Rural,0
+38,Private,57459,Bachelor,Single,Intern,Living Alone,White,Female,Urban,1
+20,Government,34660,PhD,Married,Part-time,Living with Family,White,Female,Suburban,0
+69,Government,179003,Highschool,Married,Contract,Living Alone,Other,Female,Suburban,1
+38,Government,29087,Bachelor,Married,Full-time,Living Alone,Hispanic,Male,Suburban,0
+49,Private,123719,Master,Married,Intern,Living with Family,Hispanic,Male,Urban,1
+65,Government,33664,Master,Single,Contract,Living with Roommates,Black,Female,Rural,0
+41,Unemployed,134813,PhD,Single,Full-time,Living with Roommates,Hispanic,Male,Urban,1
+65,Self-emp,142526,Bachelor,Single,Intern,Living with Family,Hispanic,Male,Suburban,1
+32,Unemployed,46738,Bachelor,Single,Full-time,Living with Family,Asian,Male,Urban,0
+54,Government,196343,Bachelor,Widowed,Full-time,Living with Family,Other,Female,Urban,1
+48,Unemployed,17096,Bachelor,Married,Full-time,Living Alone,Other,Female,Rural,0
+35,Self-emp,20058,Highschool,Married,Part-time,Living with Family,Hispanic,Female,Urban,0
+23,Self-emp,191072,Bachelor,Married,Contract,Living Alone,Hispanic,Male,Rural,1
+32,Government,47674,PhD,Married,Contract,Living with Roommates,White,Male,Rural,0
+41,Government,60024,PhD,Divorced,Part-time,Living with Roommates,Other,Female,Urban,1
+31,Private,89524,Bachelor,Married,Part-time,Living with Family,White,Male,Rural,1
+69,Self-emp,167476,PhD,Widowed,Contract,Living with Family,White,Female,Urban,1
+20,Self-emp,179139,Highschool,Married,Contract,Living with Family,Hispanic,Female,Suburban,1
+64,Unemployed,166909,Master,Widowed,Intern,Living with Roommates,Black,Female,Urban,1
+22,Private,88170,Highschool,Divorced,Part-time,Living with Roommates,Black,Male,Rural,1
+18,Private,104693,Highschool,Single,Full-time,Living with Roommates,Asian,Female,Rural,1
+64,Government,192958,Master,Married,Contract,Living Alone,Asian,Female,Urban,1
+40,Unemployed,99861,PhD,Married,Contract,Living with Family,Asian,Male,Suburban,1
+24,Unemployed,194325,Master,Widowed,Contract,Living with Family,White,Female,Rural,1
+52,Unemployed,12203,Master,Widowed,Contract,Living Alone,Hispanic,Female,Rural,0
+56,Government,74550,Master,Married,Full-time,Living with Family,Black,Male,Rural,1
+70,Private,199959,Highschool,Widowed,Full-time,Living with Family,White,Female,Urban,1
+34,Private,76008,Highschool,Single,Contract,Living with Roommates,Black,Female,Urban,1
+51,Self-emp,163693,Highschool,Divorced,Full-time,Living Alone,Other,Male,Rural,1
+41,Government,25540,Bachelor,Widowed,Full-time,Living Alone,Other,Female,Rural,0
+56,Unemployed,138322,Highschool,Married,Full-time,Living Alone,White,Female,Urban,1
+49,Government,90494,Master,Divorced,Contract,Living Alone,White,Male,Suburban,1
+57,Unemployed,22411,Bachelor,Single,Intern,Living Alone,Black,Male,Urban,0
+37,Private,84024,Bachelor,Single,Part-time,Living with Roommates,Other,Male,Rural,1
+29,Unemployed,13207,Bachelor,Single,Part-time,Living Alone,Asian,Male,Rural,0
+57,Unemployed,68547,Highschool,Married,Contract,Living with Family,Asian,Male,Urban,1
+36,Government,143069,PhD,Widowed,Contract,Living with Roommates,Other,Female,Urban,1
+44,Unemployed,66087,Highschool,Widowed,Part-time,Living with Family,Black,Male,Rural,1
+51,Self-emp,70274,Highschool,Single,Intern,Living Alone,Hispanic,Male,Urban,1
+26,Unemployed,17425,Master,Single,Part-time,Living with Roommates,Hispanic,Female,Suburban,0
+69,Private,40871,Master,Single,Intern,Living with Family,Black,Female,Suburban,0
+41,Private,196516,Bachelor,Widowed,Intern,Living Alone,Other,Female,Urban,1
+53,Self-emp,175449,Master,Married,Intern,Living with Roommates,Other,Male,Rural,1
+63,Private,54609,Master,Married,Intern,Living with Family,Asian,Male,Urban,1
+32,Government,18297,Highschool,Married,Full-time,Living Alone,Hispanic,Male,Urban,0
+19,Unemployed,121555,Bachelor,Married,Intern,Living Alone,Hispanic,Male,Rural,1
+58,Self-emp,19308,Master,Married,Part-time,Living with Roommates,Other,Male,Urban,0
+38,Unemployed,134184,Bachelor,Widowed,Part-time,Living with Roommates,Asian,Male,Suburban,1
+51,Government,13224,Master,Married,Contract,Living with Roommates,Hispanic,Female,Rural,0
+21,Unemployed,189821,Master,Married,Contract,Living with Family,Asian,Female,Rural,1
+53,Unemployed,196520,PhD,Single,Part-time,Living with Family,Other,Male,Suburban,1
+59,Self-emp,118809,PhD,Married,Intern,Living Alone,Asian,Female,Rural,1
+67,Self-emp,125077,Master,Divorced,Full-time,Living with Family,Asian,Male,Suburban,1
+61,Government,100314,Bachelor,Single,Intern,Living with Family,Hispanic,Male,Urban,1
+21,Government,32076,Highschool,Widowed,Full-time,Living with Roommates,Asian,Female,Rural,0
+52,Government,147479,PhD,Single,Contract,Living with Roommates,Asian,Male,Rural,1
+46,Private,35391,PhD,Single,Intern,Living Alone,Black,Female,Urban,0
+23,Unemployed,154702,Highschool,Widowed,Contract,Living Alone,Hispanic,Female,Rural,1
+55,Self-emp,127160,PhD,Single,Intern,Living with Family,White,Female,Urban,1
+66,Unemployed,116998,Highschool,Widowed,Contract,Living with Family,Black,Female,Rural,1
+23,Self-emp,196483,Highschool,Divorced,Contract,Living with Roommates,Asian,Female,Urban,1
+32,Self-emp,38886,PhD,Married,Contract,Living Alone,White,Female,Rural,0
+52,Government,152592,PhD,Single,Contract,Living Alone,Asian,Male,Urban,1
+31,Private,94949,Master,Single,Contract,Living Alone,Black,Male,Urban,1
+67,Government,83957,Master,Married,Contract,Living with Family,Hispanic,Female,Suburban,1
+60,Private,96236,PhD,Divorced,Intern,Living Alone,Asian,Female,Rural,1
+57,Private,16381,Bachelor,Married,Intern,Living with Roommates,Hispanic,Male,Urban,0
+62,Unemployed,60379,Master,Married,Contract,Living Alone,Black,Male,Suburban,1
+65,Private,14531,PhD,Married,Part-time,Living with Family,Hispanic,Female,Urban,0
+58,Government,147037,PhD,Widowed,Full-time,Living with Family,White,Female,Suburban,1
+53,Private,67370,PhD,Single,Full-time,Living with Roommates,Hispanic,Female,Urban,1
+45,Government,29736,PhD,Divorced,Contract,Living with Roommates,Black,Male,Urban,0
+69,Unemployed,148066,PhD,Single,Contract,Living with Roommates,Other,Male,Urban,1
+38,Private,106097,PhD,Widowed,Intern,Living with Family,Other,Male,Rural,1
+65,Private,153156,Highschool,Widowed,Intern,Living with Roommates,Hispanic,Female,Urban,1
+38,Unemployed,107093,Highschool,Single,Part-time,Living with Family,White,Male,Urban,1
+47,Self-emp,31582,PhD,Single,Intern,Living with Roommates,Other,Female,Suburban,0
+34,Government,16704,Master,Widowed,Part-time,Living with Roommates,Asian,Female,Urban,0
+33,Unemployed,169781,Master,Divorced,Intern,Living with Roommates,Black,Male,Urban,1
+42,Self-emp,72170,PhD,Divorced,Part-time,Living with Family,Other,Male,Rural,1
+57,Private,29571,Master,Divorced,Contract,Living with Family,Black,Female,Urban,0
+32,Government,148292,PhD,Married,Intern,Living with Family,White,Female,Rural,1
+34,Self-emp,146758,Highschool,Divorced,Full-time,Living with Roommates,Black,Male,Rural,1
+31,Self-emp,128579,Highschool,Widowed,Full-time,Living Alone,White,Male,Suburban,1
+69,Government,15857,Bachelor,Widowed,Part-time,Living with Family,Hispanic,Female,Urban,0
+50,Unemployed,151726,PhD,Divorced,Contract,Living with Roommates,Black,Male,Suburban,1
+27,Government,17094,PhD,Single,Contract,Living Alone,Other,Male,Rural,0
+48,Government,42615,Master,Widowed,Contract,Living with Family,White,Female,Urban,0
+27,Unemployed,114446,Master,Married,Intern,Living with Roommates,White,Female,Urban,1
+70,Private,129818,Highschool,Divorced,Part-time,Living Alone,White,Female,Rural,1
+48,Unemployed,117716,Master,Widowed,Contract,Living with Family,Black,Male,Rural,1
+24,Unemployed,108838,PhD,Divorced,Contract,Living with Roommates,Black,Male,Urban,1
+66,Government,164355,Highschool,Single,Full-time,Living Alone,Other,Female,Rural,1
+26,Unemployed,139276,Highschool,Married,Full-time,Living Alone,Asian,Male,Rural,1
+25,Government,161361,Bachelor,Single,Contract,Living with Family,Other,Female,Urban,1
+50,Private,159832,Bachelor,Divorced,Full-time,Living with Family,Asian,Female,Urban,1
+39,Self-emp,166809,PhD,Divorced,Full-time,Living with Family,Hispanic,Female,Urban,1
+48,Private,106843,Bachelor,Widowed,Contract,Living with Roommates,White,Male,Suburban,1
+30,Government,50341,Bachelor,Married,Part-time,Living with Roommates,Other,Female,Suburban,1
+25,Private,104113,PhD,Married,Contract,Living Alone,White,Female,Suburban,1
+21,Unemployed,41319,Master,Widowed,Intern,Living Alone,Asian,Male,Suburban,0
+36,Private,141149,Master,Divorced,Part-time,Living Alone,Hispanic,Female,Rural,1
+34,Private,119584,Highschool,Married,Contract,Living Alone,White,Female,Urban,1
+62,Self-emp,124973,PhD,Single,Part-time,Living with Family,Black,Female,Rural,1
+18,Private,68689,Highschool,Divorced,Full-time,Living Alone,White,Female,Suburban,1
+48,Government,193986,PhD,Divorced,Intern,Living Alone,White,Male,Urban,1
+45,Private,36244,Master,Widowed,Contract,Living with Roommates,White,Male,Suburban,0
+26,Private,81270,Bachelor,Widowed,Contract,Living with Roommates,Hispanic,Male,Rural,1
+38,Unemployed,43609,Master,Widowed,Contract,Living with Roommates,Hispanic,Female,Urban,0
+54,Self-emp,194845,PhD,Married,Contract,Living with Family,Hispanic,Female,Suburban,1
+23,Unemployed,58856,PhD,Widowed,Full-time,Living Alone,Other,Male,Rural,1
+63,Government,149764,Master,Married,Contract,Living with Family,White,Male,Suburban,1
+31,Private,11857,Highschool,Married,Contract,Living with Roommates,White,Male,Urban,0
+68,Government,190898,Master,Married,Intern,Living with Family,Black,Male,Suburban,1
+60,Self-emp,52909,Master,Married,Part-time,Living Alone,Asian,Female,Urban,1
+61,Self-emp,149645,Highschool,Divorced,Full-time,Living with Roommates,Other,Female,Suburban,1
+68,Government,12615,Master,Widowed,Full-time,Living with Roommates,White,Female,Urban,0
+50,Private,108280,Master,Divorced,Part-time,Living with Roommates,Other,Female,Suburban,1
+18,Government,76883,Bachelor,Divorced,Full-time,Living with Roommates,White,Female,Rural,1
+30,Private,90665,Highschool,Divorced,Intern,Living with Family,Hispanic,Male,Rural,1
+54,Unemployed,91490,Highschool,Married,Full-time,Living with Family,White,Female,Urban,1
+54,Private,61937,Master,Single,Full-time,Living with Family,Asian,Male,Urban,1
+38,Private,27739,Master,Single,Intern,Living Alone,Other,Female,Urban,0
+18,Unemployed,137095,Bachelor,Married,Intern,Living Alone,Asian,Female,Rural,1
+57,Self-emp,112822,PhD,Widowed,Contract,Living with Roommates,Black,Male,Suburban,1
+55,Unemployed,61773,Master,Married,Intern,Living with Family,Other,Female,Suburban,1
+57,Government,66803,PhD,Single,Contract,Living with Family,Hispanic,Male,Suburban,1
+47,Unemployed,40763,PhD,Divorced,Intern,Living with Family,Black,Female,Suburban,0
+43,Self-emp,101860,Master,Divorced,Full-time,Living with Roommates,White,Male,Urban,1
+22,Private,16501,Bachelor,Divorced,Full-time,Living with Family,Black,Female,Rural,0
+22,Unemployed,161020,Bachelor,Widowed,Contract,Living Alone,Black,Male,Urban,1
+62,Self-emp,89789,PhD,Married,Part-time,Living with Family,Hispanic,Female,Rural,1
+62,Private,43928,Highschool,Single,Full-time,Living with Family,White,Male,Urban,0
+45,Unemployed,147273,Bachelor,Single,Contract,Living with Family,Asian,Male,Rural,1
+47,Unemployed,73147,Bachelor,Widowed,Part-time,Living with Roommates,White,Male,Urban,1
+67,Government,82755,Highschool,Widowed,Full-time,Living with Family,White,Male,Rural,1
+41,Government,44559,Highschool,Widowed,Intern,Living with Roommates,Asian,Female,Urban,0
+35,Private,23975,PhD,Married,Part-time,Living with Family,Other,Female,Rural,0
+50,Self-emp,181403,Highschool,Married,Part-time,Living with Roommates,Other,Male,Suburban,1
+62,Private,148588,Highschool,Married,Full-time,Living Alone,White,Female,Rural,1
+66,Unemployed,42402,PhD,Widowed,Full-time,Living Alone,Asian,Male,Urban,0
+27,Government,67533,Master,Widowed,Part-time,Living with Family,Black,Female,Rural,1
+37,Unemployed,162852,PhD,Divorced,Intern,Living Alone,White,Male,Urban,1
+28,Self-emp,113688,Highschool,Divorced,Contract,Living with Roommates,Black,Female,Suburban,1
+23,Government,37489,Bachelor,Widowed,Full-time,Living Alone,Other,Female,Suburban,0
+35,Unemployed,148664,Highschool,Widowed,Contract,Living Alone,Hispanic,Female,Urban,1
+27,Self-emp,47113,Highschool,Widowed,Part-time,Living Alone,Black,Female,Rural,0
+20,Government,36807,PhD,Divorced,Full-time,Living with Roommates,Black,Female,Rural,0
+43,Government,168170,Bachelor,Divorced,Part-time,Living Alone,Hispanic,Female,Urban,1
+70,Private,16880,Bachelor,Widowed,Part-time,Living with Family,Black,Female,Suburban,0
+50,Government,125588,Bachelor,Single,Full-time,Living with Roommates,Other,Female,Suburban,1
+50,Unemployed,66059,PhD,Divorced,Contract,Living with Family,Hispanic,Male,Urban,1
+55,Self-emp,181871,Master,Widowed,Contract,Living Alone,Other,Female,Urban,1
+37,Private,150644,Master,Divorced,Part-time,Living Alone,Hispanic,Male,Suburban,1
+31,Government,49368,Highschool,Married,Full-time,Living with Roommates,Black,Female,Suburban,0
+57,Private,92546,Highschool,Married,Intern,Living with Family,Other,Female,Urban,1
+35,Self-emp,40920,Master,Divorced,Intern,Living with Roommates,Other,Male,Rural,0
+39,Government,22732,Highschool,Single,Intern,Living with Roommates,Asian,Female,Suburban,0
+46,Government,61247,PhD,Divorced,Full-time,Living with Family,Other,Male,Suburban,1
+47,Unemployed,110316,Highschool,Married,Part-time,Living with Family,Black,Female,Urban,1
+44,Self-emp,179414,Master,Married,Full-time,Living Alone,Hispanic,Female,Rural,1
+29,Government,131136,Master,Married,Intern,Living with Family,Hispanic,Female,Urban,1
+25,Government,194255,Master,Married,Part-time,Living Alone,Black,Male,Suburban,1
+30,Private,80684,PhD,Divorced,Part-time,Living Alone,White,Male,Suburban,1
+49,Government,82596,Bachelor,Widowed,Contract,Living with Roommates,Asian,Female,Urban,1
+63,Self-emp,20315,Highschool,Single,Part-time,Living with Roommates,Black,Male,Urban,0
+41,Self-emp,62778,Bachelor,Single,Intern,Living with Roommates,White,Male,Suburban,1
+61,Unemployed,66750,Highschool,Married,Part-time,Living with Family,Black,Male,Urban,1
+34,Private,152819,Master,Single,Part-time,Living with Roommates,White,Female,Rural,1
+58,Government,15896,Bachelor,Widowed,Full-time,Living with Roommates,Other,Female,Urban,0
+40,Private,49365,Highschool,Divorced,Part-time,Living Alone,White,Male,Suburban,0
+69,Government,137870,Highschool,Widowed,Full-time,Living with Family,White,Male,Suburban,1
+23,Self-emp,51473,Bachelor,Widowed,Intern,Living with Roommates,Hispanic,Female,Rural,1
+48,Private,122407,Highschool,Married,Contract,Living with Family,Hispanic,Male,Rural,1
+28,Government,126974,Master,Single,Intern,Living Alone,Black,Male,Suburban,1
+47,Private,179608,Highschool,Widowed,Contract,Living Alone,Asian,Male,Suburban,1
+52,Unemployed,199149,PhD,Widowed,Full-time,Living with Family,Asian,Male,Urban,1
+40,Unemployed,199226,Bachelor,Widowed,Intern,Living Alone,Hispanic,Female,Suburban,1
+45,Private,27023,Bachelor,Married,Intern,Living with Family,Hispanic,Female,Rural,0
+57,Government,57622,Master,Married,Full-time,Living with Family,Hispanic,Male,Suburban,1
+52,Self-emp,57172,Master,Married,Intern,Living with Roommates,Asian,Female,Urban,1
+37,Private,61717,Highschool,Single,Contract,Living with Roommates,Black,Female,Rural,1
+24,Government,155522,Bachelor,Single,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+23,Private,191387,Highschool,Widowed,Intern,Living with Family,White,Male,Urban,1
+23,Unemployed,57573,Bachelor,Married,Intern,Living with Family,Black,Female,Suburban,1
+27,Government,16685,PhD,Single,Full-time,Living Alone,Hispanic,Male,Rural,0
+60,Unemployed,78648,Master,Married,Intern,Living with Family,Black,Female,Rural,1
+39,Unemployed,116823,Bachelor,Divorced,Full-time,Living with Roommates,Hispanic,Female,Rural,1
+23,Government,110656,PhD,Married,Part-time,Living with Family,Asian,Male,Suburban,1
+45,Self-emp,29446,Master,Single,Intern,Living with Family,Black,Female,Rural,0
+61,Private,101327,Bachelor,Single,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+27,Self-emp,197466,Bachelor,Divorced,Contract,Living with Roommates,Other,Female,Suburban,1
+52,Government,30722,Master,Divorced,Intern,Living with Roommates,Hispanic,Female,Urban,0
+46,Government,39568,Master,Widowed,Full-time,Living Alone,White,Male,Rural,0
+27,Government,194139,Bachelor,Married,Intern,Living Alone,Other,Female,Rural,1
+63,Private,100562,Highschool,Divorced,Full-time,Living with Roommates,White,Male,Urban,1
+65,Government,89611,Bachelor,Single,Intern,Living with Family,White,Female,Rural,1
+32,Unemployed,18417,Highschool,Single,Intern,Living Alone,Asian,Male,Urban,0
+66,Self-emp,169420,Highschool,Married,Full-time,Living with Roommates,Other,Female,Rural,1
+22,Private,10398,Highschool,Divorced,Part-time,Living with Roommates,Other,Female,Urban,0
+38,Self-emp,199065,Master,Single,Full-time,Living Alone,Black,Male,Urban,1
+19,Unemployed,62780,Bachelor,Widowed,Intern,Living with Roommates,Hispanic,Male,Urban,1
+20,Private,116823,Bachelor,Single,Contract,Living Alone,Hispanic,Female,Suburban,1
+42,Government,125828,Highschool,Married,Contract,Living Alone,Asian,Male,Urban,1
+61,Private,125267,PhD,Single,Intern,Living with Family,Other,Male,Rural,1
+64,Private,23358,PhD,Single,Contract,Living Alone,Other,Female,Rural,0
+29,Private,75505,Highschool,Divorced,Intern,Living Alone,Hispanic,Female,Suburban,1
+53,Private,43818,Highschool,Divorced,Part-time,Living with Roommates,Hispanic,Male,Rural,0
+66,Private,86720,Highschool,Single,Full-time,Living with Family,Black,Male,Rural,1
+59,Private,116410,Master,Single,Full-time,Living with Roommates,Asian,Male,Rural,1
+69,Self-emp,36936,Bachelor,Married,Part-time,Living with Roommates,Other,Male,Rural,0
+19,Private,85675,Highschool,Single,Intern,Living Alone,Black,Female,Rural,1
+66,Government,133226,Highschool,Widowed,Full-time,Living with Roommates,Other,Female,Urban,1
+62,Self-emp,153836,Bachelor,Divorced,Part-time,Living with Family,Black,Female,Rural,1
+29,Unemployed,70041,Bachelor,Married,Part-time,Living with Family,Hispanic,Male,Rural,1
+69,Government,162166,Highschool,Single,Intern,Living with Family,White,Female,Suburban,1
+55,Government,144834,PhD,Married,Part-time,Living with Roommates,Black,Male,Suburban,1
+34,Unemployed,25325,Master,Married,Full-time,Living with Roommates,White,Female,Urban,0
+70,Self-emp,185162,Bachelor,Widowed,Full-time,Living Alone,Asian,Female,Urban,1
+36,Private,174616,Master,Single,Contract,Living Alone,Hispanic,Female,Rural,1
+63,Unemployed,83805,Highschool,Divorced,Intern,Living Alone,Black,Female,Suburban,1
+38,Private,82678,Bachelor,Divorced,Contract,Living with Family,White,Male,Rural,1
+56,Private,12572,PhD,Divorced,Full-time,Living with Roommates,Other,Female,Urban,0
+51,Government,11060,PhD,Single,Part-time,Living with Roommates,White,Female,Rural,0
+25,Self-emp,93968,PhD,Divorced,Part-time,Living with Family,White,Male,Urban,1
+27,Government,182565,Highschool,Single,Contract,Living with Family,Other,Male,Urban,1
+43,Self-emp,199774,PhD,Widowed,Intern,Living Alone,Asian,Female,Urban,1
+35,Government,35217,Bachelor,Divorced,Contract,Living with Family,Asian,Male,Rural,0
+25,Unemployed,170974,Highschool,Married,Contract,Living Alone,White,Female,Rural,1
+69,Private,60207,PhD,Widowed,Part-time,Living Alone,Other,Female,Urban,1
+35,Self-emp,34570,Highschool,Divorced,Contract,Living with Roommates,Other,Male,Suburban,0
+39,Unemployed,48006,PhD,Single,Contract,Living with Roommates,White,Female,Suburban,0
+28,Private,108507,Master,Single,Intern,Living with Roommates,Other,Female,Rural,1
+46,Unemployed,177339,Master,Divorced,Full-time,Living Alone,Black,Male,Urban,1
+65,Unemployed,144068,Highschool,Married,Intern,Living with Roommates,White,Male,Rural,1
+42,Self-emp,173173,Highschool,Divorced,Intern,Living with Family,Asian,Female,Urban,1
+36,Private,173146,Bachelor,Widowed,Contract,Living with Roommates,Asian,Male,Urban,1
+47,Self-emp,141870,Master,Divorced,Full-time,Living with Roommates,White,Male,Urban,1
+64,Unemployed,19623,Master,Divorced,Full-time,Living with Roommates,White,Female,Rural,0
+40,Self-emp,121740,Highschool,Married,Contract,Living with Family,Asian,Female,Rural,1
+63,Private,38468,Bachelor,Married,Full-time,Living Alone,Asian,Male,Suburban,0
+23,Self-emp,68928,Bachelor,Married,Full-time,Living Alone,Asian,Female,Urban,1
+66,Unemployed,188023,Bachelor,Widowed,Intern,Living Alone,Hispanic,Male,Urban,1
+57,Government,145468,Highschool,Single,Full-time,Living with Roommates,Black,Male,Rural,1
+46,Unemployed,33260,Highschool,Married,Contract,Living with Roommates,White,Male,Urban,0
+37,Private,190595,Master,Single,Contract,Living with Roommates,Black,Female,Rural,1
+19,Private,83876,Bachelor,Divorced,Intern,Living with Family,Asian,Female,Urban,1
+56,Self-emp,17464,Master,Single,Full-time,Living Alone,White,Female,Suburban,0
+19,Self-emp,194715,Bachelor,Widowed,Full-time,Living with Family,Other,Female,Rural,1
+56,Private,95850,Master,Single,Contract,Living Alone,Black,Male,Rural,1
+19,Unemployed,59599,PhD,Widowed,Part-time,Living Alone,Asian,Male,Rural,1
+31,Government,125129,Bachelor,Married,Contract,Living Alone,Asian,Female,Urban,1
+25,Private,194214,Highschool,Divorced,Part-time,Living with Roommates,White,Female,Urban,1
+61,Self-emp,43489,Highschool,Married,Contract,Living Alone,White,Male,Suburban,0
+32,Private,188898,Highschool,Single,Part-time,Living with Family,Other,Male,Rural,1
+18,Unemployed,78002,Bachelor,Single,Full-time,Living Alone,White,Female,Suburban,1
+54,Government,183679,Master,Married,Contract,Living Alone,Black,Male,Rural,1
+28,Private,10803,Highschool,Married,Full-time,Living Alone,White,Female,Urban,0
+21,Private,154578,Bachelor,Married,Intern,Living with Roommates,Other,Female,Rural,1
+33,Self-emp,15767,Bachelor,Divorced,Part-time,Living with Family,Hispanic,Male,Suburban,0
+27,Self-emp,47276,Highschool,Married,Intern,Living Alone,White,Female,Rural,0
+64,Unemployed,21437,Bachelor,Widowed,Part-time,Living with Roommates,Black,Male,Suburban,0
+24,Self-emp,100031,Bachelor,Divorced,Contract,Living with Roommates,Other,Female,Urban,1
+26,Self-emp,90900,Master,Single,Full-time,Living Alone,Black,Male,Suburban,1
+22,Private,98063,Bachelor,Single,Full-time,Living with Family,Hispanic,Male,Suburban,1
+26,Self-emp,169793,PhD,Widowed,Intern,Living with Roommates,Black,Female,Rural,1
+19,Government,55627,PhD,Divorced,Full-time,Living Alone,Other,Female,Suburban,1
+57,Unemployed,73436,PhD,Married,Intern,Living Alone,Hispanic,Male,Rural,1
+51,Government,162125,PhD,Single,Part-time,Living with Roommates,White,Female,Suburban,1
+58,Unemployed,180612,Highschool,Single,Part-time,Living Alone,Hispanic,Male,Suburban,1
+55,Unemployed,32053,Master,Married,Intern,Living with Family,Asian,Female,Suburban,0
+39,Government,54799,Bachelor,Single,Part-time,Living with Roommates,Asian,Male,Urban,1
+58,Unemployed,134314,PhD,Divorced,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+65,Unemployed,62842,Master,Widowed,Intern,Living with Roommates,Black,Male,Urban,1
+47,Government,23220,Highschool,Divorced,Contract,Living with Roommates,Asian,Male,Rural,0
+22,Government,86753,Highschool,Married,Full-time,Living with Family,White,Female,Urban,1
+23,Private,43523,PhD,Widowed,Full-time,Living Alone,Other,Male,Urban,0
+69,Government,82256,Bachelor,Divorced,Part-time,Living with Family,Asian,Female,Urban,1
+68,Unemployed,30529,Master,Divorced,Full-time,Living with Roommates,Black,Male,Suburban,0
+19,Unemployed,175173,Highschool,Married,Contract,Living Alone,Hispanic,Female,Rural,1
+23,Self-emp,20822,PhD,Married,Contract,Living Alone,Asian,Female,Urban,0
+69,Government,127085,Master,Divorced,Part-time,Living with Family,Other,Male,Suburban,1
+49,Private,86654,Highschool,Widowed,Intern,Living with Roommates,Other,Female,Suburban,1
+49,Government,70439,Highschool,Single,Intern,Living Alone,Hispanic,Female,Suburban,1
+50,Private,59571,PhD,Widowed,Intern,Living with Family,White,Female,Suburban,1
+48,Self-emp,31708,Bachelor,Divorced,Full-time,Living with Roommates,Hispanic,Male,Urban,0
+20,Unemployed,109224,Bachelor,Widowed,Full-time,Living with Family,Black,Female,Urban,1
+21,Government,120975,Bachelor,Single,Full-time,Living with Roommates,Black,Female,Suburban,1
+44,Private,125251,Highschool,Married,Full-time,Living with Roommates,Black,Male,Suburban,1
+44,Unemployed,96827,Bachelor,Widowed,Full-time,Living with Family,White,Male,Urban,1
+49,Private,148501,Bachelor,Divorced,Contract,Living with Family,Other,Female,Rural,1
+21,Government,76045,Highschool,Married,Intern,Living with Roommates,White,Female,Urban,1
+54,Government,184018,Bachelor,Married,Full-time,Living Alone,Other,Male,Suburban,1
+22,Unemployed,190727,Highschool,Divorced,Intern,Living Alone,Asian,Male,Rural,1
+30,Private,46563,PhD,Single,Part-time,Living with Roommates,Asian,Female,Suburban,0
+45,Self-emp,21601,PhD,Divorced,Part-time,Living Alone,Black,Female,Suburban,0
+44,Government,157736,Bachelor,Single,Part-time,Living Alone,Hispanic,Male,Rural,1
+27,Private,49575,PhD,Married,Part-time,Living with Roommates,Black,Male,Urban,0
+50,Private,176080,PhD,Divorced,Full-time,Living with Roommates,Hispanic,Female,Urban,1
+33,Self-emp,191025,Highschool,Widowed,Contract,Living with Roommates,White,Female,Rural,1
+24,Self-emp,90985,Bachelor,Widowed,Intern,Living Alone,Black,Male,Rural,1
+36,Unemployed,168076,Highschool,Married,Contract,Living with Roommates,Black,Female,Rural,1
+42,Unemployed,166370,Master,Widowed,Contract,Living Alone,Hispanic,Male,Suburban,1
+66,Government,58382,Bachelor,Widowed,Part-time,Living with Roommates,Hispanic,Female,Urban,1
+18,Unemployed,35717,Highschool,Single,Part-time,Living with Family,Asian,Male,Urban,0
+25,Self-emp,63033,Highschool,Divorced,Contract,Living with Roommates,Hispanic,Female,Suburban,1
+39,Self-emp,54600,Bachelor,Widowed,Contract,Living with Roommates,Black,Female,Urban,1
+34,Private,147412,Master,Married,Part-time,Living with Family,White,Female,Rural,1
+43,Self-emp,63364,Highschool,Divorced,Contract,Living with Roommates,Other,Female,Rural,1
+44,Unemployed,152082,Master,Divorced,Intern,Living Alone,Black,Male,Rural,1
+48,Government,178046,Bachelor,Married,Part-time,Living with Family,Black,Male,Urban,1
+70,Self-emp,155910,PhD,Widowed,Part-time,Living with Family,Black,Female,Rural,1
+29,Government,183830,Master,Married,Full-time,Living with Family,Hispanic,Male,Urban,1
+29,Government,51745,Master,Married,Intern,Living Alone,Asian,Male,Rural,1
+26,Private,193160,Highschool,Single,Contract,Living with Roommates,Other,Female,Rural,1
+55,Unemployed,177289,PhD,Married,Contract,Living with Roommates,Hispanic,Female,Rural,1
+51,Self-emp,109570,PhD,Divorced,Intern,Living with Family,Other,Male,Suburban,1
+34,Government,119194,PhD,Divorced,Contract,Living Alone,Hispanic,Male,Suburban,1
+37,Private,24316,Master,Divorced,Intern,Living with Roommates,Hispanic,Female,Urban,0
+46,Government,161095,Bachelor,Single,Intern,Living Alone,Hispanic,Female,Suburban,1
+37,Private,132108,Highschool,Married,Full-time,Living with Roommates,Black,Male,Rural,1
+54,Government,28123,Bachelor,Widowed,Full-time,Living with Roommates,Other,Male,Rural,0
+62,Unemployed,27278,PhD,Single,Part-time,Living Alone,Asian,Female,Urban,0
+22,Unemployed,102910,Master,Divorced,Intern,Living with Roommates,White,Male,Suburban,1
+51,Unemployed,111875,Bachelor,Widowed,Full-time,Living with Family,Asian,Female,Urban,1
+52,Private,149341,PhD,Divorced,Full-time,Living with Roommates,Black,Male,Rural,1
+25,Private,26590,Master,Widowed,Contract,Living Alone,Other,Male,Urban,0
+68,Self-emp,87667,Bachelor,Widowed,Full-time,Living Alone,Hispanic,Male,Suburban,1
+58,Unemployed,78813,Master,Divorced,Part-time,Living Alone,Black,Male,Suburban,1
+57,Government,160504,PhD,Widowed,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+58,Self-emp,181068,Bachelor,Married,Full-time,Living with Roommates,Hispanic,Female,Rural,1
+60,Self-emp,166540,Highschool,Single,Full-time,Living with Family,Asian,Male,Urban,1
+44,Self-emp,49679,PhD,Divorced,Contract,Living with Roommates,Asian,Female,Urban,0
+66,Self-emp,61867,Master,Single,Full-time,Living Alone,White,Male,Rural,1
+26,Government,197621,PhD,Widowed,Full-time,Living Alone,Black,Male,Rural,1
+54,Self-emp,185707,Master,Married,Full-time,Living with Roommates,Black,Male,Suburban,1
+47,Government,92538,Bachelor,Married,Intern,Living Alone,White,Female,Urban,1
+43,Self-emp,195441,PhD,Widowed,Contract,Living with Family,White,Male,Rural,1
+54,Private,153607,PhD,Divorced,Intern,Living Alone,Asian,Male,Suburban,1
+69,Self-emp,126268,Master,Divorced,Full-time,Living Alone,Other,Male,Suburban,1
+20,Self-emp,184248,Bachelor,Widowed,Full-time,Living with Family,Other,Female,Rural,1
+19,Private,125359,Master,Married,Intern,Living with Family,Other,Female,Rural,1
+58,Government,68755,Highschool,Married,Contract,Living with Family,Black,Male,Rural,1
+50,Government,115950,Highschool,Single,Part-time,Living with Roommates,White,Male,Rural,1
+23,Unemployed,32981,Master,Divorced,Full-time,Living with Family,Hispanic,Female,Urban,0
+25,Self-emp,15640,Bachelor,Widowed,Full-time,Living with Roommates,Asian,Male,Urban,0
+51,Private,136458,Master,Divorced,Full-time,Living with Roommates,Other,Female,Suburban,1
+55,Government,104269,Master,Single,Intern,Living Alone,Black,Female,Suburban,1
+50,Private,71665,Bachelor,Divorced,Contract,Living Alone,Other,Female,Suburban,1
+29,Self-emp,74177,Highschool,Divorced,Contract,Living Alone,Black,Male,Urban,1
+36,Government,62354,Highschool,Widowed,Intern,Living with Roommates,Black,Female,Urban,1
+52,Government,123783,Highschool,Widowed,Part-time,Living Alone,Hispanic,Female,Urban,1
+24,Government,136226,Master,Widowed,Part-time,Living Alone,White,Female,Suburban,1
+61,Government,126686,PhD,Divorced,Intern,Living with Family,Black,Female,Urban,1
+39,Unemployed,96961,PhD,Widowed,Part-time,Living with Roommates,Other,Female,Suburban,1
+19,Unemployed,105502,Highschool,Divorced,Full-time,Living with Family,Hispanic,Male,Rural,1
+24,Self-emp,20980,Master,Single,Contract,Living with Roommates,Other,Male,Urban,0
+33,Private,53245,Master,Single,Part-time,Living with Family,Black,Female,Urban,1
+46,Government,152561,Master,Single,Full-time,Living with Roommates,Other,Female,Suburban,1
+55,Self-emp,121313,Highschool,Widowed,Part-time,Living with Family,Hispanic,Male,Suburban,1
+38,Private,191474,Highschool,Single,Part-time,Living Alone,Black,Female,Suburban,1
+70,Government,77384,PhD,Divorced,Contract,Living with Family,Other,Male,Rural,1
+18,Unemployed,131377,PhD,Married,Part-time,Living with Roommates,Asian,Female,Suburban,1
+67,Government,27586,Highschool,Single,Intern,Living with Roommates,Hispanic,Female,Urban,0
+24,Private,92874,Master,Married,Contract,Living with Roommates,White,Female,Urban,1
+36,Unemployed,77904,Master,Widowed,Intern,Living with Roommates,Other,Male,Suburban,1
+50,Unemployed,32485,Highschool,Widowed,Contract,Living with Family,Hispanic,Female,Rural,0
+47,Self-emp,187795,Master,Widowed,Intern,Living Alone,Hispanic,Female,Rural,1
+18,Private,54972,Highschool,Widowed,Intern,Living with Roommates,Black,Female,Suburban,1
+61,Government,102675,PhD,Married,Part-time,Living with Roommates,Hispanic,Female,Rural,1
+23,Government,143565,PhD,Married,Full-time,Living with Family,Hispanic,Male,Suburban,1
+18,Government,25150,Highschool,Married,Intern,Living Alone,White,Female,Urban,0
+21,Private,153139,Master,Widowed,Full-time,Living Alone,Asian,Male,Urban,1
+28,Private,128352,PhD,Married,Full-time,Living Alone,Black,Female,Suburban,1
+68,Self-emp,96316,PhD,Single,Intern,Living with Roommates,Black,Male,Suburban,1
+33,Self-emp,116794,Bachelor,Married,Intern,Living with Family,Black,Male,Rural,1
+60,Private,190107,Highschool,Single,Part-time,Living with Roommates,Asian,Male,Rural,1
+42,Private,59524,Bachelor,Single,Intern,Living Alone,Other,Male,Urban,1
+25,Private,185226,PhD,Married,Part-time,Living with Roommates,Other,Female,Urban,1
+37,Private,120791,Master,Married,Contract,Living with Roommates,Other,Male,Suburban,1
+26,Unemployed,138541,PhD,Divorced,Contract,Living with Family,Asian,Male,Suburban,1
+45,Private,79490,PhD,Married,Intern,Living with Roommates,Black,Male,Suburban,1
+59,Private,151872,PhD,Married,Intern,Living with Roommates,Black,Female,Suburban,1
+22,Self-emp,176082,Highschool,Married,Intern,Living with Roommates,Other,Female,Rural,1
+19,Self-emp,20965,Master,Married,Contract,Living with Roommates,White,Female,Urban,0
+33,Unemployed,111801,Highschool,Widowed,Intern,Living with Family,Other,Male,Suburban,1
+69,Government,183530,PhD,Divorced,Full-time,Living with Family,Hispanic,Female,Urban,1
+20,Private,132620,Highschool,Single,Intern,Living with Family,Other,Female,Rural,1
+37,Unemployed,100636,Highschool,Divorced,Part-time,Living Alone,White,Male,Urban,1
+18,Government,178415,PhD,Divorced,Intern,Living Alone,Other,Female,Suburban,1
+66,Unemployed,127829,Highschool,Divorced,Intern,Living Alone,Other,Male,Rural,1
+32,Private,56817,Highschool,Single,Full-time,Living with Roommates,Black,Female,Urban,1
+26,Unemployed,170030,PhD,Widowed,Full-time,Living with Family,Other,Male,Suburban,1
+48,Unemployed,24761,PhD,Divorced,Contract,Living with Roommates,Black,Male,Suburban,0
+41,Self-emp,44882,Master,Divorced,Intern,Living with Roommates,Black,Male,Urban,0
+27,Government,73388,Highschool,Divorced,Contract,Living Alone,Asian,Female,Suburban,1
+41,Unemployed,36565,Bachelor,Divorced,Part-time,Living with Roommates,Asian,Male,Urban,0
+52,Private,16931,PhD,Married,Full-time,Living with Family,Hispanic,Female,Urban,0
+59,Private,58233,Bachelor,Divorced,Contract,Living with Family,White,Male,Suburban,1
+36,Private,186637,Bachelor,Divorced,Intern,Living with Roommates,Black,Female,Rural,1
+55,Government,143807,Master,Widowed,Contract,Living Alone,Hispanic,Female,Suburban,1
+18,Unemployed,25596,Highschool,Married,Full-time,Living Alone,White,Female,Urban,0
+62,Government,119842,Highschool,Married,Contract,Living Alone,Other,Female,Urban,1
+38,Government,88625,Master,Married,Part-time,Living with Family,Asian,Female,Rural,1
+20,Government,97758,Highschool,Widowed,Full-time,Living with Family,Black,Male,Rural,1
+31,Self-emp,139326,Bachelor,Single,Contract,Living with Family,Other,Female,Suburban,1
+25,Government,105742,Highschool,Married,Intern,Living Alone,Asian,Male,Urban,1
+59,Private,51060,Bachelor,Single,Part-time,Living with Roommates,Asian,Male,Urban,1
+49,Private,132873,PhD,Single,Full-time,Living Alone,Other,Male,Rural,1
+38,Private,119824,Master,Widowed,Full-time,Living Alone,Other,Male,Urban,1
+42,Government,142726,PhD,Single,Contract,Living with Family,Black,Female,Suburban,1
+31,Private,26596,PhD,Married,Part-time,Living Alone,White,Male,Suburban,0
+30,Unemployed,47145,PhD,Single,Part-time,Living with Roommates,Black,Female,Suburban,0
+48,Unemployed,53189,Bachelor,Widowed,Intern,Living Alone,Hispanic,Male,Urban,1
+51,Unemployed,108142,PhD,Single,Part-time,Living with Roommates,Black,Female,Rural,1
+28,Unemployed,39703,Highschool,Widowed,Contract,Living with Roommates,Asian,Female,Suburban,0
+34,Self-emp,114964,Master,Single,Full-time,Living with Roommates,White,Male,Suburban,1
+52,Unemployed,173778,Highschool,Married,Intern,Living with Family,Black,Female,Suburban,1
+23,Unemployed,156268,Highschool,Married,Contract,Living Alone,Black,Female,Rural,1
+45,Government,159992,Bachelor,Married,Full-time,Living with Roommates,Hispanic,Male,Suburban,1
+42,Private,98330,Highschool,Divorced,Part-time,Living with Roommates,Asian,Female,Rural,1
+20,Self-emp,73175,Bachelor,Divorced,Intern,Living with Roommates,White,Female,Urban,1
+55,Private,28104,Master,Single,Part-time,Living Alone,White,Male,Rural,0
+53,Private,105869,Master,Married,Intern,Living with Family,Hispanic,Male,Rural,1
+56,Private,54093,PhD,Single,Contract,Living with Family,Other,Female,Suburban,1
+32,Private,98360,Master,Married,Full-time,Living with Family,White,Female,Urban,1
+69,Government,22003,Bachelor,Single,Contract,Living with Roommates,Other,Male,Urban,0
+38,Private,160205,Highschool,Single,Contract,Living Alone,Other,Male,Urban,1
+23,Self-emp,29262,Highschool,Married,Full-time,Living Alone,White,Male,Rural,0
+27,Government,82475,Highschool,Single,Full-time,Living with Roommates,Black,Male,Suburban,1
+55,Self-emp,122704,Master,Widowed,Part-time,Living Alone,Asian,Male,Suburban,1
+42,Unemployed,95428,Bachelor,Married,Intern,Living Alone,Hispanic,Male,Suburban,1
+20,Private,143316,PhD,Widowed,Part-time,Living with Roommates,Black,Male,Urban,1
+37,Government,145742,Highschool,Divorced,Intern,Living with Family,Hispanic,Male,Rural,1
+56,Unemployed,166142,PhD,Widowed,Contract,Living Alone,White,Male,Urban,1
+65,Unemployed,164606,Highschool,Single,Full-time,Living with Roommates,Asian,Female,Rural,1
+38,Private,64075,Highschool,Married,Contract,Living with Roommates,Black,Male,Suburban,1
+49,Private,15027,Bachelor,Single,Full-time,Living with Roommates,Black,Male,Rural,0
+20,Self-emp,89851,Highschool,Married,Intern,Living Alone,Black,Female,Rural,1
+26,Private,96774,Master,Married,Full-time,Living Alone,White,Male,Rural,1
+54,Unemployed,78147,PhD,Married,Intern,Living with Family,White,Female,Urban,1
+39,Unemployed,127161,Master,Widowed,Intern,Living Alone,White,Female,Suburban,1
+29,Government,179013,PhD,Divorced,Intern,Living with Roommates,Asian,Female,Suburban,1
+22,Self-emp,62006,Bachelor,Single,Intern,Living with Roommates,Black,Female,Rural,1
+28,Government,49827,Highschool,Divorced,Contract,Living Alone,White,Male,Suburban,0
+24,Self-emp,162406,PhD,Widowed,Intern,Living with Roommates,Asian,Male,Suburban,1
+61,Unemployed,195622,PhD,Divorced,Full-time,Living with Family,Asian,Female,Suburban,1
+60,Self-emp,46986,PhD,Divorced,Part-time,Living Alone,Hispanic,Male,Rural,0
+61,Private,39537,Master,Married,Contract,Living Alone,White,Female,Urban,0
+24,Private,91748,Master,Married,Contract,Living with Family,Asian,Female,Suburban,1
+21,Unemployed,140709,Master,Married,Intern,Living with Family,Asian,Female,Urban,1
+63,Self-emp,71033,Bachelor,Divorced,Intern,Living Alone,Other,Male,Suburban,1
+54,Private,95724,Master,Divorced,Part-time,Living with Roommates,Black,Male,Urban,1
+21,Government,188301,PhD,Married,Part-time,Living Alone,Other,Male,Rural,1
+48,Self-emp,149788,PhD,Married,Contract,Living Alone,Hispanic,Female,Suburban,1
+59,Unemployed,104412,Master,Widowed,Part-time,Living Alone,Hispanic,Male,Suburban,1
+39,Government,65832,Highschool,Single,Intern,Living with Roommates,Hispanic,Male,Suburban,1
+38,Unemployed,145632,Master,Divorced,Part-time,Living with Roommates,Other,Female,Suburban,1
+43,Self-emp,68585,Master,Married,Full-time,Living with Roommates,Hispanic,Male,Urban,1
+24,Unemployed,47868,Master,Single,Contract,Living with Roommates,Other,Male,Urban,0
+25,Self-emp,186926,Highschool,Single,Intern,Living with Family,Asian,Female,Urban,1
+51,Unemployed,37257,Bachelor,Single,Intern,Living with Family,Asian,Female,Urban,0
+25,Private,85030,Highschool,Divorced,Contract,Living with Roommates,Other,Male,Urban,1
+67,Private,154553,PhD,Widowed,Full-time,Living Alone,Black,Male,Urban,1
+35,Self-emp,126637,PhD,Single,Part-time,Living with Family,Hispanic,Female,Urban,1
+64,Self-emp,178620,Bachelor,Single,Full-time,Living with Roommates,Other,Male,Rural,1
+33,Unemployed,140296,Highschool,Single,Intern,Living with Family,Hispanic,Male,Rural,1
+18,Government,51576,Highschool,Married,Part-time,Living with Family,Hispanic,Male,Urban,1
+60,Unemployed,131012,Bachelor,Married,Part-time,Living with Roommates,White,Male,Suburban,1
+68,Private,180008,Bachelor,Widowed,Part-time,Living with Roommates,Other,Male,Suburban,1
+19,Government,187065,Highschool,Divorced,Contract,Living Alone,Black,Female,Suburban,1
+64,Unemployed,100498,Highschool,Widowed,Full-time,Living Alone,Black,Female,Suburban,1
+27,Self-emp,166941,PhD,Divorced,Full-time,Living with Roommates,Other,Male,Urban,1
+22,Self-emp,105442,Master,Single,Contract,Living with Family,Asian,Female,Suburban,1
+53,Self-emp,75938,Bachelor,Widowed,Intern,Living with Roommates,Black,Male,Rural,1
+50,Self-emp,27576,Bachelor,Single,Intern,Living with Family,Black,Male,Rural,0
+59,Government,77288,PhD,Widowed,Intern,Living Alone,Black,Female,Rural,1
+48,Unemployed,80567,Highschool,Divorced,Full-time,Living Alone,Other,Female,Suburban,1
+60,Government,59204,Bachelor,Married,Part-time,Living Alone,White,Male,Suburban,1
+20,Private,162017,PhD,Single,Intern,Living Alone,Asian,Female,Rural,1
+51,Private,161251,PhD,Divorced,Intern,Living with Roommates,Asian,Male,Rural,1
+49,Self-emp,164543,Bachelor,Married,Intern,Living with Family,Black,Male,Rural,1
+58,Government,32767,Highschool,Single,Full-time,Living with Family,Black,Male,Urban,0
+20,Unemployed,72542,Master,Widowed,Full-time,Living with Family,White,Female,Suburban,1
+42,Private,49524,Highschool,Widowed,Intern,Living with Family,Hispanic,Female,Rural,0
+60,Government,42873,Master,Divorced,Intern,Living with Family,Hispanic,Female,Suburban,0
+31,Unemployed,111351,Bachelor,Widowed,Part-time,Living Alone,Black,Male,Urban,1
+25,Self-emp,103530,PhD,Married,Intern,Living with Roommates,Other,Female,Urban,1
+54,Unemployed,48651,Master,Married,Contract,Living with Family,Other,Female,Urban,0
+39,Government,44526,Highschool,Divorced,Intern,Living with Roommates,Asian,Male,Suburban,0
+45,Self-emp,73550,PhD,Married,Part-time,Living Alone,Asian,Male,Suburban,1
+62,Private,133464,Bachelor,Divorced,Part-time,Living with Roommates,Hispanic,Male,Rural,1
+46,Private,145015,PhD,Widowed,Part-time,Living with Family,Asian,Male,Rural,1
+54,Self-emp,179864,Highschool,Single,Contract,Living with Family,Other,Female,Suburban,1
+24,Government,30917,Highschool,Single,Contract,Living with Roommates,White,Male,Rural,0
+21,Private,42556,PhD,Married,Part-time,Living with Roommates,Hispanic,Male,Rural,0
+30,Government,107852,Bachelor,Single,Part-time,Living with Family,Other,Male,Rural,1
+52,Self-emp,27359,PhD,Divorced,Full-time,Living with Roommates,Other,Male,Rural,0
+63,Government,103205,Bachelor,Married,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+47,Government,104528,Highschool,Divorced,Part-time,Living with Roommates,Hispanic,Female,Rural,1
+38,Self-emp,26511,Bachelor,Divorced,Contract,Living with Family,White,Female,Rural,0
+24,Self-emp,40231,Bachelor,Single,Part-time,Living with Family,Black,Female,Rural,0
+44,Self-emp,93800,Highschool,Widowed,Part-time,Living with Roommates,Other,Female,Urban,1
+29,Government,46846,Highschool,Married,Intern,Living Alone,Other,Male,Rural,0
+40,Government,17043,Highschool,Divorced,Intern,Living Alone,Hispanic,Female,Urban,0
+48,Private,11607,Highschool,Married,Intern,Living with Roommates,Other,Female,Urban,0
+68,Private,183045,Bachelor,Widowed,Part-time,Living with Family,White,Male,Rural,1
+64,Unemployed,90554,PhD,Divorced,Intern,Living Alone,Hispanic,Female,Rural,1
+31,Self-emp,120304,Bachelor,Widowed,Intern,Living with Roommates,Hispanic,Female,Urban,1
+47,Unemployed,186610,Highschool,Married,Full-time,Living with Family,Black,Female,Suburban,1
+66,Private,30484,Master,Single,Contract,Living Alone,Black,Female,Suburban,0
+23,Unemployed,186767,Master,Widowed,Part-time,Living with Roommates,Other,Female,Urban,1
+64,Government,84940,Master,Single,Contract,Living with Roommates,Hispanic,Male,Rural,1
+44,Private,107992,Master,Single,Part-time,Living with Family,Other,Male,Urban,1
+19,Private,132689,Master,Widowed,Contract,Living with Family,Asian,Female,Urban,1
+27,Self-emp,68646,Highschool,Single,Full-time,Living Alone,White,Male,Suburban,1
+28,Self-emp,113606,Master,Widowed,Intern,Living Alone,Hispanic,Female,Suburban,1
+63,Private,89007,Bachelor,Divorced,Contract,Living with Family,Other,Female,Urban,1
+64,Private,23472,Master,Married,Part-time,Living with Roommates,White,Female,Suburban,0
+39,Government,83873,PhD,Single,Contract,Living with Roommates,Black,Female,Urban,1
+51,Private,21605,Master,Divorced,Intern,Living with Family,Hispanic,Female,Suburban,0
+31,Self-emp,21449,Highschool,Widowed,Full-time,Living Alone,Asian,Male,Suburban,0
+55,Self-emp,34660,Master,Married,Part-time,Living with Family,Asian,Male,Rural,0
+28,Government,77595,Bachelor,Single,Part-time,Living Alone,Asian,Female,Suburban,1
+48,Unemployed,41269,Master,Single,Intern,Living with Family,Other,Female,Urban,0
+44,Government,76769,Master,Married,Part-time,Living Alone,Hispanic,Female,Suburban,1
+46,Unemployed,195966,PhD,Single,Full-time,Living Alone,Black,Female,Suburban,1
+57,Unemployed,145989,Master,Divorced,Intern,Living Alone,Black,Female,Rural,1
+69,Self-emp,144552,Bachelor,Single,Part-time,Living with Family,Black,Male,Rural,1
+69,Unemployed,102591,Bachelor,Married,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+43,Unemployed,26493,Highschool,Divorced,Part-time,Living with Roommates,Hispanic,Male,Urban,0
+39,Private,61128,PhD,Divorced,Part-time,Living with Roommates,Asian,Female,Urban,1
+69,Private,104960,PhD,Single,Full-time,Living with Family,White,Male,Rural,1
+37,Self-emp,192903,PhD,Single,Intern,Living with Family,Hispanic,Male,Urban,1
+53,Self-emp,171227,PhD,Divorced,Part-time,Living Alone,Other,Male,Suburban,1
+22,Government,102797,Master,Single,Part-time,Living Alone,White,Female,Rural,1
+47,Government,81300,Highschool,Widowed,Contract,Living with Roommates,White,Male,Urban,1
+39,Unemployed,197717,Bachelor,Widowed,Part-time,Living Alone,Other,Male,Urban,1
+21,Self-emp,78146,Highschool,Widowed,Full-time,Living with Family,Hispanic,Male,Suburban,1
+42,Self-emp,168903,Master,Divorced,Intern,Living with Roommates,Other,Male,Urban,1
+60,Self-emp,135794,Highschool,Married,Full-time,Living with Roommates,Other,Female,Suburban,1
+64,Government,123579,PhD,Widowed,Contract,Living with Family,White,Male,Suburban,1
+64,Private,61945,Master,Single,Part-time,Living with Family,Asian,Female,Urban,1
+55,Private,198460,Bachelor,Single,Contract,Living with Family,Black,Male,Suburban,1
+29,Self-emp,109466,Master,Divorced,Intern,Living Alone,Black,Male,Rural,1
+66,Private,32588,PhD,Single,Contract,Living Alone,Other,Female,Suburban,0
+52,Government,15406,Master,Married,Full-time,Living Alone,Black,Male,Suburban,0
+57,Self-emp,140908,Bachelor,Widowed,Part-time,Living with Family,Asian,Male,Suburban,1
+68,Government,92029,PhD,Widowed,Full-time,Living Alone,Hispanic,Female,Rural,1
+62,Self-emp,95840,Bachelor,Divorced,Part-time,Living with Roommates,Hispanic,Male,Rural,1
+21,Unemployed,60136,PhD,Divorced,Part-time,Living with Family,Other,Female,Rural,1
+67,Private,20897,PhD,Divorced,Contract,Living with Family,White,Female,Urban,0
+39,Private,72517,PhD,Divorced,Intern,Living Alone,Asian,Male,Suburban,1
+69,Government,93770,PhD,Widowed,Part-time,Living with Roommates,Asian,Male,Urban,1
+45,Self-emp,181656,Master,Married,Part-time,Living with Family,Hispanic,Male,Urban,1
+34,Self-emp,27088,Bachelor,Single,Part-time,Living Alone,Hispanic,Female,Urban,0
+20,Self-emp,70139,Highschool,Divorced,Part-time,Living with Family,Hispanic,Male,Urban,1
+67,Government,99041,Bachelor,Married,Contract,Living Alone,Hispanic,Male,Rural,1
+21,Self-emp,23363,Bachelor,Single,Part-time,Living Alone,Asian,Female,Rural,0
+53,Unemployed,69975,Highschool,Widowed,Part-time,Living with Family,White,Female,Suburban,1
+48,Government,41604,Bachelor,Widowed,Part-time,Living with Family,Asian,Female,Rural,0
+39,Government,99895,Bachelor,Divorced,Part-time,Living Alone,Black,Female,Suburban,1
+32,Private,153727,Highschool,Divorced,Intern,Living with Roommates,White,Male,Urban,1
+69,Private,63149,PhD,Widowed,Intern,Living Alone,Hispanic,Female,Urban,1
+29,Private,197224,Bachelor,Widowed,Intern,Living with Family,Hispanic,Female,Suburban,1
+23,Unemployed,19916,PhD,Married,Contract,Living with Family,Other,Female,Rural,0
+48,Unemployed,175808,Bachelor,Single,Contract,Living Alone,Black,Female,Suburban,1
+33,Self-emp,49335,Bachelor,Single,Intern,Living with Roommates,Black,Male,Urban,0
+68,Unemployed,157696,Bachelor,Divorced,Full-time,Living with Roommates,White,Male,Urban,1
+23,Private,81895,Bachelor,Divorced,Full-time,Living with Roommates,Asian,Male,Rural,1
+45,Private,46548,Master,Single,Intern,Living with Roommates,Black,Female,Rural,0
+37,Private,63080,Master,Widowed,Full-time,Living Alone,Black,Male,Rural,1
+26,Unemployed,48511,Highschool,Widowed,Full-time,Living Alone,Black,Male,Suburban,0
+36,Self-emp,109188,Highschool,Divorced,Full-time,Living Alone,Asian,Male,Suburban,1
+56,Private,94304,Bachelor,Widowed,Full-time,Living with Roommates,White,Female,Suburban,1
+26,Unemployed,190139,Bachelor,Widowed,Full-time,Living with Family,Hispanic,Male,Suburban,1
+54,Private,134261,Master,Single,Part-time,Living Alone,Hispanic,Female,Urban,1
+66,Self-emp,44138,Bachelor,Widowed,Full-time,Living Alone,Asian,Male,Rural,0
+53,Private,105436,Master,Single,Full-time,Living with Family,Black,Male,Suburban,1
+42,Government,91334,Master,Divorced,Part-time,Living with Family,Asian,Female,Urban,1
+45,Government,108379,PhD,Single,Contract,Living with Roommates,Asian,Female,Suburban,1
+70,Unemployed,62169,Master,Married,Full-time,Living with Family,White,Male,Rural,1
+23,Government,76268,Master,Married,Contract,Living Alone,Other,Male,Rural,1
+47,Self-emp,165755,Bachelor,Widowed,Part-time,Living with Roommates,Black,Male,Rural,1
+52,Unemployed,35580,Bachelor,Widowed,Full-time,Living Alone,Hispanic,Female,Suburban,0
+42,Unemployed,115686,PhD,Widowed,Part-time,Living with Roommates,Other,Female,Suburban,1
+40,Self-emp,33590,Highschool,Widowed,Part-time,Living Alone,Other,Male,Rural,0
+21,Unemployed,28702,Bachelor,Widowed,Contract,Living with Family,White,Female,Suburban,0
+29,Self-emp,154929,Bachelor,Married,Contract,Living Alone,Hispanic,Male,Urban,1
+42,Unemployed,160753,Bachelor,Married,Contract,Living Alone,Asian,Male,Suburban,1
+68,Unemployed,158888,Highschool,Widowed,Part-time,Living Alone,Asian,Female,Urban,1
+38,Unemployed,192864,PhD,Single,Full-time,Living Alone,Black,Female,Urban,1
+57,Government,100791,Master,Single,Contract,Living with Family,White,Male,Suburban,1
+43,Government,62056,Highschool,Divorced,Full-time,Living with Roommates,Other,Male,Urban,1
+24,Self-emp,195916,Master,Divorced,Part-time,Living with Roommates,White,Female,Rural,1
+25,Self-emp,142469,Highschool,Divorced,Intern,Living with Roommates,Hispanic,Female,Rural,1
+58,Unemployed,45536,Bachelor,Single,Intern,Living with Family,White,Female,Rural,0
+39,Self-emp,18491,Master,Divorced,Part-time,Living with Roommates,Black,Female,Suburban,0
+57,Unemployed,94237,Bachelor,Divorced,Full-time,Living with Roommates,Hispanic,Female,Rural,1
+49,Private,180711,Highschool,Widowed,Contract,Living Alone,Other,Female,Rural,1
+36,Government,23712,Bachelor,Widowed,Part-time,Living Alone,Black,Male,Suburban,0
+24,Private,182991,Highschool,Married,Full-time,Living with Roommates,Black,Male,Urban,1
+38,Government,83477,Highschool,Single,Contract,Living with Family,Hispanic,Female,Rural,1
+70,Government,66664,Bachelor,Single,Contract,Living with Family,Asian,Male,Rural,1
+55,Unemployed,97838,Bachelor,Married,Contract,Living with Family,White,Female,Rural,1
+28,Unemployed,52640,Highschool,Married,Contract,Living with Roommates,Black,Male,Suburban,1
+59,Private,41828,Master,Married,Intern,Living with Family,Other,Male,Suburban,0
+35,Self-emp,153387,Bachelor,Married,Contract,Living with Roommates,Asian,Male,Urban,1
+67,Private,56428,Highschool,Single,Full-time,Living Alone,Hispanic,Male,Rural,1
+62,Private,149180,Bachelor,Divorced,Part-time,Living Alone,Hispanic,Male,Rural,1
+55,Government,14256,Bachelor,Single,Intern,Living Alone,Hispanic,Female,Suburban,0
+34,Unemployed,85467,Bachelor,Married,Intern,Living with Roommates,Black,Male,Suburban,1
+67,Self-emp,168629,PhD,Divorced,Contract,Living Alone,Hispanic,Male,Urban,1
+39,Self-emp,22741,Master,Divorced,Full-time,Living Alone,Asian,Male,Urban,0
+42,Self-emp,174259,Bachelor,Divorced,Contract,Living with Roommates,Other,Male,Urban,1
+50,Government,78275,Master,Widowed,Intern,Living with Family,Other,Male,Rural,1
+61,Self-emp,87972,Bachelor,Widowed,Full-time,Living Alone,Other,Female,Suburban,1
+62,Government,134743,Master,Divorced,Contract,Living Alone,Other,Male,Rural,1
+25,Government,179432,Bachelor,Married,Part-time,Living with Roommates,White,Male,Suburban,1
+30,Unemployed,141034,Highschool,Single,Full-time,Living with Roommates,Other,Male,Urban,1
+42,Private,50901,Highschool,Married,Contract,Living with Roommates,Other,Female,Urban,1
+22,Unemployed,108192,Bachelor,Widowed,Contract,Living with Roommates,Other,Male,Rural,1
+50,Unemployed,161486,Master,Widowed,Contract,Living Alone,Hispanic,Male,Suburban,1
+49,Private,126802,Highschool,Married,Intern,Living with Roommates,Hispanic,Female,Suburban,1
+30,Private,106261,Master,Married,Intern,Living with Family,White,Female,Suburban,1
+58,Private,82580,Master,Widowed,Intern,Living Alone,Black,Male,Suburban,1
+22,Self-emp,118982,Bachelor,Divorced,Full-time,Living with Family,Other,Male,Rural,1
+33,Private,117129,PhD,Married,Intern,Living Alone,Asian,Male,Urban,1
+59,Private,151537,Master,Married,Full-time,Living with Family,White,Female,Urban,1
+62,Unemployed,189972,Master,Single,Contract,Living with Roommates,Black,Female,Rural,1
+24,Unemployed,43784,Master,Divorced,Contract,Living with Roommates,Asian,Female,Urban,0
+35,Unemployed,65475,PhD,Divorced,Intern,Living with Roommates,Other,Male,Rural,1
+59,Private,166752,Master,Single,Contract,Living Alone,Other,Female,Rural,1
+53,Self-emp,193630,Highschool,Married,Contract,Living with Family,Black,Female,Urban,1
+62,Unemployed,170880,PhD,Divorced,Full-time,Living Alone,Other,Female,Suburban,1
+46,Unemployed,192342,Master,Divorced,Part-time,Living with Roommates,White,Male,Urban,1
+19,Private,120433,PhD,Widowed,Full-time,Living Alone,Black,Male,Suburban,1
+24,Unemployed,85386,Highschool,Married,Part-time,Living with Family,Black,Female,Rural,1
+38,Self-emp,114117,Highschool,Single,Part-time,Living with Roommates,Other,Female,Rural,1
+47,Self-emp,130418,PhD,Widowed,Intern,Living Alone,Asian,Female,Urban,1
+58,Government,69208,Highschool,Single,Full-time,Living with Roommates,Hispanic,Female,Urban,1
+60,Unemployed,25286,Master,Divorced,Intern,Living with Family,Hispanic,Female,Rural,0
+51,Government,104065,PhD,Widowed,Full-time,Living Alone,Hispanic,Female,Suburban,1
+60,Unemployed,109834,Bachelor,Married,Full-time,Living Alone,Black,Male,Rural,1
+38,Government,184511,PhD,Single,Full-time,Living with Family,Asian,Male,Suburban,1
+56,Private,39720,Bachelor,Widowed,Part-time,Living with Roommates,Asian,Male,Urban,0
+21,Private,88512,Highschool,Single,Full-time,Living Alone,Other,Male,Rural,1
+41,Government,68099,Highschool,Married,Intern,Living with Family,Other,Male,Rural,1
+47,Unemployed,170922,Highschool,Single,Contract,Living Alone,White,Female,Suburban,1
+51,Government,113917,PhD,Divorced,Intern,Living with Family,Black,Female,Urban,1
+56,Government,14262,Bachelor,Divorced,Full-time,Living Alone,Black,Female,Urban,0
+23,Government,159438,Highschool,Single,Intern,Living with Roommates,White,Male,Rural,1
+52,Self-emp,180806,Bachelor,Married,Intern,Living with Family,Hispanic,Female,Rural,1
+28,Government,26320,Master,Divorced,Part-time,Living with Roommates,Black,Female,Rural,0
+54,Unemployed,190720,Highschool,Single,Part-time,Living with Roommates,White,Female,Rural,1
+45,Private,48021,Highschool,Widowed,Contract,Living with Family,Hispanic,Male,Rural,0
+69,Government,41303,Master,Divorced,Intern,Living with Family,Other,Female,Rural,0
+24,Self-emp,110570,Highschool,Widowed,Contract,Living Alone,Other,Male,Urban,1
+22,Unemployed,119353,PhD,Widowed,Part-time,Living Alone,Other,Female,Rural,1
+61,Self-emp,74379,PhD,Married,Contract,Living with Roommates,Hispanic,Male,Rural,1
+52,Government,81756,Highschool,Single,Part-time,Living with Family,Other,Male,Suburban,1
+37,Private,144751,Bachelor,Single,Part-time,Living with Family,Black,Male,Urban,1
+28,Government,63930,Bachelor,Married,Intern,Living with Family,Other,Female,Rural,1
+31,Self-emp,125172,Bachelor,Married,Part-time,Living Alone,Hispanic,Male,Suburban,1
+27,Government,79313,Highschool,Widowed,Full-time,Living with Roommates,Asian,Female,Rural,1
+49,Private,60881,PhD,Single,Full-time,Living Alone,Asian,Male,Suburban,1
+30,Government,93922,Highschool,Married,Contract,Living Alone,Black,Male,Rural,1
+62,Unemployed,174079,Master,Divorced,Contract,Living Alone,White,Male,Urban,1
+48,Private,148605,PhD,Widowed,Full-time,Living with Family,Other,Male,Urban,1
+24,Government,124993,Highschool,Widowed,Part-time,Living with Roommates,Hispanic,Female,Suburban,1
+54,Government,142362,Master,Married,Intern,Living with Roommates,Asian,Female,Suburban,1
+56,Self-emp,139132,PhD,Widowed,Full-time,Living with Roommates,Black,Male,Suburban,1
+66,Government,185943,Highschool,Widowed,Contract,Living with Family,White,Female,Suburban,1
+26,Government,179113,PhD,Married,Contract,Living with Roommates,Other,Male,Suburban,1
+59,Private,177947,Bachelor,Married,Part-time,Living with Family,White,Female,Rural,1
+18,Private,168686,Highschool,Married,Contract,Living with Family,Black,Female,Urban,1
+43,Unemployed,157341,PhD,Widowed,Full-time,Living with Roommates,White,Male,Urban,1
+29,Unemployed,60358,Master,Married,Contract,Living Alone,Hispanic,Male,Urban,1
+49,Self-emp,191977,PhD,Single,Part-time,Living Alone,Hispanic,Male,Rural,1
+25,Private,32571,Master,Widowed,Contract,Living with Family,Asian,Female,Urban,0
+28,Government,113910,Highschool,Widowed,Intern,Living Alone,Hispanic,Female,Rural,1
+68,Self-emp,40303,PhD,Widowed,Intern,Living Alone,Hispanic,Male,Rural,0
+30,Self-emp,54096,Master,Divorced,Part-time,Living with Family,Hispanic,Male,Suburban,1
+51,Government,136524,Master,Single,Full-time,Living with Family,Black,Female,Urban,1
+58,Unemployed,53194,Bachelor,Single,Intern,Living with Roommates,Black,Male,Rural,1
+65,Government,135924,Highschool,Single,Part-time,Living with Roommates,Black,Female,Rural,1
+63,Government,164176,Master,Married,Full-time,Living with Family,White,Female,Urban,1
+51,Government,168937,PhD,Divorced,Part-time,Living with Family,Black,Male,Rural,1
+43,Self-emp,134357,Bachelor,Divorced,Contract,Living with Family,White,Male,Urban,1
+67,Self-emp,183177,Highschool,Divorced,Part-time,Living Alone,White,Male,Rural,1
+54,Unemployed,103251,Highschool,Divorced,Full-time,Living with Roommates,Asian,Female,Suburban,1
+44,Government,22600,Highschool,Widowed,Full-time,Living with Family,Asian,Male,Suburban,0
+41,Unemployed,120188,Highschool,Widowed,Intern,Living with Family,Asian,Female,Urban,1
+41,Unemployed,196967,PhD,Single,Intern,Living Alone,White,Male,Urban,1
+24,Government,183534,Highschool,Widowed,Intern,Living with Roommates,Other,Male,Rural,1
+66,Private,193527,Highschool,Widowed,Full-time,Living with Family,Hispanic,Male,Rural,1
+40,Private,34024,Master,Widowed,Full-time,Living with Roommates,Black,Female,Rural,0
+30,Unemployed,139374,Master,Widowed,Full-time,Living Alone,White,Female,Rural,1
+21,Unemployed,82683,PhD,Widowed,Full-time,Living with Family,Asian,Male,Suburban,1
+56,Self-emp,72364,Master,Widowed,Full-time,Living Alone,Other,Female,Rural,1
+44,Unemployed,137292,Highschool,Married,Part-time,Living Alone,Other,Male,Suburban,1
+50,Self-emp,78458,Highschool,Divorced,Contract,Living Alone,Black,Female,Urban,1
+62,Government,130595,Bachelor,Single,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+31,Self-emp,192445,Bachelor,Widowed,Full-time,Living with Family,Other,Male,Urban,1
+20,Government,49996,Highschool,Divorced,Full-time,Living with Roommates,Asian,Male,Suburban,0
+42,Unemployed,130903,Highschool,Divorced,Contract,Living Alone,Hispanic,Female,Urban,1
+58,Government,158737,PhD,Married,Intern,Living with Roommates,Black,Female,Urban,1
+49,Self-emp,169309,Highschool,Divorced,Part-time,Living with Roommates,Other,Female,Rural,1
+61,Government,153328,Master,Single,Contract,Living with Roommates,White,Male,Rural,1
+49,Unemployed,115741,Bachelor,Single,Part-time,Living with Roommates,Hispanic,Female,Urban,1
+23,Private,69725,Master,Divorced,Part-time,Living with Roommates,Other,Female,Suburban,1
+39,Government,57740,Highschool,Single,Full-time,Living Alone,Black,Female,Suburban,1
+51,Self-emp,47885,Master,Married,Contract,Living Alone,White,Male,Suburban,0
+52,Private,26688,PhD,Widowed,Full-time,Living with Roommates,Other,Male,Suburban,0
+34,Unemployed,104555,Highschool,Widowed,Part-time,Living with Family,White,Male,Urban,1
+38,Self-emp,188442,Master,Divorced,Full-time,Living Alone,Black,Male,Rural,1
+51,Government,164612,Master,Widowed,Contract,Living with Roommates,Asian,Male,Urban,1
+36,Self-emp,79070,Bachelor,Widowed,Full-time,Living Alone,Black,Female,Urban,1
+67,Private,16455,Master,Single,Intern,Living with Roommates,Black,Male,Rural,0
+69,Government,46515,Bachelor,Married,Intern,Living Alone,Asian,Male,Urban,0
+24,Self-emp,103021,Bachelor,Divorced,Contract,Living with Family,Black,Male,Suburban,1
+67,Private,143964,Bachelor,Divorced,Intern,Living Alone,Black,Male,Urban,1
+49,Private,67373,Master,Divorced,Full-time,Living with Roommates,Hispanic,Female,Suburban,1
+48,Unemployed,189630,Bachelor,Single,Full-time,Living Alone,Other,Female,Urban,1
+47,Government,69243,Highschool,Widowed,Intern,Living Alone,White,Female,Rural,1
+26,Unemployed,114321,Highschool,Divorced,Contract,Living with Family,Asian,Male,Rural,1
+63,Unemployed,175555,Master,Married,Contract,Living with Roommates,Black,Male,Suburban,1
+58,Private,133650,PhD,Divorced,Full-time,Living with Family,White,Female,Urban,1
+54,Government,53746,Master,Married,Part-time,Living with Family,White,Male,Urban,1
+56,Private,72804,Bachelor,Single,Part-time,Living Alone,White,Male,Rural,1
+59,Private,136143,Master,Widowed,Contract,Living with Roommates,Hispanic,Female,Suburban,1
+58,Self-emp,72130,PhD,Divorced,Intern,Living with Family,Other,Male,Urban,1
+34,Private,75368,Master,Married,Full-time,Living Alone,White,Male,Rural,1
+35,Government,96187,Bachelor,Married,Contract,Living with Family,Hispanic,Female,Rural,1
+58,Private,142193,PhD,Single,Part-time,Living Alone,Asian,Male,Rural,1
+29,Government,106765,Master,Divorced,Intern,Living with Family,White,Female,Urban,1
+64,Self-emp,161806,Bachelor,Widowed,Part-time,Living Alone,Other,Male,Urban,1
+33,Unemployed,129980,Master,Married,Intern,Living with Family,White,Male,Urban,1
+51,Unemployed,113784,Bachelor,Married,Full-time,Living with Family,Asian,Male,Urban,1
+65,Private,170673,Highschool,Divorced,Part-time,Living Alone,Other,Male,Suburban,1
+31,Unemployed,86067,PhD,Widowed,Full-time,Living with Family,Black,Female,Urban,1
+35,Self-emp,181952,Bachelor,Married,Part-time,Living with Roommates,Other,Female,Rural,1
+24,Unemployed,183635,Highschool,Divorced,Contract,Living Alone,Black,Female,Urban,1
+58,Self-emp,144245,PhD,Divorced,Intern,Living Alone,Other,Female,Rural,1
+46,Government,66118,Bachelor,Single,Full-time,Living with Family,Hispanic,Male,Suburban,1
+45,Private,37618,PhD,Married,Intern,Living with Family,Hispanic,Male,Urban,0
+23,Private,96883,PhD,Single,Intern,Living with Family,Other,Male,Urban,1
+28,Private,100971,PhD,Married,Intern,Living Alone,Hispanic,Female,Rural,1
+64,Unemployed,151776,Master,Divorced,Full-time,Living Alone,Asian,Female,Rural,1
+69,Government,74917,Highschool,Single,Contract,Living with Roommates,Asian,Male,Rural,1
+19,Unemployed,70129,Highschool,Divorced,Contract,Living Alone,Other,Female,Suburban,1
+52,Government,164178,Master,Divorced,Full-time,Living with Roommates,Hispanic,Female,Suburban,1
+57,Private,72584,Highschool,Widowed,Full-time,Living Alone,Black,Male,Suburban,1
+33,Unemployed,192712,Bachelor,Married,Part-time,Living with Family,Asian,Male,Suburban,1
+53,Government,116583,PhD,Single,Full-time,Living with Family,Other,Female,Rural,1
+39,Self-emp,141668,Bachelor,Married,Contract,Living with Roommates,Other,Female,Rural,1
+58,Self-emp,189687,Master,Widowed,Intern,Living Alone,Other,Male,Rural,1
+68,Government,64237,Highschool,Divorced,Contract,Living Alone,Other,Female,Rural,1
+37,Unemployed,110204,Bachelor,Widowed,Contract,Living Alone,Other,Male,Rural,1
+43,Unemployed,69068,Master,Divorced,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+56,Private,52338,Bachelor,Divorced,Intern,Living with Family,Asian,Female,Rural,1
+27,Private,80484,PhD,Widowed,Part-time,Living with Family,Black,Male,Suburban,1
+53,Unemployed,134111,Bachelor,Married,Full-time,Living Alone,White,Male,Urban,1
+62,Government,58319,Bachelor,Single,Part-time,Living with Family,Hispanic,Male,Rural,1
+62,Government,35964,Master,Married,Part-time,Living with Family,White,Male,Urban,0
+51,Government,151136,PhD,Single,Full-time,Living Alone,Black,Male,Urban,1
+52,Unemployed,126530,Master,Single,Full-time,Living with Family,Black,Male,Urban,1
+26,Private,187257,Bachelor,Married,Part-time,Living with Roommates,White,Male,Urban,1
+18,Government,34792,Highschool,Divorced,Full-time,Living with Roommates,Hispanic,Male,Suburban,0
+70,Government,68089,PhD,Single,Full-time,Living Alone,Asian,Male,Rural,1
+31,Private,106363,Master,Widowed,Contract,Living Alone,Other,Female,Urban,1
+37,Government,159746,Bachelor,Widowed,Contract,Living with Roommates,Asian,Female,Urban,1
+30,Private,176788,Bachelor,Divorced,Part-time,Living with Roommates,Other,Male,Suburban,1
+28,Self-emp,144139,PhD,Divorced,Part-time,Living Alone,White,Male,Urban,1
+64,Self-emp,199870,Master,Widowed,Intern,Living Alone,White,Female,Urban,1
+33,Private,189822,PhD,Widowed,Contract,Living Alone,White,Male,Suburban,1
+63,Government,121599,Bachelor,Married,Contract,Living with Roommates,White,Male,Suburban,1
+59,Unemployed,19015,Bachelor,Divorced,Intern,Living Alone,White,Male,Rural,0
+43,Self-emp,161360,Bachelor,Married,Intern,Living with Family,Other,Female,Rural,1
+43,Self-emp,71924,Highschool,Divorced,Part-time,Living with Roommates,White,Female,Suburban,1
+55,Private,62843,Bachelor,Widowed,Part-time,Living with Family,Asian,Male,Urban,1
+58,Self-emp,84256,PhD,Widowed,Intern,Living Alone,White,Male,Rural,1
+29,Unemployed,110150,Bachelor,Widowed,Part-time,Living Alone,Black,Male,Rural,1
+31,Self-emp,73049,Master,Married,Full-time,Living with Roommates,Hispanic,Male,Urban,1
+28,Government,15788,Master,Married,Full-time,Living Alone,White,Female,Urban,0
+27,Government,93122,Bachelor,Single,Intern,Living Alone,Hispanic,Male,Suburban,1
+44,Unemployed,131311,Master,Divorced,Contract,Living with Roommates,Other,Male,Suburban,1
+43,Private,60857,Highschool,Single,Contract,Living with Roommates,Black,Female,Urban,1
+67,Government,34942,Master,Single,Full-time,Living with Family,White,Female,Suburban,0
+54,Self-emp,10405,Highschool,Single,Contract,Living Alone,Other,Male,Urban,0
+45,Unemployed,171198,Bachelor,Married,Part-time,Living Alone,Hispanic,Male,Rural,1
+57,Government,139528,Highschool,Divorced,Full-time,Living Alone,White,Male,Suburban,1
+55,Government,128191,Highschool,Widowed,Contract,Living with Roommates,Asian,Female,Rural,1
+46,Self-emp,156857,PhD,Single,Contract,Living Alone,Asian,Female,Rural,1
+37,Private,168063,Master,Married,Intern,Living Alone,Hispanic,Male,Rural,1
+19,Self-emp,37578,PhD,Widowed,Full-time,Living Alone,Black,Female,Urban,0
+64,Unemployed,30085,Bachelor,Single,Intern,Living Alone,Other,Male,Urban,0
+37,Private,122153,PhD,Divorced,Contract,Living with Roommates,Hispanic,Male,Rural,1
+41,Government,87829,Highschool,Married,Intern,Living Alone,Other,Male,Rural,1
+38,Government,49777,Master,Married,Full-time,Living with Roommates,Asian,Male,Suburban,0
+21,Self-emp,36817,Master,Single,Full-time,Living with Family,Asian,Female,Urban,0
+31,Unemployed,97534,Master,Single,Part-time,Living Alone,White,Male,Suburban,1
+23,Private,54023,Bachelor,Widowed,Contract,Living with Family,Hispanic,Male,Suburban,1
+65,Unemployed,35650,PhD,Single,Full-time,Living Alone,White,Female,Suburban,0
+47,Private,16884,Master,Widowed,Intern,Living with Roommates,Other,Female,Urban,0
+49,Private,100775,Highschool,Single,Part-time,Living Alone,Other,Female,Suburban,1
+37,Private,122363,Master,Divorced,Part-time,Living with Family,Other,Female,Suburban,1
+33,Private,19457,Highschool,Widowed,Part-time,Living Alone,Hispanic,Female,Rural,0
+70,Government,173125,Bachelor,Divorced,Contract,Living with Roommates,Hispanic,Female,Urban,1
+62,Private,155328,Bachelor,Widowed,Contract,Living with Family,Hispanic,Female,Rural,1
+57,Unemployed,195652,Master,Divorced,Full-time,Living with Roommates,Other,Male,Rural,1
+36,Unemployed,107898,PhD,Single,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+40,Government,193358,PhD,Single,Intern,Living Alone,Hispanic,Male,Rural,1
+68,Private,17109,Bachelor,Single,Part-time,Living with Family,Other,Female,Urban,0
+52,Private,87279,PhD,Divorced,Part-time,Living with Family,Black,Female,Urban,1
+29,Self-emp,103562,Highschool,Married,Part-time,Living Alone,Other,Male,Urban,1
+46,Unemployed,63624,Highschool,Married,Contract,Living with Family,Asian,Female,Urban,1
+46,Unemployed,132018,Master,Single,Full-time,Living with Family,Asian,Female,Urban,1
+65,Unemployed,194124,PhD,Single,Contract,Living with Roommates,Black,Female,Suburban,1
+57,Self-emp,62862,Master,Married,Full-time,Living with Roommates,Other,Female,Urban,1
+37,Self-emp,73336,PhD,Married,Contract,Living with Roommates,Black,Male,Rural,1
+40,Self-emp,124268,Bachelor,Divorced,Intern,Living with Roommates,Black,Male,Rural,1
+45,Private,22504,Master,Widowed,Intern,Living with Roommates,White,Female,Rural,0
+41,Government,133679,Highschool,Married,Full-time,Living with Roommates,Black,Male,Rural,1
+23,Private,120906,Master,Divorced,Full-time,Living with Family,Asian,Male,Urban,1
+70,Private,107043,PhD,Single,Intern,Living Alone,Hispanic,Male,Suburban,1
+45,Private,47597,Master,Single,Part-time,Living with Family,White,Male,Rural,0
+61,Self-emp,123802,Bachelor,Married,Part-time,Living with Roommates,White,Female,Rural,1
+69,Government,54032,Highschool,Widowed,Intern,Living with Roommates,Hispanic,Male,Rural,1
+26,Self-emp,106316,PhD,Divorced,Full-time,Living Alone,Asian,Female,Urban,1
+61,Government,52166,Master,Widowed,Part-time,Living with Roommates,Black,Male,Suburban,1
+29,Government,100207,Bachelor,Divorced,Contract,Living with Family,Asian,Male,Rural,1
+60,Self-emp,23061,Highschool,Single,Full-time,Living with Roommates,Black,Male,Suburban,0
+32,Government,186139,PhD,Married,Part-time,Living with Roommates,White,Female,Urban,1
+63,Government,20340,PhD,Divorced,Intern,Living Alone,Asian,Male,Rural,0
+67,Self-emp,115819,Bachelor,Widowed,Contract,Living with Roommates,White,Female,Suburban,1
+70,Government,181517,Highschool,Married,Intern,Living with Roommates,White,Male,Suburban,1
+62,Government,22770,Bachelor,Single,Intern,Living Alone,Black,Male,Suburban,0
+57,Self-emp,17061,Master,Married,Full-time,Living with Family,Black,Male,Rural,0
+40,Government,199775,PhD,Single,Full-time,Living with Roommates,Other,Male,Rural,1
+37,Government,100167,Bachelor,Married,Part-time,Living with Family,Black,Male,Urban,1
+68,Government,174019,Highschool,Married,Contract,Living with Roommates,Asian,Male,Suburban,1
+52,Unemployed,116375,Bachelor,Married,Contract,Living with Family,Black,Female,Urban,1
+21,Self-emp,43137,Bachelor,Married,Part-time,Living with Roommates,Asian,Male,Suburban,0
+61,Unemployed,152003,Master,Married,Intern,Living with Family,Black,Female,Urban,1
+29,Self-emp,160152,Bachelor,Divorced,Part-time,Living Alone,Black,Female,Suburban,1
+29,Private,167114,PhD,Married,Contract,Living with Family,Hispanic,Male,Rural,1
+47,Private,90832,PhD,Single,Part-time,Living Alone,Other,Female,Suburban,1
+27,Government,121666,Highschool,Married,Contract,Living Alone,Hispanic,Female,Suburban,1
+64,Private,73669,Bachelor,Married,Intern,Living Alone,Hispanic,Female,Urban,1
+24,Government,45635,Bachelor,Divorced,Intern,Living with Family,White,Male,Suburban,0
+35,Self-emp,90044,Master,Married,Full-time,Living with Roommates,Asian,Female,Rural,1
+39,Unemployed,65055,PhD,Single,Contract,Living Alone,Other,Female,Urban,1
+64,Government,158754,Bachelor,Single,Intern,Living with Family,White,Male,Suburban,1
+57,Unemployed,74136,PhD,Widowed,Contract,Living with Family,White,Female,Rural,1
+64,Private,113052,Highschool,Widowed,Part-time,Living with Family,White,Male,Suburban,1
+55,Unemployed,15023,Highschool,Married,Full-time,Living with Family,Black,Female,Suburban,0
+68,Self-emp,124209,Highschool,Divorced,Intern,Living with Family,White,Female,Urban,1
+55,Government,136329,Master,Divorced,Full-time,Living with Roommates,Asian,Female,Suburban,1
+61,Unemployed,62647,Master,Married,Contract,Living Alone,Black,Female,Urban,1
+18,Unemployed,135869,Bachelor,Divorced,Contract,Living with Roommates,Asian,Female,Suburban,1
+31,Unemployed,177793,Highschool,Widowed,Part-time,Living with Family,Black,Male,Urban,1
+59,Government,106214,Highschool,Single,Intern,Living with Roommates,White,Male,Suburban,1
+40,Self-emp,145611,PhD,Divorced,Part-time,Living with Family,Asian,Male,Suburban,1
+24,Private,161305,PhD,Single,Intern,Living Alone,White,Male,Rural,1
+59,Private,30387,PhD,Single,Contract,Living Alone,Other,Female,Urban,0
+27,Private,59080,PhD,Single,Part-time,Living with Family,White,Male,Rural,1
+21,Self-emp,32345,Bachelor,Divorced,Full-time,Living with Roommates,Other,Female,Urban,0
+35,Government,108653,PhD,Single,Part-time,Living Alone,Other,Female,Suburban,1
+40,Private,150702,PhD,Widowed,Full-time,Living Alone,Hispanic,Male,Urban,1
+28,Self-emp,129120,Highschool,Widowed,Part-time,Living with Family,Asian,Male,Suburban,1
+49,Self-emp,43755,Bachelor,Single,Intern,Living with Roommates,White,Female,Rural,0
+45,Private,67951,Bachelor,Single,Contract,Living with Family,Other,Female,Urban,1
+68,Unemployed,160326,PhD,Single,Full-time,Living with Roommates,Hispanic,Female,Suburban,1
+35,Unemployed,148326,Master,Widowed,Full-time,Living with Roommates,Asian,Male,Suburban,1
+62,Self-emp,135241,PhD,Widowed,Part-time,Living Alone,Hispanic,Female,Suburban,1
+24,Government,95958,Bachelor,Married,Part-time,Living with Family,Black,Male,Suburban,1
+51,Private,66030,Highschool,Married,Intern,Living with Family,Other,Male,Suburban,1
+56,Government,103654,Bachelor,Divorced,Intern,Living with Roommates,Other,Male,Urban,1
+24,Self-emp,180189,Highschool,Widowed,Contract,Living with Roommates,Other,Male,Suburban,1
+49,Unemployed,53850,Master,Divorced,Part-time,Living with Family,Asian,Female,Rural,1
+45,Private,142340,Bachelor,Single,Intern,Living Alone,Other,Male,Rural,1
+18,Unemployed,164844,Highschool,Single,Intern,Living with Family,Other,Female,Urban,1
+47,Government,106632,PhD,Single,Intern,Living with Roommates,Other,Male,Suburban,1
+21,Private,157763,Master,Married,Intern,Living with Family,Hispanic,Male,Urban,1
+27,Government,76918,Bachelor,Divorced,Intern,Living Alone,Asian,Female,Rural,1
+29,Self-emp,125485,Master,Single,Part-time,Living Alone,Black,Male,Urban,1
+18,Government,66993,PhD,Single,Intern,Living with Roommates,Other,Female,Suburban,1
+43,Private,16028,Bachelor,Divorced,Part-time,Living with Family,Hispanic,Female,Suburban,0
+68,Government,46087,Highschool,Married,Full-time,Living Alone,White,Female,Urban,0
+33,Private,51355,Bachelor,Widowed,Contract,Living with Roommates,Black,Female,Urban,1
+50,Self-emp,40000,PhD,Widowed,Full-time,Living with Family,Other,Male,Suburban,0
+34,Government,89867,PhD,Married,Full-time,Living with Roommates,Other,Male,Suburban,1
+35,Unemployed,52364,Bachelor,Divorced,Part-time,Living with Family,Hispanic,Female,Urban,1
+57,Private,29753,PhD,Married,Full-time,Living with Family,White,Female,Suburban,0
+32,Self-emp,73485,PhD,Widowed,Intern,Living with Family,Other,Male,Rural,1
+39,Self-emp,143927,PhD,Single,Full-time,Living with Family,Black,Male,Rural,1
+46,Unemployed,164174,Bachelor,Divorced,Full-time,Living with Roommates,Black,Male,Rural,1
+27,Private,86429,Highschool,Married,Part-time,Living with Family,Black,Female,Rural,1
+21,Self-emp,164329,PhD,Widowed,Intern,Living Alone,Black,Female,Rural,1
+33,Unemployed,30733,Master,Widowed,Intern,Living with Family,Asian,Female,Rural,0
+60,Unemployed,134349,Bachelor,Divorced,Full-time,Living with Roommates,Hispanic,Male,Rural,1
+18,Self-emp,163546,PhD,Divorced,Contract,Living with Roommates,Black,Male,Urban,1
+56,Government,91038,Bachelor,Widowed,Part-time,Living Alone,White,Female,Rural,1
+40,Private,11805,Highschool,Divorced,Part-time,Living with Roommates,White,Female,Suburban,0
+31,Unemployed,173598,Bachelor,Single,Contract,Living with Roommates,Black,Male,Rural,1
+24,Unemployed,101012,PhD,Single,Contract,Living with Family,Hispanic,Male,Suburban,1
+67,Private,126360,Master,Single,Intern,Living with Roommates,Black,Female,Suburban,1
+43,Self-emp,17897,Bachelor,Divorced,Intern,Living Alone,Black,Male,Suburban,0
+47,Private,175115,Master,Single,Intern,Living with Family,Asian,Male,Suburban,1
+45,Self-emp,194798,PhD,Married,Intern,Living Alone,Asian,Male,Suburban,1
+28,Unemployed,74951,Master,Divorced,Full-time,Living with Family,Other,Male,Suburban,1
+59,Self-emp,32149,Highschool,Married,Intern,Living with Family,Black,Female,Rural,0
+48,Unemployed,187727,Highschool,Single,Intern,Living with Roommates,Asian,Female,Suburban,1
+43,Self-emp,47248,Highschool,Widowed,Intern,Living Alone,White,Male,Rural,0
+20,Unemployed,122323,PhD,Married,Full-time,Living with Roommates,Asian,Female,Suburban,1
+65,Unemployed,59604,Bachelor,Divorced,Contract,Living Alone,Black,Male,Urban,1
+69,Self-emp,104873,Master,Married,Intern,Living with Roommates,Other,Male,Suburban,1
+67,Government,15707,PhD,Married,Part-time,Living with Roommates,Black,Male,Urban,0
+27,Unemployed,39775,Highschool,Divorced,Contract,Living with Family,Other,Male,Suburban,0
+30,Private,29361,Bachelor,Divorced,Full-time,Living Alone,Asian,Male,Rural,0
+33,Unemployed,148688,Highschool,Single,Contract,Living with Family,Other,Male,Suburban,1
+18,Government,153202,PhD,Single,Part-time,Living with Roommates,White,Male,Suburban,1
+22,Self-emp,66299,PhD,Divorced,Contract,Living with Family,Other,Female,Suburban,1
+68,Private,173782,Master,Widowed,Intern,Living Alone,Other,Male,Suburban,1
+30,Private,15506,Master,Widowed,Contract,Living Alone,White,Male,Rural,0
+48,Self-emp,88165,Master,Married,Contract,Living with Roommates,Asian,Male,Rural,1
+23,Private,196769,PhD,Widowed,Full-time,Living with Family,Asian,Female,Suburban,1
+50,Private,151294,Highschool,Married,Full-time,Living with Roommates,White,Female,Urban,1
+19,Government,38301,PhD,Single,Intern,Living with Family,Asian,Female,Urban,0
+58,Unemployed,102078,Master,Single,Part-time,Living with Family,Hispanic,Male,Suburban,1
+49,Self-emp,107287,PhD,Widowed,Full-time,Living with Family,Asian,Female,Urban,1
+32,Unemployed,197649,Highschool,Divorced,Full-time,Living Alone,White,Female,Rural,1
+70,Self-emp,90174,Highschool,Single,Intern,Living with Family,Other,Female,Rural,1
+31,Government,192632,PhD,Single,Contract,Living with Roommates,Asian,Female,Rural,1
+59,Unemployed,87107,PhD,Divorced,Contract,Living with Roommates,Other,Male,Urban,1
+21,Self-emp,195139,Highschool,Divorced,Part-time,Living Alone,White,Male,Rural,1
+27,Private,165516,PhD,Single,Contract,Living with Roommates,Other,Male,Urban,1
+34,Private,74315,Master,Divorced,Intern,Living with Roommates,Asian,Female,Rural,1
+70,Self-emp,154995,PhD,Widowed,Full-time,Living Alone,Other,Female,Suburban,1
+53,Self-emp,85617,Master,Divorced,Intern,Living with Roommates,Hispanic,Female,Urban,1
+58,Self-emp,51720,PhD,Widowed,Intern,Living with Roommates,Other,Male,Rural,1
+44,Unemployed,90193,Bachelor,Married,Part-time,Living with Family,Asian,Female,Suburban,1
+56,Private,26638,Master,Divorced,Part-time,Living Alone,White,Female,Urban,0
+63,Private,105421,Highschool,Widowed,Part-time,Living Alone,White,Male,Urban,1
+52,Self-emp,108032,Highschool,Widowed,Intern,Living with Roommates,Hispanic,Male,Rural,1
+26,Government,132972,Highschool,Single,Intern,Living Alone,Asian,Male,Urban,1
+23,Government,115536,Bachelor,Single,Contract,Living with Roommates,Other,Female,Urban,1
+42,Government,99480,Bachelor,Married,Intern,Living with Family,White,Female,Suburban,1
+43,Government,73831,PhD,Single,Intern,Living with Family,Hispanic,Female,Urban,1
+29,Private,30088,Master,Divorced,Intern,Living Alone,Asian,Male,Urban,0
+55,Self-emp,119388,PhD,Divorced,Contract,Living Alone,Asian,Female,Urban,1
+27,Unemployed,149223,Master,Single,Full-time,Living with Family,Hispanic,Male,Rural,1
+68,Unemployed,117591,Highschool,Widowed,Contract,Living Alone,Other,Female,Suburban,1
+24,Unemployed,27049,PhD,Widowed,Intern,Living with Family,Hispanic,Male,Rural,0
+23,Self-emp,48736,Highschool,Single,Part-time,Living with Family,Hispanic,Female,Urban,0
+25,Government,30322,PhD,Widowed,Contract,Living Alone,Black,Male,Suburban,0
+37,Private,134416,Bachelor,Married,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+61,Government,72901,Bachelor,Married,Full-time,Living with Roommates,Black,Male,Urban,1
+44,Self-emp,106663,Highschool,Widowed,Full-time,Living with Family,White,Male,Rural,1
+49,Government,74364,PhD,Divorced,Full-time,Living with Family,White,Male,Rural,1
+70,Unemployed,65193,Highschool,Married,Intern,Living Alone,Black,Male,Suburban,1
+31,Unemployed,95765,Bachelor,Divorced,Intern,Living with Family,Hispanic,Male,Rural,1
+55,Self-emp,171892,PhD,Single,Part-time,Living Alone,Asian,Male,Rural,1
+24,Unemployed,189734,Bachelor,Single,Full-time,Living with Family,Black,Male,Rural,1
+57,Government,77410,Bachelor,Single,Intern,Living with Roommates,Asian,Male,Rural,1
+65,Unemployed,96691,Highschool,Divorced,Intern,Living Alone,Hispanic,Female,Urban,1
+68,Self-emp,120762,Master,Divorced,Contract,Living Alone,White,Female,Urban,1
+44,Unemployed,10140,Master,Widowed,Full-time,Living with Roommates,Black,Male,Suburban,0
+59,Unemployed,192105,PhD,Divorced,Full-time,Living Alone,Other,Female,Rural,1
+62,Self-emp,20359,PhD,Single,Part-time,Living with Roommates,Asian,Female,Urban,0
+33,Government,31092,Bachelor,Divorced,Contract,Living Alone,Hispanic,Female,Rural,0
+20,Government,31881,Master,Divorced,Contract,Living with Family,Other,Female,Suburban,0
+18,Unemployed,64850,Highschool,Widowed,Contract,Living with Family,Black,Female,Urban,1
+23,Self-emp,108167,Bachelor,Married,Full-time,Living with Roommates,Black,Female,Suburban,1
+53,Private,150613,Master,Divorced,Intern,Living Alone,Hispanic,Male,Suburban,1
+19,Self-emp,83561,Bachelor,Widowed,Full-time,Living with Family,White,Female,Rural,1
+62,Private,175757,Bachelor,Single,Contract,Living Alone,Hispanic,Female,Suburban,1
+66,Self-emp,102278,Bachelor,Married,Intern,Living Alone,Black,Female,Urban,1
+68,Unemployed,12184,Bachelor,Widowed,Full-time,Living with Roommates,Asian,Female,Suburban,0
+22,Government,166587,Highschool,Married,Full-time,Living with Roommates,Asian,Female,Urban,1
+67,Private,147821,PhD,Divorced,Contract,Living Alone,Asian,Female,Suburban,1
+59,Private,195428,Highschool,Married,Intern,Living with Roommates,Hispanic,Female,Urban,1
+65,Unemployed,178208,Master,Divorced,Intern,Living Alone,Other,Male,Rural,1
+18,Private,171205,Bachelor,Widowed,Intern,Living with Roommates,Other,Male,Urban,1
+28,Private,96321,Highschool,Divorced,Contract,Living with Roommates,White,Male,Rural,1
+55,Government,138401,Bachelor,Widowed,Contract,Living with Roommates,White,Male,Suburban,1
+25,Unemployed,52898,Master,Widowed,Part-time,Living Alone,Asian,Male,Suburban,1
+59,Government,187369,Highschool,Married,Part-time,Living with Roommates,Hispanic,Male,Rural,1
+53,Unemployed,10793,Highschool,Divorced,Contract,Living with Family,Asian,Female,Urban,0
+42,Government,12029,Master,Single,Full-time,Living with Family,Black,Male,Rural,0
+44,Self-emp,101002,Highschool,Divorced,Full-time,Living with Family,Other,Female,Suburban,1
+66,Unemployed,142540,PhD,Single,Full-time,Living with Roommates,White,Male,Rural,1
+28,Private,129778,Master,Married,Contract,Living with Family,Black,Male,Rural,1
+41,Unemployed,54442,Master,Married,Full-time,Living with Roommates,White,Male,Suburban,1
+46,Private,16054,Highschool,Single,Part-time,Living Alone,Asian,Female,Suburban,0
+25,Private,126421,Bachelor,Single,Part-time,Living Alone,Other,Female,Rural,1
+45,Unemployed,173295,Master,Married,Contract,Living with Family,Other,Male,Rural,1
+36,Self-emp,115515,PhD,Widowed,Full-time,Living with Family,Hispanic,Female,Rural,1
+65,Private,122078,PhD,Divorced,Part-time,Living Alone,Other,Female,Rural,1
+34,Unemployed,41426,PhD,Married,Full-time,Living Alone,Asian,Female,Rural,0
+35,Government,74469,PhD,Married,Contract,Living Alone,Hispanic,Male,Suburban,1
+31,Private,49908,Highschool,Single,Part-time,Living Alone,Asian,Male,Urban,0
+59,Unemployed,172903,PhD,Married,Intern,Living with Family,Black,Female,Suburban,1
+51,Government,51601,Highschool,Divorced,Contract,Living with Roommates,Hispanic,Male,Rural,1
+24,Government,153292,PhD,Divorced,Part-time,Living Alone,White,Male,Suburban,1
+60,Government,195358,Bachelor,Widowed,Contract,Living with Family,Hispanic,Female,Urban,1
+56,Government,53411,PhD,Widowed,Intern,Living with Roommates,Asian,Female,Suburban,1
+46,Self-emp,107699,Highschool,Divorced,Part-time,Living with Roommates,Asian,Female,Urban,1
+34,Private,163849,Highschool,Married,Full-time,Living Alone,Asian,Female,Urban,1
+29,Government,148229,PhD,Single,Contract,Living Alone,Black,Male,Rural,1
+54,Self-emp,69470,Bachelor,Divorced,Intern,Living with Roommates,Black,Female,Suburban,1
+29,Private,151824,Bachelor,Divorced,Full-time,Living with Family,Hispanic,Female,Urban,1
+18,Self-emp,178610,PhD,Married,Part-time,Living Alone,Other,Female,Suburban,1
+70,Unemployed,55536,Highschool,Married,Contract,Living with Family,Hispanic,Female,Rural,1
+63,Government,74841,Highschool,Married,Intern,Living Alone,Asian,Male,Urban,1
+37,Government,60283,PhD,Widowed,Part-time,Living Alone,Asian,Female,Urban,1
+32,Private,72823,Bachelor,Single,Part-time,Living with Family,Hispanic,Female,Urban,1
+42,Government,167481,PhD,Single,Contract,Living Alone,White,Male,Rural,1
+51,Self-emp,184125,PhD,Married,Full-time,Living Alone,Other,Female,Suburban,1
+57,Government,132110,Master,Married,Contract,Living Alone,Other,Female,Urban,1
+64,Government,168116,Master,Single,Intern,Living Alone,Black,Female,Suburban,1
+36,Private,165793,Master,Widowed,Full-time,Living with Roommates,Asian,Female,Urban,1
+62,Unemployed,127309,Master,Single,Contract,Living with Family,White,Male,Rural,1
+54,Unemployed,32186,Master,Divorced,Contract,Living with Family,White,Male,Urban,0
+51,Unemployed,104169,Highschool,Single,Full-time,Living with Roommates,White,Male,Urban,1
+24,Government,13443,PhD,Widowed,Contract,Living Alone,Asian,Male,Suburban,0
+44,Self-emp,63887,Master,Married,Contract,Living with Family,Asian,Male,Suburban,1
+31,Government,75548,Master,Widowed,Part-time,Living with Roommates,Black,Female,Rural,1
+49,Self-emp,16913,Highschool,Single,Part-time,Living Alone,Hispanic,Male,Rural,0
+25,Self-emp,94109,Bachelor,Married,Contract,Living with Roommates,Hispanic,Female,Urban,1
+54,Unemployed,125673,Bachelor,Widowed,Intern,Living with Family,Asian,Female,Suburban,1
+61,Government,64790,Master,Widowed,Part-time,Living Alone,Hispanic,Male,Urban,1
+30,Private,50201,Highschool,Widowed,Part-time,Living with Family,Asian,Female,Suburban,1
+21,Government,74664,PhD,Widowed,Contract,Living Alone,Hispanic,Female,Suburban,1
+37,Government,126057,PhD,Married,Intern,Living with Roommates,White,Male,Urban,1
+69,Self-emp,181198,Master,Married,Full-time,Living with Roommates,Black,Male,Rural,1
+22,Self-emp,163790,Master,Widowed,Full-time,Living Alone,Asian,Male,Rural,1
+59,Private,37287,Master,Married,Part-time,Living with Family,Black,Male,Urban,0
+53,Self-emp,103436,PhD,Divorced,Contract,Living Alone,White,Female,Suburban,1
+65,Self-emp,61580,Bachelor,Single,Intern,Living Alone,Black,Female,Urban,1
+25,Unemployed,115440,PhD,Widowed,Full-time,Living Alone,Other,Female,Suburban,1
+55,Government,139304,Bachelor,Single,Intern,Living with Family,White,Male,Urban,1
+42,Unemployed,59253,PhD,Single,Full-time,Living with Roommates,Hispanic,Female,Rural,1
+64,Self-emp,24833,Master,Married,Intern,Living with Roommates,Hispanic,Male,Rural,0
+58,Unemployed,109062,Bachelor,Married,Contract,Living Alone,White,Male,Suburban,1
+52,Government,126701,Highschool,Married,Intern,Living with Family,Hispanic,Female,Suburban,1
+68,Government,170834,Highschool,Married,Full-time,Living with Family,Other,Female,Rural,1
+18,Private,148971,PhD,Single,Full-time,Living with Family,Black,Male,Rural,1
+30,Self-emp,115937,PhD,Divorced,Part-time,Living with Family,White,Male,Urban,1
+25,Unemployed,40229,PhD,Married,Intern,Living with Roommates,Black,Female,Suburban,0
+26,Unemployed,171397,Bachelor,Married,Contract,Living with Family,Asian,Female,Suburban,1
+66,Private,199239,Bachelor,Single,Contract,Living with Roommates,Black,Male,Suburban,1
+43,Unemployed,170498,Highschool,Widowed,Contract,Living with Family,Hispanic,Female,Rural,1
+56,Self-emp,144567,Highschool,Married,Intern,Living with Family,White,Male,Suburban,1
+52,Private,56977,Master,Married,Part-time,Living with Family,Other,Female,Suburban,1
+57,Government,141209,Bachelor,Single,Intern,Living with Roommates,Black,Female,Rural,1
+26,Self-emp,37578,PhD,Widowed,Part-time,Living Alone,Black,Female,Rural,0
+64,Private,134069,PhD,Divorced,Intern,Living with Roommates,Black,Male,Rural,1
+56,Government,129565,Master,Widowed,Intern,Living with Roommates,Asian,Male,Suburban,1
+64,Private,58372,PhD,Widowed,Contract,Living with Roommates,White,Male,Urban,1
+29,Unemployed,190813,Highschool,Single,Intern,Living with Family,Hispanic,Male,Rural,1
+46,Private,77891,Bachelor,Married,Part-time,Living Alone,Other,Male,Suburban,1
+68,Unemployed,173079,Bachelor,Divorced,Full-time,Living Alone,White,Male,Rural,1
+21,Private,137543,Bachelor,Divorced,Intern,Living Alone,Other,Female,Rural,1
+48,Unemployed,137340,PhD,Married,Contract,Living with Roommates,Asian,Female,Rural,1
+65,Government,171200,Bachelor,Single,Full-time,Living Alone,Other,Male,Rural,1
+65,Unemployed,43699,PhD,Widowed,Part-time,Living Alone,Hispanic,Male,Suburban,0
+62,Unemployed,191625,Bachelor,Divorced,Part-time,Living with Roommates,White,Male,Suburban,1
+67,Self-emp,31861,Bachelor,Single,Intern,Living with Family,Asian,Male,Suburban,0
+34,Unemployed,147091,Bachelor,Married,Full-time,Living with Roommates,Other,Male,Suburban,1
+63,Government,185184,Bachelor,Married,Full-time,Living with Roommates,White,Female,Suburban,1
+59,Unemployed,132623,Highschool,Single,Part-time,Living with Roommates,White,Female,Urban,1
+68,Government,65694,Highschool,Married,Part-time,Living with Family,Hispanic,Female,Rural,1
+55,Self-emp,131552,Highschool,Married,Contract,Living with Family,White,Female,Rural,1
+34,Government,136247,PhD,Divorced,Full-time,Living Alone,Other,Male,Urban,1
+64,Unemployed,88059,PhD,Widowed,Contract,Living with Family,White,Male,Rural,1
+53,Self-emp,73328,Master,Divorced,Contract,Living Alone,Other,Female,Urban,1
+30,Self-emp,105837,Highschool,Widowed,Part-time,Living Alone,White,Male,Suburban,1
+34,Self-emp,76095,Master,Single,Intern,Living Alone,Black,Female,Rural,1
+53,Government,12239,Bachelor,Divorced,Intern,Living with Roommates,Other,Male,Rural,0
+37,Government,111178,Highschool,Widowed,Intern,Living with Roommates,Other,Male,Rural,1
+58,Government,198801,Bachelor,Widowed,Intern,Living Alone,Asian,Female,Rural,1
+61,Self-emp,100629,Bachelor,Widowed,Full-time,Living with Roommates,Hispanic,Male,Suburban,1
+62,Private,189374,Master,Divorced,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+62,Government,10891,Highschool,Married,Contract,Living Alone,Other,Male,Urban,0
+60,Government,67081,Master,Married,Part-time,Living with Roommates,Hispanic,Female,Urban,1
+50,Government,59931,Master,Widowed,Full-time,Living with Roommates,Other,Male,Suburban,1
+51,Private,122519,Bachelor,Married,Full-time,Living with Family,Hispanic,Female,Urban,1
+25,Self-emp,61623,Bachelor,Divorced,Part-time,Living Alone,Hispanic,Female,Rural,1
+29,Unemployed,155802,Highschool,Single,Contract,Living with Roommates,Hispanic,Male,Rural,1
+66,Government,103543,Master,Married,Contract,Living with Roommates,White,Male,Suburban,1
+23,Self-emp,38774,Master,Married,Intern,Living with Family,Black,Female,Rural,0
+30,Unemployed,71201,Bachelor,Married,Part-time,Living Alone,Other,Male,Rural,1
+40,Unemployed,36623,PhD,Married,Full-time,Living Alone,Hispanic,Female,Urban,0
+62,Private,85253,Bachelor,Widowed,Full-time,Living with Family,White,Male,Suburban,1
+59,Unemployed,165691,Highschool,Divorced,Contract,Living with Family,Asian,Male,Rural,1
+33,Self-emp,73299,PhD,Divorced,Full-time,Living with Family,Asian,Male,Rural,1
+38,Self-emp,53941,PhD,Divorced,Full-time,Living with Family,Asian,Male,Suburban,1
+44,Private,54611,Highschool,Widowed,Intern,Living with Roommates,Black,Female,Suburban,1
+59,Private,177588,Bachelor,Widowed,Intern,Living with Roommates,White,Female,Suburban,1
+18,Private,83116,Master,Divorced,Contract,Living with Family,Black,Male,Suburban,1
+64,Government,152282,Master,Widowed,Full-time,Living Alone,Black,Male,Urban,1
+35,Government,23445,Highschool,Widowed,Intern,Living with Roommates,White,Female,Rural,0
+21,Unemployed,92169,Master,Single,Full-time,Living with Roommates,White,Male,Suburban,1
+35,Government,13494,PhD,Divorced,Full-time,Living with Family,Black,Male,Suburban,0
+24,Government,91770,Highschool,Widowed,Full-time,Living with Roommates,White,Male,Suburban,1
+37,Self-emp,131980,PhD,Married,Contract,Living with Roommates,Hispanic,Male,Rural,1
+51,Self-emp,80066,Master,Widowed,Contract,Living with Family,White,Female,Suburban,1
+62,Private,17760,PhD,Single,Full-time,Living with Family,White,Female,Rural,0
+31,Private,48040,PhD,Divorced,Intern,Living with Roommates,Other,Male,Urban,0
+31,Private,140074,Highschool,Widowed,Intern,Living Alone,Hispanic,Female,Suburban,1
+40,Government,199141,Master,Single,Contract,Living Alone,Hispanic,Male,Rural,1
+36,Self-emp,36199,Highschool,Divorced,Contract,Living Alone,Other,Male,Rural,0
+43,Private,119993,Highschool,Single,Intern,Living with Roommates,Black,Male,Suburban,1
+64,Government,192697,Master,Widowed,Contract,Living with Roommates,Black,Male,Urban,1
+59,Government,98234,PhD,Widowed,Part-time,Living with Family,White,Male,Urban,1
+55,Unemployed,95645,PhD,Divorced,Contract,Living with Roommates,Other,Female,Rural,1
+40,Self-emp,163060,Bachelor,Widowed,Contract,Living Alone,Asian,Male,Suburban,1
+47,Unemployed,121945,Highschool,Widowed,Full-time,Living Alone,White,Male,Urban,1
+51,Self-emp,29843,PhD,Divorced,Intern,Living with Family,White,Male,Urban,0
+44,Self-emp,47343,PhD,Widowed,Contract,Living Alone,White,Female,Rural,0
+58,Private,150153,Bachelor,Single,Part-time,Living with Family,Asian,Male,Rural,1
+19,Unemployed,106267,Bachelor,Widowed,Part-time,Living Alone,Other,Male,Rural,1
+29,Government,100087,PhD,Widowed,Full-time,Living Alone,Black,Male,Urban,1
+56,Private,136535,Highschool,Divorced,Contract,Living Alone,Asian,Male,Urban,1
+59,Government,19117,Bachelor,Divorced,Intern,Living Alone,Other,Female,Rural,0
+35,Self-emp,142810,PhD,Divorced,Part-time,Living Alone,Hispanic,Male,Urban,1
+69,Government,29994,Highschool,Divorced,Contract,Living with Roommates,Black,Male,Suburban,0
+60,Self-emp,63552,Bachelor,Single,Part-time,Living Alone,Other,Female,Urban,1
+23,Private,55311,Bachelor,Married,Intern,Living Alone,Hispanic,Male,Rural,1
+64,Unemployed,33744,Highschool,Single,Part-time,Living with Family,Other,Female,Urban,0
+21,Private,20326,Highschool,Divorced,Full-time,Living Alone,White,Female,Urban,0
+37,Private,144610,Master,Divorced,Contract,Living Alone,White,Female,Urban,1
+33,Self-emp,193943,PhD,Single,Full-time,Living with Family,Other,Male,Rural,1
+42,Unemployed,17409,Master,Divorced,Contract,Living with Family,Asian,Female,Urban,0
+64,Unemployed,159176,Master,Single,Contract,Living with Family,White,Female,Suburban,1
+64,Private,34177,Bachelor,Married,Full-time,Living with Family,Other,Female,Rural,0
+51,Private,62342,Bachelor,Single,Contract,Living Alone,Black,Female,Rural,1
+59,Government,182617,Bachelor,Single,Intern,Living Alone,Asian,Female,Rural,1
+55,Private,44666,PhD,Married,Part-time,Living Alone,White,Female,Urban,0
+29,Self-emp,36335,Highschool,Widowed,Full-time,Living Alone,White,Female,Rural,0
+33,Unemployed,29856,Bachelor,Single,Full-time,Living with Family,Other,Male,Rural,0
+69,Government,67578,Highschool,Married,Part-time,Living with Family,Asian,Female,Suburban,1
+59,Self-emp,162173,Bachelor,Married,Contract,Living with Roommates,Other,Female,Suburban,1
+52,Government,177629,PhD,Single,Part-time,Living with Family,White,Female,Urban,1
+21,Self-emp,144104,Master,Married,Full-time,Living Alone,Asian,Female,Urban,1
+55,Government,181733,Highschool,Divorced,Intern,Living Alone,White,Female,Suburban,1
+19,Unemployed,85969,Master,Divorced,Contract,Living Alone,Other,Male,Urban,1
+43,Private,189989,Highschool,Divorced,Intern,Living with Family,Asian,Male,Urban,1
+46,Private,70590,PhD,Divorced,Intern,Living with Roommates,Asian,Male,Urban,1
+67,Self-emp,42815,Highschool,Single,Intern,Living with Roommates,White,Female,Urban,0
+50,Private,143157,Master,Widowed,Part-time,Living with Family,Asian,Male,Urban,1
+28,Self-emp,101581,Highschool,Single,Intern,Living with Roommates,Black,Male,Rural,1
+48,Government,34397,Bachelor,Widowed,Part-time,Living with Roommates,Other,Female,Rural,0
+45,Unemployed,94269,Master,Single,Full-time,Living with Roommates,Asian,Female,Rural,1
+43,Unemployed,13252,Master,Widowed,Part-time,Living with Roommates,Other,Female,Suburban,0
+40,Self-emp,58653,Highschool,Divorced,Intern,Living Alone,Other,Female,Suburban,1
+57,Unemployed,132656,Highschool,Divorced,Full-time,Living with Roommates,Other,Female,Urban,1
+58,Private,48269,Bachelor,Divorced,Contract,Living with Roommates,Asian,Female,Rural,0
+21,Government,89105,Highschool,Divorced,Full-time,Living Alone,Other,Male,Rural,1
+30,Unemployed,61060,PhD,Widowed,Part-time,Living with Roommates,White,Male,Suburban,1
+67,Government,42718,Master,Single,Contract,Living with Roommates,Black,Female,Suburban,0
+51,Private,84797,PhD,Single,Contract,Living with Roommates,Black,Male,Suburban,1
+45,Government,41729,Highschool,Divorced,Intern,Living with Family,Other,Male,Suburban,0
+48,Government,49651,Master,Widowed,Contract,Living with Family,Black,Male,Rural,0
+45,Government,166155,Master,Married,Part-time,Living Alone,Hispanic,Female,Urban,1
+56,Government,172070,Master,Single,Full-time,Living with Family,Asian,Male,Rural,1
+45,Unemployed,88225,PhD,Single,Contract,Living Alone,White,Male,Suburban,1
+20,Self-emp,193264,Highschool,Single,Contract,Living with Roommates,Hispanic,Female,Urban,1
+54,Government,78813,Highschool,Married,Part-time,Living Alone,Other,Male,Rural,1
+33,Unemployed,32965,Bachelor,Married,Contract,Living with Family,Asian,Male,Suburban,0
+37,Private,160127,Highschool,Single,Full-time,Living with Family,Hispanic,Female,Suburban,1
+70,Self-emp,53968,Master,Divorced,Full-time,Living Alone,Hispanic,Female,Rural,1
+55,Self-emp,52641,PhD,Divorced,Part-time,Living with Roommates,Asian,Female,Rural,1
+26,Unemployed,112663,Highschool,Widowed,Full-time,Living with Roommates,Hispanic,Male,Urban,1
+62,Private,58212,Highschool,Widowed,Contract,Living Alone,White,Male,Rural,1
+33,Unemployed,30372,Master,Divorced,Full-time,Living with Family,Hispanic,Female,Rural,0
+22,Self-emp,80383,Master,Divorced,Contract,Living with Roommates,White,Male,Rural,1
+51,Private,31224,Bachelor,Married,Full-time,Living with Family,Asian,Female,Suburban,0
+30,Unemployed,104676,Master,Widowed,Full-time,Living with Roommates,White,Female,Suburban,1
+19,Private,27025,PhD,Divorced,Intern,Living with Family,Other,Female,Urban,0
+55,Private,177760,Master,Single,Full-time,Living Alone,White,Male,Rural,1
+51,Private,21176,PhD,Married,Full-time,Living with Roommates,Hispanic,Male,Rural,0
+38,Unemployed,58160,Bachelor,Widowed,Contract,Living Alone,White,Female,Urban,1
+65,Government,86450,Highschool,Married,Intern,Living Alone,Black,Female,Suburban,1
+33,Unemployed,36687,Highschool,Widowed,Contract,Living Alone,White,Female,Urban,0
+32,Unemployed,177856,Bachelor,Widowed,Intern,Living Alone,Hispanic,Male,Rural,1
+59,Government,189156,Highschool,Divorced,Part-time,Living with Roommates,Hispanic,Male,Urban,1
+18,Private,141009,Highschool,Divorced,Full-time,Living with Family,Other,Female,Rural,1
+61,Self-emp,123451,Bachelor,Widowed,Intern,Living with Family,White,Female,Urban,1
+31,Self-emp,46848,Highschool,Married,Part-time,Living with Family,White,Female,Rural,0
+61,Government,184088,Master,Divorced,Part-time,Living Alone,Asian,Female,Urban,1
+45,Self-emp,150926,Master,Widowed,Full-time,Living with Family,White,Male,Rural,1
+57,Unemployed,174265,Master,Divorced,Contract,Living Alone,Other,Male,Rural,1
+41,Private,44748,Bachelor,Single,Intern,Living with Family,Asian,Male,Urban,0
+27,Self-emp,177394,PhD,Widowed,Intern,Living Alone,Other,Female,Suburban,1
+69,Self-emp,150237,Master,Divorced,Contract,Living with Roommates,Asian,Female,Rural,1
+37,Self-emp,127494,Bachelor,Married,Contract,Living with Family,Hispanic,Female,Rural,1
+24,Private,56811,Highschool,Widowed,Full-time,Living with Family,White,Male,Urban,1
+25,Unemployed,159031,Highschool,Married,Part-time,Living with Roommates,Hispanic,Female,Rural,1
+19,Unemployed,17111,Highschool,Widowed,Full-time,Living with Roommates,Hispanic,Male,Urban,0
+59,Unemployed,110862,Highschool,Married,Contract,Living with Roommates,Other,Female,Urban,1
+59,Private,19902,PhD,Single,Part-time,Living with Family,Hispanic,Male,Suburban,0
+25,Government,169426,Master,Divorced,Full-time,Living with Family,Asian,Female,Urban,1
+50,Private,34110,PhD,Widowed,Full-time,Living Alone,Hispanic,Female,Rural,0
+69,Unemployed,93004,Highschool,Widowed,Full-time,Living with Family,Black,Male,Suburban,1
+52,Government,39048,Highschool,Married,Full-time,Living Alone,Black,Male,Suburban,0
+65,Government,81534,Master,Single,Contract,Living with Family,Other,Female,Suburban,1
+54,Private,192320,Master,Widowed,Contract,Living Alone,White,Female,Urban,1
+42,Unemployed,162860,Highschool,Single,Part-time,Living with Roommates,Asian,Male,Urban,1
+30,Self-emp,124578,PhD,Single,Part-time,Living with Roommates,Hispanic,Male,Suburban,1
+29,Unemployed,39709,Highschool,Widowed,Part-time,Living with Family,Asian,Female,Urban,0
+51,Self-emp,143677,Master,Single,Part-time,Living with Family,Asian,Female,Suburban,1
+54,Unemployed,36244,Bachelor,Married,Part-time,Living with Roommates,Asian,Female,Urban,0
+43,Government,141604,Bachelor,Widowed,Full-time,Living with Family,White,Male,Rural,1
+19,Private,179887,Bachelor,Divorced,Full-time,Living Alone,Asian,Female,Suburban,1
+44,Self-emp,39813,Bachelor,Married,Full-time,Living Alone,Hispanic,Female,Rural,0
+24,Government,84418,Highschool,Married,Full-time,Living Alone,Asian,Male,Urban,1
+55,Unemployed,22521,PhD,Single,Intern,Living with Family,White,Female,Suburban,0
+37,Government,179012,Master,Widowed,Contract,Living Alone,White,Female,Suburban,1
+26,Unemployed,182590,Bachelor,Single,Part-time,Living with Family,Hispanic,Male,Rural,1
+25,Private,146367,Master,Widowed,Contract,Living with Roommates,White,Female,Urban,1
+27,Government,171494,PhD,Divorced,Full-time,Living with Family,White,Female,Urban,1
+36,Unemployed,167062,Bachelor,Divorced,Full-time,Living with Family,Black,Male,Suburban,1
+45,Private,156986,Master,Single,Intern,Living with Roommates,Asian,Male,Urban,1
+64,Self-emp,141401,PhD,Widowed,Intern,Living with Roommates,Asian,Male,Urban,1
+29,Self-emp,129054,Bachelor,Widowed,Contract,Living with Family,White,Female,Urban,1
+39,Self-emp,111339,Highschool,Divorced,Intern,Living Alone,Other,Female,Urban,1
+27,Self-emp,160912,Bachelor,Single,Intern,Living with Roommates,Asian,Female,Suburban,1
+62,Private,131015,PhD,Divorced,Full-time,Living Alone,Black,Male,Rural,1
+39,Government,172274,Master,Single,Intern,Living Alone,Hispanic,Female,Suburban,1
+40,Unemployed,187412,Master,Single,Intern,Living with Family,Hispanic,Female,Urban,1
+22,Government,83641,Master,Divorced,Full-time,Living with Roommates,Other,Male,Urban,1
+55,Private,87055,Master,Widowed,Contract,Living with Roommates,Hispanic,Male,Rural,1
+60,Government,13360,Highschool,Single,Contract,Living with Roommates,Black,Male,Suburban,0
+55,Unemployed,184194,Master,Single,Part-time,Living with Roommates,Other,Male,Urban,1
+58,Self-emp,174065,Master,Divorced,Full-time,Living with Family,Asian,Female,Rural,1
+54,Private,39523,Bachelor,Married,Contract,Living with Roommates,Black,Male,Urban,0
+38,Self-emp,99031,Bachelor,Married,Part-time,Living with Roommates,Hispanic,Male,Suburban,1
+44,Unemployed,150526,PhD,Widowed,Part-time,Living Alone,Hispanic,Male,Urban,1
+46,Self-emp,193556,Highschool,Divorced,Full-time,Living Alone,White,Female,Rural,1
+56,Government,85886,Highschool,Divorced,Contract,Living with Family,Black,Female,Rural,1
+52,Private,91100,Master,Single,Full-time,Living Alone,Black,Male,Urban,1
+31,Government,135309,Bachelor,Widowed,Full-time,Living with Family,Hispanic,Female,Suburban,1
+44,Government,124845,Master,Divorced,Part-time,Living with Roommates,Asian,Female,Urban,1
+25,Government,149971,Highschool,Single,Intern,Living with Family,White,Male,Urban,1
+43,Private,142904,Highschool,Married,Intern,Living with Roommates,Hispanic,Female,Rural,1
+54,Government,80210,Master,Married,Part-time,Living with Family,White,Male,Rural,1
+62,Private,49242,Highschool,Married,Contract,Living with Roommates,White,Female,Urban,0
+62,Government,15548,Highschool,Widowed,Full-time,Living with Roommates,Hispanic,Female,Urban,0
+36,Self-emp,106944,Highschool,Married,Intern,Living with Roommates,Black,Male,Suburban,1
+31,Unemployed,176817,PhD,Single,Part-time,Living with Roommates,Other,Female,Urban,1
+65,Government,151722,Master,Widowed,Part-time,Living with Family,Asian,Female,Urban,1
+54,Self-emp,64594,Master,Widowed,Full-time,Living with Roommates,Other,Female,Urban,1
+24,Government,109569,PhD,Married,Intern,Living Alone,Other,Female,Rural,1
+37,Private,98614,Master,Married,Contract,Living with Roommates,Black,Female,Urban,1
+28,Unemployed,176850,Highschool,Divorced,Part-time,Living with Roommates,Other,Female,Suburban,1
+53,Self-emp,80432,Highschool,Married,Full-time,Living with Family,Other,Female,Suburban,1
+35,Unemployed,172050,Highschool,Divorced,Part-time,Living with Family,Asian,Female,Suburban,1
+37,Unemployed,87666,Bachelor,Divorced,Intern,Living with Roommates,White,Male,Urban,1
+54,Government,121350,Bachelor,Married,Full-time,Living Alone,Asian,Male,Suburban,1
+43,Government,41481,Bachelor,Single,Contract,Living with Roommates,Black,Male,Suburban,0
+34,Private,24607,Highschool,Widowed,Part-time,Living with Roommates,White,Female,Rural,0
+34,Private,157415,Bachelor,Widowed,Intern,Living with Roommates,White,Female,Suburban,1
+44,Unemployed,191262,PhD,Single,Intern,Living with Family,Hispanic,Male,Urban,1
+63,Self-emp,190870,Highschool,Single,Contract,Living with Roommates,Other,Female,Suburban,1
+60,Private,39583,Bachelor,Married,Full-time,Living with Roommates,Black,Male,Rural,0
+41,Government,171268,Highschool,Married,Intern,Living Alone,White,Male,Urban,1
+53,Government,69444,PhD,Single,Intern,Living with Family,Black,Male,Rural,1
+29,Private,188856,PhD,Divorced,Intern,Living Alone,Asian,Female,Suburban,1
+44,Private,109856,PhD,Single,Full-time,Living with Family,Asian,Female,Suburban,1
+54,Private,159430,Highschool,Widowed,Part-time,Living Alone,Other,Female,Urban,1
+36,Private,142035,Bachelor,Widowed,Full-time,Living with Roommates,Other,Male,Rural,1
+64,Private,83256,Highschool,Divorced,Intern,Living with Family,Black,Male,Rural,1
+37,Self-emp,117149,Bachelor,Divorced,Contract,Living Alone,Black,Male,Urban,1
+20,Unemployed,146618,Master,Widowed,Part-time,Living with Roommates,Asian,Female,Rural,1
+22,Unemployed,195337,Master,Divorced,Part-time,Living Alone,Black,Male,Urban,1
+46,Unemployed,37393,Bachelor,Widowed,Contract,Living Alone,Other,Male,Rural,0
+45,Government,158354,Bachelor,Divorced,Full-time,Living with Family,Hispanic,Female,Urban,1
+54,Government,86653,PhD,Divorced,Contract,Living with Family,White,Female,Rural,1
+55,Private,28556,Highschool,Single,Full-time,Living Alone,Black,Female,Suburban,0
+58,Government,155461,Bachelor,Widowed,Contract,Living with Family,Black,Female,Rural,1
+48,Unemployed,63803,Highschool,Widowed,Contract,Living with Family,Hispanic,Female,Suburban,1
+69,Self-emp,151288,Master,Widowed,Part-time,Living with Family,Other,Female,Suburban,1
+44,Unemployed,16788,Bachelor,Single,Part-time,Living with Roommates,Black,Male,Urban,0
+29,Unemployed,172684,PhD,Divorced,Intern,Living with Family,Black,Male,Rural,1
+58,Government,160987,PhD,Single,Contract,Living Alone,Hispanic,Male,Rural,1
+41,Unemployed,160888,Master,Divorced,Part-time,Living Alone,Other,Female,Rural,1
+22,Unemployed,12524,Bachelor,Single,Intern,Living with Family,White,Male,Suburban,0
+37,Government,198876,Highschool,Single,Contract,Living with Family,Asian,Female,Suburban,1
+61,Government,177859,Highschool,Divorced,Contract,Living with Roommates,Asian,Male,Rural,1
+38,Government,50386,PhD,Married,Part-time,Living Alone,Other,Male,Suburban,1
+44,Unemployed,171258,Bachelor,Divorced,Full-time,Living with Roommates,White,Male,Rural,1
+23,Government,89740,Highschool,Divorced,Full-time,Living with Family,Other,Female,Rural,1
+60,Self-emp,129444,Bachelor,Married,Intern,Living with Family,Black,Male,Suburban,1
+63,Private,187617,Highschool,Married,Full-time,Living with Family,Asian,Male,Rural,1
+70,Unemployed,91203,Highschool,Single,Part-time,Living with Family,White,Male,Rural,1
+29,Private,191273,Master,Married,Contract,Living with Roommates,White,Female,Urban,1
+42,Private,40128,Bachelor,Married,Intern,Living with Family,Hispanic,Male,Rural,0
+19,Government,95104,Highschool,Divorced,Intern,Living with Roommates,White,Male,Rural,1
+39,Private,127684,PhD,Married,Part-time,Living with Family,Hispanic,Female,Urban,1
+21,Private,55464,Highschool,Widowed,Part-time,Living Alone,Other,Female,Suburban,1
+45,Unemployed,39154,Master,Widowed,Part-time,Living with Family,Black,Male,Urban,0
+70,Unemployed,84904,Master,Married,Part-time,Living with Roommates,Hispanic,Female,Suburban,1
+53,Self-emp,93507,Highschool,Married,Intern,Living Alone,Black,Female,Suburban,1
+56,Private,32921,PhD,Divorced,Part-time,Living Alone,Asian,Female,Urban,0
+41,Self-emp,42419,Master,Divorced,Contract,Living Alone,Asian,Female,Urban,0
+63,Self-emp,41614,Master,Single,Part-time,Living with Family,Black,Male,Rural,0
+58,Private,35226,PhD,Single,Part-time,Living with Family,Hispanic,Female,Urban,0
+44,Self-emp,136877,Bachelor,Married,Full-time,Living Alone,Asian,Male,Urban,1
+45,Private,51202,Highschool,Single,Intern,Living with Family,White,Male,Urban,1
+57,Unemployed,16390,Bachelor,Married,Contract,Living with Family,Hispanic,Male,Rural,0
+32,Self-emp,118567,Master,Single,Intern,Living with Roommates,Asian,Female,Urban,1
+62,Private,113827,PhD,Divorced,Contract,Living Alone,White,Female,Rural,1
+49,Self-emp,143964,Master,Single,Contract,Living with Family,Asian,Female,Urban,1
+57,Government,199803,Master,Single,Contract,Living with Roommates,Black,Male,Rural,1
+26,Private,86537,Highschool,Married,Full-time,Living Alone,Other,Male,Urban,1
+54,Self-emp,57294,Bachelor,Married,Contract,Living with Family,Hispanic,Female,Rural,1
+26,Self-emp,190914,PhD,Single,Contract,Living Alone,Other,Male,Rural,1
+70,Unemployed,152938,Master,Married,Intern,Living Alone,Asian,Female,Urban,1
+47,Unemployed,85647,Bachelor,Single,Intern,Living with Roommates,Black,Female,Suburban,1
+55,Government,29066,Master,Single,Full-time,Living with Family,Other,Male,Rural,0
+69,Government,167259,Highschool,Single,Part-time,Living Alone,Asian,Female,Suburban,1
+27,Self-emp,138773,PhD,Widowed,Full-time,Living with Roommates,Other,Male,Rural,1
+66,Unemployed,32230,Highschool,Single,Full-time,Living with Roommates,White,Female,Urban,0
+37,Government,82416,Highschool,Single,Part-time,Living with Roommates,Asian,Male,Suburban,1
+61,Unemployed,181129,Master,Single,Intern,Living with Roommates,White,Male,Rural,1
+26,Self-emp,179826,Highschool,Divorced,Contract,Living with Roommates,Other,Female,Suburban,1
+38,Private,104265,Highschool,Single,Intern,Living Alone,Other,Female,Rural,1
+36,Unemployed,144549,Bachelor,Divorced,Full-time,Living with Roommates,Asian,Male,Rural,1
+56,Self-emp,40727,Bachelor,Widowed,Intern,Living with Family,Hispanic,Female,Suburban,0
+19,Government,21288,Master,Single,Intern,Living with Roommates,Black,Male,Urban,0
+21,Self-emp,117561,PhD,Divorced,Full-time,Living with Family,White,Male,Suburban,1
+46,Self-emp,191345,PhD,Single,Full-time,Living Alone,Black,Male,Rural,1
+49,Self-emp,20529,Highschool,Single,Contract,Living with Family,Black,Female,Rural,0
+18,Private,190300,PhD,Single,Full-time,Living with Roommates,Hispanic,Male,Rural,1
+52,Private,87299,PhD,Divorced,Intern,Living with Family,White,Female,Suburban,1
+34,Self-emp,69735,Master,Divorced,Full-time,Living with Roommates,Hispanic,Male,Suburban,1
+35,Unemployed,81872,Highschool,Married,Full-time,Living with Roommates,Asian,Male,Urban,1
+29,Government,92817,PhD,Widowed,Contract,Living with Family,Asian,Female,Rural,1
+57,Government,107958,Master,Single,Intern,Living with Roommates,Asian,Female,Urban,1
+50,Private,103933,Master,Married,Intern,Living Alone,White,Male,Urban,1
+70,Unemployed,188273,Highschool,Widowed,Part-time,Living Alone,White,Male,Urban,1
+59,Unemployed,60763,Highschool,Married,Intern,Living Alone,Asian,Female,Rural,1
+21,Self-emp,132484,PhD,Divorced,Part-time,Living with Family,Other,Male,Urban,1
+30,Private,12522,Bachelor,Widowed,Contract,Living with Roommates,Asian,Female,Rural,0
+39,Government,78113,Highschool,Divorced,Full-time,Living with Family,Hispanic,Male,Suburban,1
+30,Private,144881,PhD,Single,Contract,Living with Roommates,Other,Male,Urban,1
+37,Private,153011,Bachelor,Widowed,Full-time,Living Alone,Black,Male,Rural,1
+54,Private,178379,PhD,Married,Full-time,Living with Roommates,Hispanic,Female,Suburban,1
+44,Private,108541,Master,Single,Full-time,Living with Family,Other,Female,Suburban,1
+38,Self-emp,189858,Highschool,Married,Intern,Living with Family,Other,Female,Urban,1
+61,Self-emp,109638,Highschool,Single,Contract,Living with Roommates,Black,Female,Urban,1
+69,Self-emp,138158,Highschool,Married,Part-time,Living Alone,White,Female,Rural,1
+65,Government,133578,Highschool,Married,Part-time,Living with Roommates,Asian,Male,Rural,1
+35,Unemployed,105589,Highschool,Divorced,Full-time,Living with Family,Asian,Male,Rural,1
+36,Self-emp,56280,PhD,Single,Contract,Living with Family,Hispanic,Male,Urban,1
+20,Unemployed,163002,Highschool,Married,Part-time,Living Alone,White,Female,Urban,1
+26,Unemployed,54396,Bachelor,Single,Part-time,Living with Family,White,Female,Urban,1
+43,Private,126434,Highschool,Widowed,Intern,Living with Roommates,Black,Female,Rural,1
+40,Private,189697,Highschool,Single,Full-time,Living Alone,Black,Male,Urban,1
+48,Self-emp,74747,PhD,Divorced,Full-time,Living with Roommates,Other,Male,Urban,1
+44,Unemployed,121741,Bachelor,Divorced,Part-time,Living with Family,Hispanic,Male,Rural,1
+42,Government,177714,PhD,Widowed,Intern,Living Alone,Hispanic,Male,Rural,1
+30,Unemployed,63700,Highschool,Single,Contract,Living with Roommates,Other,Male,Suburban,1
+48,Private,119701,PhD,Married,Part-time,Living with Roommates,Other,Female,Rural,1
+50,Self-emp,136117,PhD,Widowed,Intern,Living with Roommates,White,Female,Rural,1
+62,Self-emp,147680,Bachelor,Divorced,Intern,Living Alone,White,Male,Suburban,1
+33,Unemployed,185362,Bachelor,Single,Intern,Living with Roommates,Black,Female,Rural,1
+35,Government,104392,Master,Widowed,Part-time,Living with Family,Hispanic,Male,Urban,1
+33,Self-emp,33601,Master,Married,Intern,Living Alone,Black,Female,Rural,0
+48,Unemployed,157754,Master,Widowed,Contract,Living with Roommates,White,Male,Suburban,1
+60,Government,155149,Highschool,Divorced,Part-time,Living with Roommates,White,Male,Rural,1
+69,Unemployed,72698,Bachelor,Widowed,Part-time,Living with Family,Other,Male,Urban,1
+46,Self-emp,79306,Highschool,Widowed,Contract,Living with Family,Hispanic,Female,Rural,1
+51,Self-emp,168100,PhD,Divorced,Contract,Living with Family,Asian,Male,Rural,1
+53,Government,184539,Highschool,Single,Intern,Living with Family,White,Male,Rural,1
+32,Government,54078,PhD,Married,Part-time,Living Alone,Other,Female,Rural,1
+52,Government,82719,PhD,Divorced,Contract,Living with Family,White,Male,Urban,1
+51,Private,102539,Master,Widowed,Intern,Living Alone,Asian,Male,Urban,1
+22,Self-emp,17213,Master,Widowed,Full-time,Living with Roommates,Asian,Female,Suburban,0
+25,Unemployed,119710,PhD,Divorced,Intern,Living Alone,Asian,Male,Rural,1
+32,Private,99225,PhD,Married,Full-time,Living with Roommates,Hispanic,Female,Suburban,1
+65,Private,185191,Bachelor,Divorced,Intern,Living with Roommates,Black,Female,Rural,1
+27,Government,17828,Highschool,Single,Part-time,Living with Roommates,Black,Female,Rural,0
+43,Government,85485,PhD,Widowed,Contract,Living with Roommates,Black,Female,Urban,1
+21,Private,178043,Highschool,Single,Contract,Living with Family,White,Female,Urban,1
+38,Unemployed,73243,Bachelor,Single,Intern,Living Alone,Other,Male,Rural,1
+47,Unemployed,166607,Highschool,Divorced,Part-time,Living with Family,Hispanic,Male,Urban,1
+32,Government,195178,Highschool,Single,Full-time,Living Alone,Hispanic,Male,Rural,1
+42,Self-emp,100492,Master,Single,Full-time,Living with Roommates,Hispanic,Male,Suburban,1
+57,Self-emp,128680,Highschool,Divorced,Part-time,Living Alone,Asian,Female,Rural,1
+53,Government,140079,PhD,Single,Full-time,Living with Roommates,White,Male,Urban,1
+39,Government,69256,Highschool,Married,Part-time,Living with Roommates,Other,Male,Suburban,1
+70,Unemployed,148245,Bachelor,Single,Intern,Living with Roommates,Other,Female,Urban,1
+32,Private,85271,Highschool,Widowed,Intern,Living with Roommates,White,Male,Rural,1
+65,Self-emp,70830,Bachelor,Widowed,Full-time,Living Alone,Asian,Male,Rural,1
+22,Private,12489,Bachelor,Widowed,Contract,Living with Roommates,Asian,Female,Suburban,0
+68,Government,109829,PhD,Widowed,Contract,Living with Family,Other,Male,Rural,1
+47,Unemployed,99763,PhD,Married,Intern,Living with Family,Other,Female,Rural,1
+47,Unemployed,79860,Highschool,Divorced,Intern,Living with Family,Asian,Female,Urban,1
+22,Unemployed,14151,PhD,Married,Contract,Living with Family,Asian,Male,Urban,0
+24,Government,103870,Bachelor,Single,Part-time,Living with Family,Black,Female,Rural,1
+69,Government,32605,Master,Single,Full-time,Living with Family,Asian,Female,Urban,0
+50,Government,95619,Master,Widowed,Intern,Living with Roommates,White,Female,Urban,1
+61,Private,126642,Master,Married,Intern,Living Alone,Hispanic,Female,Rural,1
+29,Self-emp,145011,Master,Divorced,Full-time,Living Alone,Black,Male,Suburban,1
+56,Government,133901,PhD,Widowed,Contract,Living Alone,Black,Female,Urban,1
+27,Private,134845,Highschool,Single,Intern,Living with Family,Black,Female,Suburban,1
+67,Government,104699,Highschool,Married,Part-time,Living Alone,Asian,Female,Rural,1
+28,Unemployed,120473,PhD,Divorced,Full-time,Living Alone,Hispanic,Female,Urban,1
+23,Unemployed,176069,PhD,Divorced,Contract,Living with Roommates,Asian,Male,Rural,1
+53,Unemployed,113772,PhD,Married,Intern,Living with Roommates,White,Male,Rural,1
+47,Government,171743,Bachelor,Divorced,Full-time,Living Alone,Asian,Female,Suburban,1
+26,Unemployed,14755,Master,Widowed,Contract,Living Alone,Black,Female,Suburban,0
+66,Private,97600,Master,Divorced,Full-time,Living with Roommates,White,Female,Rural,1
+32,Self-emp,159933,Master,Single,Full-time,Living Alone,White,Male,Rural,1
+22,Self-emp,172270,Master,Single,Full-time,Living Alone,Asian,Female,Rural,1
+29,Unemployed,29562,Master,Married,Full-time,Living Alone,Hispanic,Female,Urban,0
+24,Government,42599,Master,Divorced,Intern,Living with Family,Other,Male,Urban,0
+54,Unemployed,27918,PhD,Single,Full-time,Living Alone,Hispanic,Male,Suburban,0
+24,Unemployed,40894,PhD,Widowed,Part-time,Living with Roommates,Other,Male,Rural,0
+25,Government,163578,Bachelor,Widowed,Intern,Living Alone,Asian,Male,Rural,1
+21,Self-emp,86882,Highschool,Married,Full-time,Living with Family,Other,Male,Rural,1
+52,Self-emp,90620,Master,Widowed,Part-time,Living Alone,Asian,Male,Suburban,1
+18,Government,188843,Bachelor,Single,Part-time,Living with Roommates,Other,Female,Urban,1
+25,Government,170548,Bachelor,Married,Part-time,Living Alone,White,Female,Rural,1
+37,Government,40690,Master,Single,Contract,Living Alone,Other,Male,Urban,0
+49,Unemployed,12734,Master,Divorced,Intern,Living with Family,Hispanic,Female,Rural,0
+58,Private,182602,Bachelor,Widowed,Full-time,Living with Family,Asian,Female,Suburban,1
+37,Unemployed,25330,Highschool,Divorced,Full-time,Living with Roommates,Black,Female,Rural,0
+67,Self-emp,116571,PhD,Married,Intern,Living with Family,Other,Male,Rural,1
+52,Private,91813,Master,Divorced,Part-time,Living Alone,Other,Female,Rural,1
+25,Government,95577,Highschool,Married,Part-time,Living with Roommates,Hispanic,Male,Suburban,1
+21,Government,31039,Master,Single,Intern,Living Alone,Asian,Female,Urban,0
+46,Private,102321,Master,Married,Full-time,Living with Family,White,Male,Suburban,1
+65,Private,110129,Highschool,Divorced,Part-time,Living with Roommates,White,Male,Urban,1
+38,Self-emp,154485,Master,Married,Full-time,Living with Roommates,Black,Male,Suburban,1
+33,Private,142272,Bachelor,Single,Contract,Living with Roommates,Asian,Female,Suburban,1
+70,Self-emp,65693,Highschool,Married,Contract,Living Alone,White,Female,Urban,1
+39,Government,63096,PhD,Married,Part-time,Living with Family,Asian,Female,Suburban,1
+62,Private,108394,PhD,Divorced,Full-time,Living with Roommates,Other,Female,Suburban,1
+66,Private,165618,Master,Married,Intern,Living with Family,White,Male,Rural,1
+56,Private,145780,PhD,Widowed,Contract,Living with Family,Black,Female,Rural,1
+35,Government,73772,Bachelor,Widowed,Contract,Living with Roommates,White,Female,Urban,1
+19,Self-emp,117455,PhD,Widowed,Intern,Living Alone,Other,Male,Rural,1
+47,Self-emp,110040,Bachelor,Widowed,Intern,Living with Roommates,Asian,Male,Urban,1
+30,Government,64096,Bachelor,Single,Intern,Living with Roommates,Hispanic,Male,Rural,1
+52,Unemployed,93723,Highschool,Divorced,Intern,Living with Family,Other,Male,Rural,1
+52,Unemployed,49105,Highschool,Married,Part-time,Living with Roommates,White,Male,Suburban,0
+35,Self-emp,91317,Highschool,Single,Part-time,Living with Roommates,White,Male,Rural,1
+41,Private,22249,Highschool,Single,Full-time,Living Alone,Hispanic,Male,Rural,0
+59,Self-emp,146230,Master,Divorced,Full-time,Living with Family,Hispanic,Male,Urban,1
+62,Unemployed,154742,PhD,Single,Intern,Living with Roommates,White,Male,Rural,1
+22,Self-emp,137592,Master,Widowed,Contract,Living with Roommates,White,Male,Rural,1
+28,Government,31820,Highschool,Married,Intern,Living with Family,Hispanic,Female,Urban,0
+21,Private,179523,Master,Widowed,Intern,Living with Family,Hispanic,Female,Suburban,1
+23,Government,73968,PhD,Married,Contract,Living with Roommates,White,Female,Urban,1
+49,Government,185688,Bachelor,Married,Part-time,Living with Family,Hispanic,Male,Suburban,1
+57,Self-emp,77113,PhD,Divorced,Intern,Living with Roommates,Other,Female,Rural,1
+69,Self-emp,182774,Bachelor,Married,Contract,Living Alone,Black,Male,Urban,1
+51,Government,32716,Highschool,Widowed,Intern,Living with Family,Asian,Female,Suburban,0
+57,Private,71962,PhD,Divorced,Part-time,Living Alone,White,Female,Rural,1
+54,Private,134974,Highschool,Single,Full-time,Living with Family,Black,Female,Suburban,1
+43,Self-emp,28731,Highschool,Single,Full-time,Living Alone,White,Male,Urban,0
+67,Government,91253,Bachelor,Single,Contract,Living Alone,Black,Female,Rural,1
+60,Self-emp,108408,Master,Widowed,Contract,Living with Roommates,Asian,Female,Suburban,1
+27,Unemployed,58489,Highschool,Widowed,Intern,Living with Family,Black,Male,Rural,1
+41,Unemployed,30509,PhD,Divorced,Part-time,Living with Roommates,Hispanic,Female,Rural,0
+65,Government,63667,Master,Single,Full-time,Living with Family,Asian,Male,Suburban,1
+63,Private,132208,Bachelor,Divorced,Intern,Living Alone,Hispanic,Female,Rural,1
+62,Self-emp,42031,PhD,Divorced,Intern,Living with Family,Hispanic,Female,Suburban,0
+46,Unemployed,193005,PhD,Single,Contract,Living Alone,Hispanic,Female,Suburban,1
+60,Government,132274,Master,Divorced,Part-time,Living with Family,Hispanic,Male,Rural,1
+19,Unemployed,73858,Highschool,Married,Full-time,Living with Roommates,Black,Male,Rural,1
+55,Government,102533,Highschool,Single,Contract,Living Alone,Asian,Male,Urban,1
+28,Self-emp,82668,Bachelor,Single,Contract,Living with Roommates,Hispanic,Male,Suburban,1
+61,Self-emp,198732,Master,Widowed,Full-time,Living with Family,White,Male,Urban,1
+62,Government,124921,Bachelor,Married,Contract,Living with Roommates,White,Male,Rural,1
+66,Self-emp,89928,Bachelor,Divorced,Contract,Living with Family,Asian,Male,Rural,1
+28,Government,127890,Bachelor,Widowed,Intern,Living with Family,Black,Male,Rural,1
+28,Unemployed,84256,PhD,Married,Contract,Living Alone,Black,Female,Urban,1
+40,Self-emp,186804,Highschool,Married,Intern,Living with Family,Black,Female,Urban,1
+35,Government,114662,Highschool,Married,Part-time,Living with Roommates,White,Male,Suburban,1
+56,Unemployed,76578,PhD,Widowed,Part-time,Living with Family,Black,Female,Urban,1
+56,Self-emp,149747,Highschool,Married,Contract,Living Alone,Other,Female,Rural,1
+43,Self-emp,133310,PhD,Widowed,Contract,Living with Family,Asian,Female,Rural,1
+56,Self-emp,193921,Highschool,Divorced,Contract,Living with Family,Asian,Male,Suburban,1
+70,Self-emp,52647,Highschool,Married,Part-time,Living with Roommates,Black,Female,Rural,1
+69,Unemployed,14069,PhD,Widowed,Contract,Living with Roommates,Other,Male,Rural,0
+69,Government,115240,Highschool,Widowed,Full-time,Living with Family,Black,Male,Urban,1
+37,Government,171280,Highschool,Married,Full-time,Living Alone,White,Male,Rural,1
+58,Government,92395,PhD,Divorced,Contract,Living with Roommates,Black,Female,Rural,1
+30,Self-emp,17662,Highschool,Widowed,Part-time,Living Alone,Hispanic,Male,Suburban,0
+46,Self-emp,136467,Master,Married,Part-time,Living with Roommates,Other,Female,Suburban,1
+28,Unemployed,14799,Bachelor,Divorced,Full-time,Living with Family,Asian,Male,Suburban,0
+18,Unemployed,73134,PhD,Widowed,Intern,Living with Family,Other,Female,Rural,1
+49,Unemployed,198100,PhD,Divorced,Intern,Living with Family,Asian,Female,Suburban,1
+70,Unemployed,70482,Master,Widowed,Full-time,Living Alone,Hispanic,Female,Suburban,1
+35,Government,41785,Bachelor,Married,Intern,Living Alone,White,Male,Urban,0
+54,Unemployed,185825,Master,Married,Full-time,Living Alone,Hispanic,Male,Urban,1
+56,Government,69342,PhD,Single,Part-time,Living with Family,Hispanic,Male,Urban,1
+60,Private,184643,Master,Single,Contract,Living with Family,White,Male,Rural,1
+23,Self-emp,191159,Bachelor,Married,Full-time,Living with Family,Black,Male,Suburban,1
+19,Private,33008,PhD,Divorced,Full-time,Living Alone,White,Male,Rural,0

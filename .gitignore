@@ -47,7 +47,6 @@ Thumbs.db
 #my file
 GEMINI.md
 t.txt
-*.csv
 .files/
 mongo_data/
-scenario/output/
+output/
