@@ -27,6 +27,9 @@ async def _download_sandbox_files(sandbox, destination_dir: str) -> list[str]:
                 relative_path = relative_path[2:]
             if not relative_path:
                 continue
+            path_parts = [part for part in relative_path.split("/") if part]
+            if any(part.startswith(".") for part in path_parts):
+                continue
 
             local_path = os.path.join(destination_dir, relative_path)
             os.makedirs(os.path.dirname(local_path), exist_ok=True)
